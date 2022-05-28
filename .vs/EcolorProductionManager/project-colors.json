@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a61b0717-501e-4f11-a54c-38770ef5e918": {
+      "ProjectGuid": "a61b0717-501e-4f11-a54c-38770ef5e918",
+      "DisplayName": "EcolorProductionManager",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

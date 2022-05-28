@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net47</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua" Version="1.4.368.53" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpcNetApi">
+      <HintPath>..\..\..\..\Desktop\OPC UA\OPC-DA-client-example-master\OPC-DA-client-example-master\myPlcOpcClient\myPlcOpcClient\OPC\OpcNetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi.Com">
+      <HintPath>..\..\..\..\Desktop\OPC UA\OPC-DA-client-example-master\OPC-DA-client-example-master\myPlcOpcClient\myPlcOpcClient\OPC\OpcNetApi.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi.Xml">
+      <HintPath>..\..\..\..\Desktop\OPC UA\OPC-DA-client-example-master\OPC-DA-client-example-master\myPlcOpcClient\myPlcOpcClient\OPC\OpcNetApi.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
