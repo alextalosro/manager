@@ -43,6 +43,7 @@ namespace EcolorProductionManager
                 WelcomePage wcp = new WelcomePage();
                 wcp.Show(); //Show welcome page.
                 this.Hide(); //Hide current form (login form);
+                this.Dispose();
             }
             else
             {
@@ -57,6 +58,11 @@ namespace EcolorProductionManager
             UserRegistrationForm userRegistrationForm = new UserRegistrationForm();
             this.Hide();
             userRegistrationForm.Show(); //Show welcome page.
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

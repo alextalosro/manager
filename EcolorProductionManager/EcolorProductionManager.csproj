@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
+	<LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
@@ -22,6 +23,7 @@
     <Reference Include="OpcNetApi.Xml">
       <HintPath>..\..\..\..\Desktop\OPC UA\OPC-DA-client-example-master\OPC-DA-client-example-master\myPlcOpcClient\myPlcOpcClient\OPC\OpcNetApi.Xml.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
 
 </Project>
