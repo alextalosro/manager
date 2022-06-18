@@ -1,0 +1,1 @@
+﻿connectionString="Data Source=SERVER-MES-APS;Initial Catalog=EcolorProductionManagerDB;Integrated Security=True"
