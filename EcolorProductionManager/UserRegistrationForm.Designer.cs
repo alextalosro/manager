@@ -136,7 +136,7 @@
             // 
             // buttonRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(273, 289);
+            this.buttonRegister.Location = new System.Drawing.Point(273, 312);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(75, 23);
             this.buttonRegister.TabIndex = 11;
@@ -147,7 +147,9 @@
             // labelStatusMessage
             // 
             this.labelStatusMessage.AutoSize = true;
-            this.labelStatusMessage.Location = new System.Drawing.Point(261, 288);
+            this.labelStatusMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusMessage.ForeColor = System.Drawing.Color.Red;
+            this.labelStatusMessage.Location = new System.Drawing.Point(172, 290);
             this.labelStatusMessage.Name = "labelStatusMessage";
             this.labelStatusMessage.Size = new System.Drawing.Size(0, 13);
             this.labelStatusMessage.TabIndex = 12;
@@ -171,7 +173,6 @@
             this.comboBox1.Items.AddRange(new object[] {
             "user",
             "admin"});
-            this.comboBox1.SelectedIndex = 0;
             this.comboBox1.Location = new System.Drawing.Point(273, 262);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 21);
@@ -179,11 +180,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(354, 289);
+            this.button1.Location = new System.Drawing.Point(354, 312);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Abort";
+            this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -231,7 +232,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserRegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserRegistrationForm";

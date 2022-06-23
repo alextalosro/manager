@@ -62,8 +62,10 @@ C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\bin\
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.exe.config
+C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.LogForm.resources
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.LoginForm.resources
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.Properties.Resources.resources
+C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.ReasonModal.resources
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.UserRegistrationForm.resources
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.WelcomePage.resources
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.csproj.GenerateResource.cache
@@ -74,5 +76,3 @@ C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.csproj.CopyComplete
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.exe
 C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.pdb
-C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.ReasonModal.resources
-C:\Users\Admin\source\repos\EcolorProductionManager\EcolorProductionManager\obj\Debug\net48\EcolorProductionManager.LogForm.resources

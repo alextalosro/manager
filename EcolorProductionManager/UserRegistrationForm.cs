@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 
@@ -17,29 +10,41 @@ namespace EcolorProductionManager
         public UserRegistrationForm()
         {
             InitializeComponent();
+            //Combo box is non-editable. Only value presented are selectable.
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            //By default new user will be set to user
+            comboBox1.SelectedIndex = 0;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            if (!AreControlsValid(this.Controls))
+            try
             {
-                return;
+                if (!AreControlsValid(this.Controls))
+                {
+                    return;
+                }
+                else
+                {
+                    //Query the db for username and password;
+                    string mainconn = ConfigurationManager.ConnectionStrings["sqlConnectionString"].ConnectionString;
+                    SqlConnection sqlconn = new SqlConnection(mainconn);
+                    string sqlquery = "INSERT INTO [dbo].[users] VALUES (@username, @password, @firstname, @lastname, @user_role)";
+                    sqlconn.Open();
+                    SqlCommand sqlCmd = new SqlCommand(sqlquery, sqlconn);
+                    sqlCmd.Parameters.AddWithValue("@username", textUsername.Text);
+                    sqlCmd.Parameters.AddWithValue("@password", textPassword.Text);
+                    sqlCmd.Parameters.AddWithValue("@firstname", textFirstName.Text);
+                    sqlCmd.Parameters.AddWithValue("@lastname", textLastName.Text);
+                    sqlCmd.Parameters.AddWithValue("@user_role", comboBox1.GetItemText(comboBox1.SelectedItem));
+                    sqlCmd.ExecuteNonQuery();
+                    labelStatusMessage.Text = "User " + textUsername.Text + " was registered successfully!. You can now close this panel!.";
+                    sqlconn.Close();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                //Query the db for username and password;
-                string mainconn = ConfigurationManager.ConnectionStrings["sqlConnectionString"].ConnectionString;
-                SqlConnection sqlconn = new SqlConnection(mainconn);
-                string sqlquery = "INSERT INTO [dbo].[users] VALUES (@username, @password, @firstname, @lastname)";
-                sqlconn.Open();
-                SqlCommand sqlCmd = new SqlCommand(sqlquery, sqlconn);
-                sqlCmd.Parameters.AddWithValue("@username", textUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@password", textPassword.Text);
-                sqlCmd.Parameters.AddWithValue("@firstname", textFirstName.Text);
-                sqlCmd.Parameters.AddWithValue("@lastname", textLastName.Text);
-                sqlCmd.ExecuteNonQuery();
-                labelStatusMessage.Text = "User " + textUsername.Text + " was registered successfully!";
-                sqlconn.Close();
+                MessageBox.Show(ex.Message);
             }
         }
 

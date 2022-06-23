@@ -29,18 +29,45 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.dateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.user = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.action = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.reason = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dateTime,
+            this.user,
+            this.action,
+            this.reason});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 77);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1240, 592);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // dateTime
+            // 
+            this.dateTime.Text = "Data/Ora";
+            // 
+            // user
+            // 
+            this.user.Text = "Utilizator";
+            // 
+            // action
+            // 
+            this.action.Text = "Actiune";
+            // 
+            // reason
+            // 
+            this.reason.Text = "Motiv";
             // 
             // label5
             // 
@@ -73,10 +100,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "LogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogForm";
+            this.Load += new System.EventHandler(this.LogForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,5 +114,9 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ColumnHeader dateTime;
+        private System.Windows.Forms.ColumnHeader user;
+        private System.Windows.Forms.ColumnHeader action;
+        private System.Windows.Forms.ColumnHeader reason;
     }
 }
