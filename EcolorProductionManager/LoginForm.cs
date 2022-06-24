@@ -13,7 +13,8 @@ namespace EcolorProductionManager
             InitializeComponent();
         }
 
-        public static string wellcomeUser = "";
+        public static string loggedUserFullName = "";
+        public static bool isCurrentUserAdmin;
         private void loginButton_Click(object sender, EventArgs e)
         {
             try
@@ -33,8 +34,12 @@ namespace EcolorProductionManager
 
                 if (dt.Rows.Count > 0)
                 {
-                    //set username into label
-                    wellcomeUser = textUsername.Text;
+                    DataRow[] dr = dt.Select();
+
+                    //Set is curent logged user ? admin : user
+                    isCurrentUserAdmin = dr[0].ItemArray[5].ToString() == "admin" ? true : false;
+                    //Set FullName of logged user into label
+                    loggedUserFullName = dr[0].ItemArray[3].ToString() + " " + dr[0].ItemArray[4].ToString();
 
                     WelcomePage wcp = new WelcomePage();
                     wcp.Show(); //Show welcome page.

@@ -101,7 +101,6 @@
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LogForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogForm";
             this.Load += new System.EventHandler(this.LogForm_Load);
             this.ResumeLayout(false);

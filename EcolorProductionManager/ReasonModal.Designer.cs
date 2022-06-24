@@ -105,6 +105,7 @@
             this.Name = "ReasonModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReasonModal";
+            this.Load += new System.EventHandler(this.ReasonModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

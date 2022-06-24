@@ -24,7 +24,7 @@ namespace EcolorProductionManager
             //TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
             //TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
 
-            //myOPCUAServer = new OPCUAClass("127.0.0.1", "49320", TagList, true, 1, "2");
+            myOPCUAServer = new OPCUAClass("127.0.0.1", "49320", TagList, true, 1, "2");
 
             ////var tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
             ////var tagLastGoodValue = TagList["TestLiniaA"].LastGoodValue;
@@ -37,7 +37,9 @@ namespace EcolorProductionManager
 
         private void WelcomePage_Load(object sender, EventArgs e)
         {
-            loggedUsername.Text = LoginForm.wellcomeUser;
+            registerButton.Enabled = LoginForm.isCurrentUserAdmin;
+            logButton.Enabled = LoginForm.isCurrentUserAdmin;
+            loggedUsername.Text = loggedUsername.Text + LoginForm.loggedUserFullName;
             //this.Text = "Welcome " + LoginForm.wellcomeUser;
             this.Text = "DASHBOARD BYPASS INTERLOCK";
         }
@@ -70,7 +72,7 @@ namespace EcolorProductionManager
         private void AddLogItemToDatabase(ReasonModal reasonModal, Label label, Button button)
         {
             DateTime dateTime = DateTime.Now;
-            string fullName = LoginForm.wellcomeUser;
+            string fullName = LoginForm.loggedUserFullName;
             string action = $"Statusul liniei ({labelLiniaA.Text.ToUpper()}) a fost schimbat in {buttonLiniaATestLiniaALock.Text.ToUpper()}.";
             var reason = reasonModal.Reason;
 
@@ -98,7 +100,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
+                    //myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaALock);
                     this.Enabled = true;
                 }
@@ -123,7 +125,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
+                    //myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaAUnlock);
                     this.Enabled = true;
                 }

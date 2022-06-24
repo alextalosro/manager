@@ -238,7 +238,7 @@ namespace EcolorProductionManager
 
 
         /// <summary>
-        /// write a note to server(you should use try catch)
+        /// write a node to server(you should use try catch)
         /// </summary>
         /// <typeparam name="T">The type of tag to write on</typeparam>
         /// <param name="tag">节点名称</param>

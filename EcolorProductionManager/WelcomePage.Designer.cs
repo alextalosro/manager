@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.loggedUsername = new System.Windows.Forms.Label();
             this.buttonLiniaATestLiniaALock = new System.Windows.Forms.Button();
             this.buttonLiniaATestLiniaAUnlock = new System.Windows.Forms.Button();
@@ -145,15 +146,17 @@
             this.button77 = new System.Windows.Forms.Button();
             this.button78 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // loggedUsername
             // 
             this.loggedUsername.AutoSize = true;
-            this.loggedUsername.Location = new System.Drawing.Point(672, 8);
+            this.loggedUsername.Location = new System.Drawing.Point(262, 15);
             this.loggedUsername.Name = "loggedUsername";
-            this.loggedUsername.Size = new System.Drawing.Size(0, 13);
+            this.loggedUsername.Size = new System.Drawing.Size(102, 13);
             this.loggedUsername.TabIndex = 0;
+            this.loggedUsername.Text = "Utilizator autetificat: ";
             // 
             // buttonLiniaATestLiniaALock
             // 
@@ -224,6 +227,7 @@
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.registerButton.MouseHover += new System.EventHandler(this.registerButton_MouseHover);
             // 
             // logoutButton
             // 
@@ -244,6 +248,7 @@
             this.logButton.Text = "Log";
             this.logButton.UseVisualStyleBackColor = true;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
+            this.logButton.MouseHover += new System.EventHandler(this.logButton_MouseHover);
             // 
             // label5
             // 
@@ -1568,5 +1573,6 @@
         private System.Windows.Forms.Button button77;
         private System.Windows.Forms.Button button78;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

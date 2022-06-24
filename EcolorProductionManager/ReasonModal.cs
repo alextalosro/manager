@@ -16,6 +16,7 @@ namespace EcolorProductionManager
         {
             _tcs = new TaskCompletionSource<DialogResult>();
 
+            textBoxReason.Text = "";
             this.Visible = true;
             this.BringToFront();
             return _tcs.Task;
@@ -66,6 +67,11 @@ namespace EcolorProductionManager
                 errorProvider1.SetError(control, String.Empty);
             }
             return true;
+        }
+
+        private void ReasonModal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
