@@ -199,10 +199,6 @@ namespace EcolorProductionManager
                     LastTimeOPCServerFoundAlive = value.SourceTimestamp.ToLocalTime();
 
                 }
-                if (item.DisplayName == "TestLiniaA")
-                {
-
-                }
                 else
                 {
                     if (value.Value != null)

@@ -147,6 +147,7 @@
             this.button78 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // loggedUsername
@@ -227,7 +228,6 @@
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
-            this.registerButton.MouseHover += new System.EventHandler(this.registerButton_MouseHover);
             // 
             // logoutButton
             // 
@@ -248,7 +248,6 @@
             this.logButton.Text = "Log";
             this.logButton.UseVisualStyleBackColor = true;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
-            this.logButton.MouseHover += new System.EventHandler(this.logButton_MouseHover);
             // 
             // label5
             // 
@@ -1321,6 +1320,10 @@
             this.label67.TabIndex = 159;
             this.label67.Text = "Interlock Scanare";
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1574,5 +1577,6 @@
         private System.Windows.Forms.Button button78;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
