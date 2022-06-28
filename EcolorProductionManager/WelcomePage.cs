@@ -46,7 +46,34 @@ namespace EcolorProductionManager
             {
                 //Tag list for read async subscription.
                 TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
-                //TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
+                TagList.Add("Interlock", new OPCUAClass.TagClass("Interlock", "Ambalaj Linia A.Linia A PLC.Interlock"));
+                TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2 Interlock Scanare", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
+                TagList.Add("Anthon 3 Interlock Scanare", new OPCUAClass.TagClass("Anthon 3 Interlock Scanare", "Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare"));
+                TagList.Add("BedBox Interlock", new OPCUAClass.TagClass("BedBox Interlock", "BedBox.BedBoxPLC.BedBox Interlock"));
+                TagList.Add("Biesse Interlock Scanare", new OPCUAClass.TagClass("Biesse Interlock Scanare", "Biesse.Biesse PLC.Biesse Interlock Scanare"));
+                TagList.Add("Interlock", new OPCUAClass.TagClass("Interlock", "Debitare_folie.PLC_debitare_folie.Interlock"));
+                TagList.Add("Homag 1 Interlock Scanare", new OPCUAClass.TagClass("Homag 1 Interlock Scanare", "Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare"));
+                TagList.Add("Homag 2 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 2", "Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2"));
+                TagList.Add("Homag 2 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 1", "Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1"));
+                TagList.Add("Homag 3 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 2", "Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2"));
+                TagList.Add("Homag 3 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 1", "Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1"));
+                TagList.Add("Homag 4 Interlock Scanare", new OPCUAClass.TagClass("Homag 4 Interlock Scanare", "Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare"));
+                TagList.Add("Homag 5 Interlock Scanare", new OPCUAClass.TagClass("Homag 5 Interlock Scanare", "Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare"));
+                TagList.Add("Homag 6 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 2", "Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2"));
+                TagList.Add("Homag 6 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 1", "Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1"));
+                TagList.Add("Homag 7 Interlock Scanare", new OPCUAClass.TagClass("Homag 7 Interlock Scanare", "Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare"));
+                TagList.Add("Koch 1 Interlock Scanare", new OPCUAClass.TagClass("Koch 1 Interlock Scanare", "Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare"));
+                TagList.Add("Koch 2 Interlock Scanare", new OPCUAClass.TagClass("Koch 2 Interlock Scanare", "Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare"));
+                TagList.Add("Output Interlock", new OPCUAClass.TagClass("Output Interlock", "Koch 3.Interlock Koch 3.Output Interlock"));
+                TagList.Add("L2 Interlock Scanare", new OPCUAClass.TagClass("L2 Interlock Scanare", "L2_Caserat.L2 PLC.L2 Interlock Scanare"));
+                TagList.Add("L3 Interlock Scanare", new OPCUAClass.TagClass("L3 Interlock Scanare", "L3_Caserat.L3 PLC.L3 Interlock Scanare"));
+                TagList.Add("L4_Interlock_scanare", new OPCUAClass.TagClass("L4_Interlock_scanare", "L4_Caserat.L4 PLC.L4_Interlock_scanare"));
+                TagList.Add("L5 Caserat Interlock Scanare", new OPCUAClass.TagClass("L5 Caserat Interlock Scanare", "L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare"));
+                TagList.Add("Output interlock 2 dreapta", new OPCUAClass.TagClass("Output interlock 2 dreapta", "Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta"));
+                TagList.Add("Output interlock 1 stanga", new OPCUAClass.TagClass("Output interlock 1 stanga", "Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga"));
+                TagList.Add("Output interlock", new OPCUAClass.TagClass("Output interlock", "Process 2.Interlock Process 2.Output interlock"));
+                TagList.Add("Tivox interlock scanare", new OPCUAClass.TagClass("Tivox interlock scanare", "Tivox.Tivox PLC.Tivox interlock scanare"));
+                TagList.Add("Weeke 5 Interlock Scanare", new OPCUAClass.TagClass("Weeke 5 Interlock Scanare", "Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare"));
 
                 myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
                 isClientConnected = true;
@@ -71,20 +98,22 @@ namespace EcolorProductionManager
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
+        {   //Testing purpose
+            //var tagCurrentValue2 = TagList["Anthon 2 Interlock Scanare"].CurrentValue;
+            //var tagLastGoodValue2 = TagList["Anthon 2 Interlock Scanare"].LastGoodValue;
+            //var lastTimeTagupdated2 = TagList["Anthon 2 Interlock Scanare"].LastUpdatedTime;
             while (true)
             {
-                var tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
-                //var tagLastGoodValue = TagList["TestLiniaA"].LastGoodValue;
-                //var lastTimeTagupdated = TagList["TestLiniaA"].LastUpdatedTime;
-                if (tagCurrentValue != null)
+                //Linia A
+                var tagCurrentValue0 = TagList["TestLiniaA"].CurrentValue;
+                if (tagCurrentValue0 != null)
                 {
-                    if (tagCurrentValue.ToString() == "true")
+                    if (tagCurrentValue0.ToString() == "True")
                     {
                         this.Invoke(new Action(() =>
                         {
                             buttonLiniaATestLiniaALock.BackColor = Color.LightGreen;
-                            buttonLiniaATestLiniaAUnlock.BackColor = SystemColors.Control;
+                            buttonLiniaATestLiniaAUnlock.BackColor = SystemColors.ControlLight;
                         }));
                     }
                     else
@@ -92,15 +121,621 @@ namespace EcolorProductionManager
                         this.Invoke(new Action(() =>
                         {
                             buttonLiniaATestLiniaAUnlock.BackColor = Color.LightGreen;
-                            buttonLiniaATestLiniaALock.BackColor = SystemColors.Control;
+                            buttonLiniaATestLiniaALock.BackColor = SystemColors.ControlLight;
                         }));
                     }
                 }
 
+                var tagCurrentValue1 = TagList["Interlock"].CurrentValue;
+                if (tagCurrentValue1 != null)
+                {
+                    if (tagCurrentValue1.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonLiniaAInterlockLock.BackColor = Color.LightGreen;
+                            buttonLiniaAInterlockUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonLiniaAInterlockLock.BackColor = Color.LightGreen;
+                            buttonLiniaAInterlockUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
 
-                //var tagCurrentValue2 = TagList["Anthon 2 Interlock Scanare"].CurrentValue;
-                //var tagLastGoodValue2 = TagList["Anthon 2 Interlock Scanare"].LastGoodValue;
-                //var lastTimeTagupdated2 = TagList["Anthon 2 Interlock Scanare"].LastUpdatedTime;
+                //Anthon 2
+                var tagCurrentValue2 = TagList["Anthon 2 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue2 != null)
+                {
+                    if (tagCurrentValue2.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonAnthon2InterlockScanareLock.BackColor = Color.LightGreen;
+                            buttonAnthon2InterlockScanareUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonAnthon2InterlockScanareUnlock.BackColor = Color.LightGreen;
+                            buttonAnthon2InterlockScanareLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Anthon 3
+                var tagCurrentValue3 = TagList["Anthon 3 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue3 != null)
+                {
+                    if (tagCurrentValue3.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonAnthon3InterlockScanareLock.BackColor = Color.LightGreen;
+                            buttonAnthon3InterlockScanareUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonAnthon3InterlockScanareUnlock.BackColor = Color.LightGreen;
+                            buttonAnthon3InterlockScanareLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Bedbox
+                var tagCurrentValue4 = TagList["BedBox Interlock"].CurrentValue;
+                if (tagCurrentValue4 != null)
+                {
+                    if (tagCurrentValue4.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonBedBoxBedBoxInterlockLock.BackColor = Color.LightGreen;
+                            buttonBedBoxBedBoxInterlockUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonBedBoxBedBoxInterlockUnlock.BackColor = Color.LightGreen;
+                            buttonBedBoxBedBoxInterlockLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Biesses
+                var tagCurrentValue5 = TagList["Biesse Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue5 != null)
+                {
+                    if (tagCurrentValue5.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonBiesseInterlockScanareLock.BackColor = Color.LightGreen;
+                            buttonBiesseInterlockScanareUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonBiesseInterlockScanareUnlock.BackColor = Color.LightGreen;
+                            buttonBiesseInterlockScanareLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Debitare folie
+                var tagCurrentValue6 = TagList["Interlock"].CurrentValue;
+                if (tagCurrentValue6 != null)
+                {
+                    if (tagCurrentValue6.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonDebitareFolieInterlockLock.BackColor = Color.LightGreen;
+                            buttonDebitareFolieInterlockUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonDebitareFolieInterlockUnlock.BackColor = Color.LightGreen;
+                            buttonDebitareFolieInterlockLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 1
+                var tagCurrentValue7 = TagList["Homag 1 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue7 != null)
+                {
+                    if (tagCurrentValue7.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag1InterlockScanareLock.BackColor = Color.LightGreen;
+                            buttonHomag1InterlockScanareUnlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag1InterlockScanareUnlock.BackColor = Color.LightGreen;
+                            buttonHomag1InterlockScanareLock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 2
+                var tagCurrentValue8 = TagList["Homag 2 Interlock Scanare Infeed 2"].CurrentValue;
+                if (tagCurrentValue8 != null)
+                {
+                    if (tagCurrentValue8.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag2InterlockScanareInfeed2Lock.BackColor = Color.LightGreen;
+                            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = Color.LightGreen;
+                            buttonHomag2InterlockScanareInfeed2Lock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                var tagCurrentValue9 = TagList["Homag 2 Interlock Scanare Infeed 1"].CurrentValue;
+                if (tagCurrentValue9 != null)
+                {
+                    if (tagCurrentValue9.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag2InterlockScanareInfeed1Lock.BackColor = Color.LightGreen;
+                            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = Color.LightGreen;
+                            buttonHomag2InterlockScanareInfeed1Lock.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 3
+                var tagCurrentValue10 = TagList["Homag 3 Interlock Scanare Infeed 2"].CurrentValue;
+                if (tagCurrentValue10 != null)
+                {
+                    if (tagCurrentValue10.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button25.BackColor = Color.LightGreen;
+                            button26.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button26.BackColor = Color.LightGreen;
+                            button25.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                var tagCurrentValue11 = TagList["Homag 3 Interlock Scanare Infeed 1"].CurrentValue;
+                if (tagCurrentValue11 != null)
+                {
+                    if (tagCurrentValue11.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button35.BackColor = Color.LightGreen;
+                            button36.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button36.BackColor = Color.LightGreen;
+                            button35.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 4
+                var tagCurrentValue12 = TagList["Homag 4 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue12 != null)
+                {
+                    if (tagCurrentValue12.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button37.BackColor = Color.LightGreen;
+                            button38.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button38.BackColor = Color.LightGreen;
+                            button37.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 5
+                var tagCurrentValue13 = TagList["Homag 5 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue13 != null)
+                {
+                    if (tagCurrentValue13.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button39.BackColor = Color.LightGreen;
+                            button40.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button40.BackColor = Color.LightGreen;
+                            button39.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 6
+                var tagCurrentValue14 = TagList["Homag 6 Interlock Scanare Infeed 2"].CurrentValue;
+                if (tagCurrentValue14 != null)
+                {
+                    if (tagCurrentValue14.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button41.BackColor = Color.LightGreen;
+                            button42.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button42.BackColor = Color.LightGreen;
+                            button41.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                var tagCurrentValue15 = TagList["Homag 6 Interlock Scanare Infeed 1"].CurrentValue;
+                if (tagCurrentValue15 != null)
+                {
+                    if (tagCurrentValue15.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button51.BackColor = Color.LightGreen;
+                            button52.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button52.BackColor = Color.LightGreen;
+                            button51.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Homag 7
+                var tagCurrentValue16 = TagList["Homag 7 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue16 != null)
+                {
+                    if (tagCurrentValue16.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button53.BackColor = Color.LightGreen;
+                            button54.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button54.BackColor = Color.LightGreen;
+                            button53.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Koch 1
+                var tagCurrentValue17 = TagList["Koch 1 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue17 != null)
+                {
+                    if (tagCurrentValue17.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button55.BackColor = Color.LightGreen;
+                            button56.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button56.BackColor = Color.LightGreen;
+                            button55.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Koch 2
+                var tagCurrentValue18 = TagList["Koch 2 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue18 != null)
+                {
+                    if (tagCurrentValue18.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button57.BackColor = Color.LightGreen;
+                            button58.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button58.BackColor = Color.LightGreen;
+                            button57.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Koch 3
+                var tagCurrentValue19 = TagList["Output Interlock"].CurrentValue;
+                if (tagCurrentValue19 != null)
+                {
+                    if (tagCurrentValue19.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button59.BackColor = Color.LightGreen;
+                            button60.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button60.BackColor = Color.LightGreen;
+                            button59.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //L2 Caserat
+                var tagCurrentValue20 = TagList["L2 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue20 != null)
+                {
+                    if (tagCurrentValue20.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button61.BackColor = Color.LightGreen;
+                            button62.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button62.BackColor = Color.LightGreen;
+                            button61.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //L3 Caserat
+                var tagCurrentValue21 = TagList["L3 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue21 != null)
+                {
+                    if (tagCurrentValue21.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button63.BackColor = Color.LightGreen;
+                            button64.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button64.BackColor = Color.LightGreen;
+                            button63.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //L4 Caserat
+                var tagCurrentValue22 = TagList["L4_Interlock_scanare"].CurrentValue;
+                if (tagCurrentValue22 != null)
+                {
+                    if (tagCurrentValue22.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button65.BackColor = Color.LightGreen;
+                            button66.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button66.BackColor = Color.LightGreen;
+                            button65.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //L5 Caserat
+                var tagCurrentValue23 = TagList["L5 Caserat Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue23 != null)
+                {
+                    if (tagCurrentValue23.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button67.BackColor = Color.LightGreen;
+                            button68.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button68.BackColor = Color.LightGreen;
+                            button67.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Linia 1 Caserat
+                var tagCurrentValue24 = TagList["Output interlock 2 dreapta"].CurrentValue;
+                if (tagCurrentValue24 != null)
+                {
+                    if (tagCurrentValue24.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button72.BackColor = Color.LightGreen;
+                            button71.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button71.BackColor = Color.LightGreen;
+                            button72.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                var tagCurrentValue25 = TagList["Output interlock 1 stanga"].CurrentValue;
+                if (tagCurrentValue25 != null)
+                {
+                    if (tagCurrentValue25.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button70.BackColor = Color.LightGreen;
+                            button69.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button69.BackColor = Color.LightGreen;
+                            button70.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Process 2
+                var tagCurrentValue26 = TagList["Output interlock"].CurrentValue;
+                if (tagCurrentValue26 != null)
+                {
+                    if (tagCurrentValue26.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button73.BackColor = Color.LightGreen;
+                            button74.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button74.BackColor = Color.LightGreen;
+                            button73.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Tivox
+                var tagCurrentValue27 = TagList["Tivox interlock scanare"].CurrentValue;
+                if (tagCurrentValue27 != null)
+                {
+                    if (tagCurrentValue27.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button75.BackColor = Color.LightGreen;
+                            button76.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button76.BackColor = Color.LightGreen;
+                            button75.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
+
+                //Weeke
+                var tagCurrentValue28 = TagList["Weeke 5 Interlock Scanare"].CurrentValue;
+                if (tagCurrentValue28 != null)
+                {
+                    if (tagCurrentValue28.ToString() == "True")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button77.BackColor = Color.LightGreen;
+                            button78.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            button78.BackColor = Color.LightGreen;
+                            button77.BackColor = SystemColors.ControlLight;
+                        }));
+                    }
+                }
             }
         }
 
@@ -1612,7 +2247,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC. Weeke 5 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelWeeke, button77);
                     this.Enabled = true;
                 }
@@ -1638,7 +2273,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC. Weeke 5 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelWeeke, button78);
                     this.Enabled = true;
                 }
