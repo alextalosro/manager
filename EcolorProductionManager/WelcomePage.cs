@@ -1,13 +1,20 @@
-﻿using System;
+﻿using Opc.Ua.Client;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace EcolorProductionManager
 {
     public partial class WelcomePage : Form
     {
+        //Connection status
+        public static bool isClientConnected;
+
         //creating a object that encapsulates the netire OPC UA Server related work
         OPCUAClass myOPCUAServer;
 
@@ -17,22 +24,69 @@ namespace EcolorProductionManager
         //Create reasomModal instance
         ReasonModal reasonModal = new ReasonModal();
 
+        //Server namespace
+        string nameSpace = "2";
+
+        //Session renewal interval
+        int renewSessionAfterMinutes = 1;
+
+        //Session renewal
+        bool isSessionRenewalRequired = true;
+
+        //Server address
+        string serverAddress = "127.0.0.1";
+        string serverPort = "49320";
+
         public WelcomePage()
         {
             InitializeComponent();
 
-            //TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
-            //TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
 
-            myOPCUAServer = new OPCUAClass("127.0.0.1", "49320", TagList, true, 1, "2");
+            try
+            {
+                //Tag list for read async subscription.
+                //TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
+                //TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
 
-            ////var tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
-            ////var tagLastGoodValue = TagList["TestLiniaA"].LastGoodValue;
-            ////var lastTimeTagupdated = TagList["TestLiniaA"].LastUpdatedTime;
+                //myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
+                isClientConnected = true;
+            }
+            catch (Exception ex)
+            {
+                string aditionalErrorMessage = "Conexiunea cu serverul nu a putut fi stabilita !";
+                if (ex.Message == "Error establishing a connection: BadNotConnected")
+                {
+                    MessageBox.Show(ex.Message + " " + "Details: " + aditionalErrorMessage);
+                    isClientConnected = false;
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                    isClientConnected = false;
+                }
+            }
 
-            ////var tagCurrentValue = TagList["Anthon 2"].CurrentValue;
-            ////var tagLastGoodValue = TagList["Anthon 2"].LastGoodValue;
-            ////var lastTimeTagupdated = TagList["Anthon 2"].LastUpdatedTime;
+            //Background worker
+            backgroundWorker1.WorkerReportsProgress = true;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    buttonLiniaATestLiniaALock.BackColor = Color.LightGreen;
+                }));
+                //string tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
+
+                //var tagLastGoodValue = TagList["TestLiniaA"].LastGoodValue;
+                //var lastTimeTagupdated = TagList["TestLiniaA"].LastUpdatedTime;
+
+                //var tagCurrentValue2 = TagList["Anthon 2 Interlock Scanare"].CurrentValue;
+                //var tagLastGoodValue2 = TagList["Anthon 2 Interlock Scanare"].LastGoodValue;
+                //var lastTimeTagupdated2 = TagList["Anthon 2 Interlock Scanare"].LastUpdatedTime;
+            }
         }
 
         private void WelcomePage_Load(object sender, EventArgs e)
@@ -40,8 +94,13 @@ namespace EcolorProductionManager
             registerButton.Enabled = LoginForm.isCurrentUserAdmin;
             logButton.Enabled = LoginForm.isCurrentUserAdmin;
             loggedUsername.Text = loggedUsername.Text + LoginForm.loggedUserFullName;
-            //this.Text = "Welcome " + LoginForm.wellcomeUser;
             this.Text = "DASHBOARD BYPASS INTERLOCK";
+
+            if (backgroundWorker1.IsBusy != true)
+            {
+                // Start the asynchronous operation.
+                backgroundWorker1.RunWorkerAsync();
+            }
         }
 
         private void WelcomePage_FormClosed(object sender, FormClosedEventArgs e)
@@ -73,7 +132,7 @@ namespace EcolorProductionManager
         {
             DateTime dateTime = DateTime.Now;
             string fullName = LoginForm.loggedUserFullName;
-            string action = $"Statusul liniei ({labelLiniaA.Text.ToUpper()}) a fost schimbat in {buttonLiniaATestLiniaALock.Text.ToUpper()}.";
+            string action = $"Statusul liniei ({label.Text.ToUpper()}) a fost schimbat in {button.Text.ToUpper()}.";
             var reason = reasonModal.Reason;
 
             //Query the db for username and password;
@@ -100,7 +159,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    //myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaALock);
                     this.Enabled = true;
                 }
@@ -125,7 +184,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    //myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaAUnlock);
                     this.Enabled = true;
                 }
@@ -1018,7 +1077,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)true);
+                    //myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelKoch2, button57);
                     this.Enabled = true;
                 }

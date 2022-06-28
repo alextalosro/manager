@@ -42,8 +42,16 @@ namespace EcolorProductionManager
                     loggedUserFullName = dr[0].ItemArray[3].ToString() + " " + dr[0].ItemArray[4].ToString();
 
                     WelcomePage wcp = new WelcomePage();
-                    wcp.Show(); //Show welcome page.
-                    this.Hide(); //Hide current form (login form);
+
+                    if (WelcomePage.isClientConnected)
+                    {
+                        wcp.Show(); //Show welcome page.
+                        this.Hide(); //Hide current form (login form);
+                    }
+                    else
+                    {
+                        wcp.Dispose();
+                    }
                 }
                 else
                 {
@@ -77,11 +85,6 @@ namespace EcolorProductionManager
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
