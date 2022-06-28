@@ -45,10 +45,10 @@ namespace EcolorProductionManager
             try
             {
                 //Tag list for read async subscription.
-                //TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
+                TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
                 //TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
 
-                //myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
+                myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
                 isClientConnected = true;
             }
             catch (Exception ex)
@@ -74,14 +74,29 @@ namespace EcolorProductionManager
         {
             while (true)
             {
-                this.Invoke(new Action(() =>
-                {
-                    buttonLiniaATestLiniaALock.BackColor = Color.LightGreen;
-                }));
-                //string tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
-
+                var tagCurrentValue = TagList["TestLiniaA"].CurrentValue;
                 //var tagLastGoodValue = TagList["TestLiniaA"].LastGoodValue;
                 //var lastTimeTagupdated = TagList["TestLiniaA"].LastUpdatedTime;
+                if (tagCurrentValue != null)
+                {
+                    if (tagCurrentValue.ToString() == "true")
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonLiniaATestLiniaALock.BackColor = Color.LightGreen;
+                            buttonLiniaATestLiniaAUnlock.BackColor = SystemColors.Control;
+                        }));
+                    }
+                    else
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            buttonLiniaATestLiniaAUnlock.BackColor = Color.LightGreen;
+                            buttonLiniaATestLiniaALock.BackColor = SystemColors.Control;
+                        }));
+                    }
+                }
+
 
                 //var tagCurrentValue2 = TagList["Anthon 2 Interlock Scanare"].CurrentValue;
                 //var tagLastGoodValue2 = TagList["Anthon 2 Interlock Scanare"].LastGoodValue;
@@ -1638,6 +1653,12 @@ namespace EcolorProductionManager
                 this.Enabled = true;
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
     }
 }
