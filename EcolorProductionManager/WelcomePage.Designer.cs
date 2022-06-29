@@ -147,7 +147,6 @@
             this.button78 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.buttonAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -1321,10 +1320,6 @@
             this.label67.TabIndex = 159;
             this.label67.Text = "Interlock Scanare";
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // buttonAbout
             // 
             this.buttonAbout.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -1591,7 +1586,6 @@
         private System.Windows.Forms.Button button78;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button buttonAbout;
     }
 }
