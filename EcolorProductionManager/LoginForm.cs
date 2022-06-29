@@ -86,5 +86,10 @@ namespace EcolorProductionManager
         {
             Application.Exit();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.Text = "DASHBOARD BYPASS INTERLOCK";
+        }
     }
 }

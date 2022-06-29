@@ -103,25 +103,11 @@ namespace EcolorProductionManager
             loggedUsername.Text = loggedUsername.Text + LoginForm.loggedUserFullName;
             this.Text = "DASHBOARD BYPASS INTERLOCK";
 
-            //Logout timer. Log the user out after 2 min.
-            Timer logOutTimer = new Timer();
-            logOutTimer.Tick += LogOutTimer_Tick;
-            logOutTimer.Interval = 120000;
-            logOutTimer.Enabled = true;
-
             //Async get status timer.
             Timer timer = new Timer();
             timer.Tick += Timer_Tick;
             timer.Interval = 500;
             timer.Enabled = true;
-        }
-
-        private void LogOutTimer_Tick(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
-            this.Dispose();
         }
 
         private async void Timer_Tick(object sender, EventArgs e)
@@ -319,6 +305,7 @@ namespace EcolorProductionManager
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+            this.Close();
             this.Dispose();
         }
 
