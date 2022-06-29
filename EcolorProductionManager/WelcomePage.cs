@@ -305,7 +305,6 @@ namespace EcolorProductionManager
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
-            this.Close();
             this.Dispose();
         }
 
