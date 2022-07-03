@@ -163,9 +163,9 @@
             // 
             this.buttonLiniaATestLiniaALock.Location = new System.Drawing.Point(172, 142);
             this.buttonLiniaATestLiniaALock.Name = "buttonLiniaATestLiniaALock";
-            this.buttonLiniaATestLiniaALock.Size = new System.Drawing.Size(67, 20);
+            this.buttonLiniaATestLiniaALock.Size = new System.Drawing.Size(72, 20);
             this.buttonLiniaATestLiniaALock.TabIndex = 4;
-            this.buttonLiniaATestLiniaALock.Text = "Lock";
+            this.buttonLiniaATestLiniaALock.Text = "Activare";
             this.buttonLiniaATestLiniaALock.UseVisualStyleBackColor = true;
             this.buttonLiniaATestLiniaALock.Click += new System.EventHandler(this.buttonLock_Click);
             // 
@@ -173,9 +173,9 @@
             // 
             this.buttonLiniaATestLiniaAUnlock.Location = new System.Drawing.Point(253, 142);
             this.buttonLiniaATestLiniaAUnlock.Name = "buttonLiniaATestLiniaAUnlock";
-            this.buttonLiniaATestLiniaAUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonLiniaATestLiniaAUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonLiniaATestLiniaAUnlock.TabIndex = 5;
-            this.buttonLiniaATestLiniaAUnlock.Text = "Release";
+            this.buttonLiniaATestLiniaAUnlock.Text = "Dezactivare";
             this.buttonLiniaATestLiniaAUnlock.UseVisualStyleBackColor = true;
             this.buttonLiniaATestLiniaAUnlock.Click += new System.EventHandler(this.buttonUnlock_ClickAsync);
             // 
@@ -202,9 +202,9 @@
             // 
             this.buttonAnthon2InterlockScanareUnlock.Location = new System.Drawing.Point(253, 211);
             this.buttonAnthon2InterlockScanareUnlock.Name = "buttonAnthon2InterlockScanareUnlock";
-            this.buttonAnthon2InterlockScanareUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonAnthon2InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonAnthon2InterlockScanareUnlock.TabIndex = 8;
-            this.buttonAnthon2InterlockScanareUnlock.Text = "Release";
+            this.buttonAnthon2InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonAnthon2InterlockScanareUnlock.UseVisualStyleBackColor = true;
             this.buttonAnthon2InterlockScanareUnlock.Click += new System.EventHandler(this.button2Unlock_Click);
             // 
@@ -213,9 +213,9 @@
             this.buttonAnthon2InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonAnthon2InterlockScanareLock.Location = new System.Drawing.Point(172, 211);
             this.buttonAnthon2InterlockScanareLock.Name = "buttonAnthon2InterlockScanareLock";
-            this.buttonAnthon2InterlockScanareLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonAnthon2InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
             this.buttonAnthon2InterlockScanareLock.TabIndex = 9;
-            this.buttonAnthon2InterlockScanareLock.Text = "Lock";
+            this.buttonAnthon2InterlockScanareLock.Text = "Activare";
             this.buttonAnthon2InterlockScanareLock.UseVisualStyleBackColor = false;
             this.buttonAnthon2InterlockScanareLock.Click += new System.EventHandler(this.button2Lock_Click);
             // 
@@ -284,9 +284,9 @@
             // 
             this.buttonLiniaAInterlockUnlock.Location = new System.Drawing.Point(253, 164);
             this.buttonLiniaAInterlockUnlock.Name = "buttonLiniaAInterlockUnlock";
-            this.buttonLiniaAInterlockUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonLiniaAInterlockUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonLiniaAInterlockUnlock.TabIndex = 23;
-            this.buttonLiniaAInterlockUnlock.Text = "Release";
+            this.buttonLiniaAInterlockUnlock.Text = "Dezactivare";
             this.buttonLiniaAInterlockUnlock.UseVisualStyleBackColor = true;
             this.buttonLiniaAInterlockUnlock.Click += new System.EventHandler(this.buttonLiniaAInterlockUnlock_Click);
             // 
@@ -294,9 +294,9 @@
             // 
             this.buttonLiniaAInterlockLock.Location = new System.Drawing.Point(172, 164);
             this.buttonLiniaAInterlockLock.Name = "buttonLiniaAInterlockLock";
-            this.buttonLiniaAInterlockLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonLiniaAInterlockLock.Size = new System.Drawing.Size(72, 20);
             this.buttonLiniaAInterlockLock.TabIndex = 22;
-            this.buttonLiniaAInterlockLock.Text = "Lock";
+            this.buttonLiniaAInterlockLock.Text = "Activare";
             this.buttonLiniaAInterlockLock.UseVisualStyleBackColor = true;
             this.buttonLiniaAInterlockLock.Click += new System.EventHandler(this.buttonLiniaAInterlockLock_Click);
             // 
@@ -335,9 +335,9 @@
             this.buttonAnthon3InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonAnthon3InterlockScanareLock.Location = new System.Drawing.Point(173, 258);
             this.buttonAnthon3InterlockScanareLock.Name = "buttonAnthon3InterlockScanareLock";
-            this.buttonAnthon3InterlockScanareLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonAnthon3InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
             this.buttonAnthon3InterlockScanareLock.TabIndex = 29;
-            this.buttonAnthon3InterlockScanareLock.Text = "Lock";
+            this.buttonAnthon3InterlockScanareLock.Text = "Activare";
             this.buttonAnthon3InterlockScanareLock.UseVisualStyleBackColor = false;
             this.buttonAnthon3InterlockScanareLock.Click += new System.EventHandler(this.buttonAnthon3InterlockScanareLock_Click);
             // 
@@ -345,9 +345,9 @@
             // 
             this.buttonAnthon3InterlockScanareUnlock.Location = new System.Drawing.Point(254, 258);
             this.buttonAnthon3InterlockScanareUnlock.Name = "buttonAnthon3InterlockScanareUnlock";
-            this.buttonAnthon3InterlockScanareUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonAnthon3InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonAnthon3InterlockScanareUnlock.TabIndex = 28;
-            this.buttonAnthon3InterlockScanareUnlock.Text = "Release";
+            this.buttonAnthon3InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonAnthon3InterlockScanareUnlock.UseVisualStyleBackColor = true;
             this.buttonAnthon3InterlockScanareUnlock.Click += new System.EventHandler(this.buttonAnthon3InterlockScanareUnlock_Click);
             // 
@@ -375,9 +375,9 @@
             this.buttonBiesseInterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonBiesseInterlockScanareLock.Location = new System.Drawing.Point(173, 354);
             this.buttonBiesseInterlockScanareLock.Name = "buttonBiesseInterlockScanareLock";
-            this.buttonBiesseInterlockScanareLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonBiesseInterlockScanareLock.Size = new System.Drawing.Size(72, 20);
             this.buttonBiesseInterlockScanareLock.TabIndex = 37;
-            this.buttonBiesseInterlockScanareLock.Text = "Lock";
+            this.buttonBiesseInterlockScanareLock.Text = "Activare";
             this.buttonBiesseInterlockScanareLock.UseVisualStyleBackColor = false;
             this.buttonBiesseInterlockScanareLock.Click += new System.EventHandler(this.buttonBiesseInterlockScanareLock_Click);
             // 
@@ -385,9 +385,9 @@
             // 
             this.buttonBiesseInterlockScanareUnlock.Location = new System.Drawing.Point(254, 354);
             this.buttonBiesseInterlockScanareUnlock.Name = "buttonBiesseInterlockScanareUnlock";
-            this.buttonBiesseInterlockScanareUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonBiesseInterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonBiesseInterlockScanareUnlock.TabIndex = 36;
-            this.buttonBiesseInterlockScanareUnlock.Text = "Release";
+            this.buttonBiesseInterlockScanareUnlock.Text = "Dezactivare";
             this.buttonBiesseInterlockScanareUnlock.UseVisualStyleBackColor = true;
             this.buttonBiesseInterlockScanareUnlock.Click += new System.EventHandler(this.buttonBiesseInterlockScanareUnlock_Click);
             // 
@@ -415,9 +415,9 @@
             this.buttonBedBoxBedBoxInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonBedBoxBedBoxInterlockLock.Location = new System.Drawing.Point(172, 307);
             this.buttonBedBoxBedBoxInterlockLock.Name = "buttonBedBoxBedBoxInterlockLock";
-            this.buttonBedBoxBedBoxInterlockLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonBedBoxBedBoxInterlockLock.Size = new System.Drawing.Size(72, 20);
             this.buttonBedBoxBedBoxInterlockLock.TabIndex = 33;
-            this.buttonBedBoxBedBoxInterlockLock.Text = "Lock";
+            this.buttonBedBoxBedBoxInterlockLock.Text = "Activare";
             this.buttonBedBoxBedBoxInterlockLock.UseVisualStyleBackColor = false;
             this.buttonBedBoxBedBoxInterlockLock.Click += new System.EventHandler(this.buttonBedBoxBedBoxInterlockLock_Click);
             // 
@@ -425,9 +425,9 @@
             // 
             this.buttonBedBoxBedBoxInterlockUnlock.Location = new System.Drawing.Point(253, 307);
             this.buttonBedBoxBedBoxInterlockUnlock.Name = "buttonBedBoxBedBoxInterlockUnlock";
-            this.buttonBedBoxBedBoxInterlockUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonBedBoxBedBoxInterlockUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonBedBoxBedBoxInterlockUnlock.TabIndex = 32;
-            this.buttonBedBoxBedBoxInterlockUnlock.Text = "Release";
+            this.buttonBedBoxBedBoxInterlockUnlock.Text = "Dezactivare";
             this.buttonBedBoxBedBoxInterlockUnlock.UseVisualStyleBackColor = true;
             this.buttonBedBoxBedBoxInterlockUnlock.Click += new System.EventHandler(this.buttonBedBoxBedBoxInterlockUnlock_Click);
             // 
@@ -455,9 +455,9 @@
             this.buttonHomag1InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag1InterlockScanareLock.Location = new System.Drawing.Point(172, 448);
             this.buttonHomag1InterlockScanareLock.Name = "buttonHomag1InterlockScanareLock";
-            this.buttonHomag1InterlockScanareLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag1InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag1InterlockScanareLock.TabIndex = 45;
-            this.buttonHomag1InterlockScanareLock.Text = "Lock";
+            this.buttonHomag1InterlockScanareLock.Text = "Activare";
             this.buttonHomag1InterlockScanareLock.UseVisualStyleBackColor = false;
             this.buttonHomag1InterlockScanareLock.Click += new System.EventHandler(this.buttonHomag1InterlockScanareLock_Click);
             // 
@@ -465,9 +465,9 @@
             // 
             this.buttonHomag1InterlockScanareUnlock.Location = new System.Drawing.Point(253, 448);
             this.buttonHomag1InterlockScanareUnlock.Name = "buttonHomag1InterlockScanareUnlock";
-            this.buttonHomag1InterlockScanareUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag1InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag1InterlockScanareUnlock.TabIndex = 44;
-            this.buttonHomag1InterlockScanareUnlock.Text = "Release";
+            this.buttonHomag1InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonHomag1InterlockScanareUnlock.UseVisualStyleBackColor = true;
             this.buttonHomag1InterlockScanareUnlock.Click += new System.EventHandler(this.buttonHomag1InterlockScanareUnlock_Click);
             // 
@@ -495,9 +495,9 @@
             this.buttonDebitareFolieInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonDebitareFolieInterlockLock.Location = new System.Drawing.Point(173, 401);
             this.buttonDebitareFolieInterlockLock.Name = "buttonDebitareFolieInterlockLock";
-            this.buttonDebitareFolieInterlockLock.Size = new System.Drawing.Size(67, 20);
+            this.buttonDebitareFolieInterlockLock.Size = new System.Drawing.Size(72, 20);
             this.buttonDebitareFolieInterlockLock.TabIndex = 41;
-            this.buttonDebitareFolieInterlockLock.Text = "Lock";
+            this.buttonDebitareFolieInterlockLock.Text = "Activare";
             this.buttonDebitareFolieInterlockLock.UseVisualStyleBackColor = false;
             this.buttonDebitareFolieInterlockLock.Click += new System.EventHandler(this.buttonDebitareFolieInterlockLock_Click);
             // 
@@ -505,9 +505,9 @@
             // 
             this.buttonDebitareFolieInterlockUnlock.Location = new System.Drawing.Point(254, 401);
             this.buttonDebitareFolieInterlockUnlock.Name = "buttonDebitareFolieInterlockUnlock";
-            this.buttonDebitareFolieInterlockUnlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonDebitareFolieInterlockUnlock.Size = new System.Drawing.Size(72, 20);
             this.buttonDebitareFolieInterlockUnlock.TabIndex = 40;
-            this.buttonDebitareFolieInterlockUnlock.Text = "Release";
+            this.buttonDebitareFolieInterlockUnlock.Text = "Dezactivare";
             this.buttonDebitareFolieInterlockUnlock.UseVisualStyleBackColor = true;
             this.buttonDebitareFolieInterlockUnlock.Click += new System.EventHandler(this.buttonDebitareFolieInterlockUnlock_Click);
             // 
@@ -535,9 +535,9 @@
             this.buttonHomag2InterlockScanareInfeed1Lock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag2InterlockScanareInfeed1Lock.Location = new System.Drawing.Point(172, 517);
             this.buttonHomag2InterlockScanareInfeed1Lock.Name = "buttonHomag2InterlockScanareInfeed1Lock";
-            this.buttonHomag2InterlockScanareInfeed1Lock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag2InterlockScanareInfeed1Lock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag2InterlockScanareInfeed1Lock.TabIndex = 49;
-            this.buttonHomag2InterlockScanareInfeed1Lock.Text = "Lock";
+            this.buttonHomag2InterlockScanareInfeed1Lock.Text = "Activare";
             this.buttonHomag2InterlockScanareInfeed1Lock.UseVisualStyleBackColor = false;
             this.buttonHomag2InterlockScanareInfeed1Lock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed1Lock_Click);
             // 
@@ -545,9 +545,9 @@
             // 
             this.buttonHomag2InterlockScanareInfeed1Unlock.Location = new System.Drawing.Point(253, 517);
             this.buttonHomag2InterlockScanareInfeed1Unlock.Name = "buttonHomag2InterlockScanareInfeed1Unlock";
-            this.buttonHomag2InterlockScanareInfeed1Unlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag2InterlockScanareInfeed1Unlock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag2InterlockScanareInfeed1Unlock.TabIndex = 48;
-            this.buttonHomag2InterlockScanareInfeed1Unlock.Text = "Release";
+            this.buttonHomag2InterlockScanareInfeed1Unlock.Text = "Dezactivare";
             this.buttonHomag2InterlockScanareInfeed1Unlock.UseVisualStyleBackColor = true;
             this.buttonHomag2InterlockScanareInfeed1Unlock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed1Unlock_Click);
             // 
@@ -565,9 +565,9 @@
             this.buttonHomag2InterlockScanareInfeed2Lock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag2InterlockScanareInfeed2Lock.Location = new System.Drawing.Point(172, 495);
             this.buttonHomag2InterlockScanareInfeed2Lock.Name = "buttonHomag2InterlockScanareInfeed2Lock";
-            this.buttonHomag2InterlockScanareInfeed2Lock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag2InterlockScanareInfeed2Lock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag2InterlockScanareInfeed2Lock.TabIndex = 65;
-            this.buttonHomag2InterlockScanareInfeed2Lock.Text = "Lock";
+            this.buttonHomag2InterlockScanareInfeed2Lock.Text = "Activare";
             this.buttonHomag2InterlockScanareInfeed2Lock.UseVisualStyleBackColor = false;
             this.buttonHomag2InterlockScanareInfeed2Lock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed2Lock_Click);
             // 
@@ -575,9 +575,9 @@
             // 
             this.buttonHomag2InterlockScanareInfeed2Unlock.Location = new System.Drawing.Point(253, 495);
             this.buttonHomag2InterlockScanareInfeed2Unlock.Name = "buttonHomag2InterlockScanareInfeed2Unlock";
-            this.buttonHomag2InterlockScanareInfeed2Unlock.Size = new System.Drawing.Size(67, 20);
+            this.buttonHomag2InterlockScanareInfeed2Unlock.Size = new System.Drawing.Size(72, 20);
             this.buttonHomag2InterlockScanareInfeed2Unlock.TabIndex = 64;
-            this.buttonHomag2InterlockScanareInfeed2Unlock.Text = "Release";
+            this.buttonHomag2InterlockScanareInfeed2Unlock.Text = "Dezactivare";
             this.buttonHomag2InterlockScanareInfeed2Unlock.UseVisualStyleBackColor = true;
             this.buttonHomag2InterlockScanareInfeed2Unlock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed2Unlock_Click);
             // 
@@ -595,9 +595,9 @@
             this.button25.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button25.Location = new System.Drawing.Point(172, 564);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(67, 20);
+            this.button25.Size = new System.Drawing.Size(72, 20);
             this.button25.TabIndex = 84;
-            this.button25.Text = "Lock";
+            this.button25.Text = "Activare";
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
@@ -605,9 +605,9 @@
             // 
             this.button26.Location = new System.Drawing.Point(253, 564);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(67, 20);
+            this.button26.Size = new System.Drawing.Size(72, 20);
             this.button26.TabIndex = 83;
-            this.button26.Text = "Release";
+            this.button26.Text = "Dezactivare";
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
@@ -635,9 +635,9 @@
             this.button35.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button35.Location = new System.Drawing.Point(172, 586);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(67, 20);
+            this.button35.Size = new System.Drawing.Size(72, 20);
             this.button35.TabIndex = 68;
-            this.button35.Text = "Lock";
+            this.button35.Text = "Activare";
             this.button35.UseVisualStyleBackColor = false;
             this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
@@ -645,9 +645,9 @@
             // 
             this.button36.Location = new System.Drawing.Point(253, 586);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(67, 20);
+            this.button36.Size = new System.Drawing.Size(72, 20);
             this.button36.TabIndex = 67;
-            this.button36.Text = "Release";
+            this.button36.Text = "Dezactivare";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
@@ -675,9 +675,9 @@
             this.button37.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button37.Location = new System.Drawing.Point(494, 142);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(67, 20);
+            this.button37.Size = new System.Drawing.Size(72, 20);
             this.button37.TabIndex = 87;
-            this.button37.Text = "Lock";
+            this.button37.Text = "Activare";
             this.button37.UseVisualStyleBackColor = false;
             this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
@@ -685,9 +685,9 @@
             // 
             this.button38.Location = new System.Drawing.Point(575, 142);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(67, 20);
+            this.button38.Size = new System.Drawing.Size(72, 20);
             this.button38.TabIndex = 86;
-            this.button38.Text = "Release";
+            this.button38.Text = "Dezactivare";
             this.button38.UseVisualStyleBackColor = true;
             this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
@@ -715,9 +715,9 @@
             this.button39.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button39.Location = new System.Drawing.Point(494, 189);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(67, 20);
+            this.button39.Size = new System.Drawing.Size(72, 20);
             this.button39.TabIndex = 91;
-            this.button39.Text = "Lock";
+            this.button39.Text = "Activare";
             this.button39.UseVisualStyleBackColor = false;
             this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
@@ -725,9 +725,9 @@
             // 
             this.button40.Location = new System.Drawing.Point(575, 189);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(67, 20);
+            this.button40.Size = new System.Drawing.Size(72, 20);
             this.button40.TabIndex = 90;
-            this.button40.Text = "Release";
+            this.button40.Text = "Dezactivare";
             this.button40.UseVisualStyleBackColor = true;
             this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
@@ -745,9 +745,9 @@
             this.button41.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button41.Location = new System.Drawing.Point(494, 236);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(67, 20);
+            this.button41.Size = new System.Drawing.Size(72, 20);
             this.button41.TabIndex = 111;
-            this.button41.Text = "Lock";
+            this.button41.Text = "Activare";
             this.button41.UseVisualStyleBackColor = false;
             this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
@@ -755,9 +755,9 @@
             // 
             this.button42.Location = new System.Drawing.Point(575, 236);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(67, 20);
+            this.button42.Size = new System.Drawing.Size(72, 20);
             this.button42.TabIndex = 110;
-            this.button42.Text = "Release";
+            this.button42.Text = "Dezactivare";
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
@@ -785,9 +785,9 @@
             this.button51.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button51.Location = new System.Drawing.Point(494, 258);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(67, 20);
+            this.button51.Size = new System.Drawing.Size(72, 20);
             this.button51.TabIndex = 95;
-            this.button51.Text = "Lock";
+            this.button51.Text = "Activare";
             this.button51.UseVisualStyleBackColor = false;
             this.button51.Click += new System.EventHandler(this.button51_Click);
             // 
@@ -795,9 +795,9 @@
             // 
             this.button52.Location = new System.Drawing.Point(575, 258);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(67, 20);
+            this.button52.Size = new System.Drawing.Size(72, 20);
             this.button52.TabIndex = 94;
-            this.button52.Text = "Release";
+            this.button52.Text = "Dezactivare";
             this.button52.UseVisualStyleBackColor = true;
             this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
@@ -825,9 +825,9 @@
             this.button53.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button53.Location = new System.Drawing.Point(494, 305);
             this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(67, 20);
+            this.button53.Size = new System.Drawing.Size(72, 20);
             this.button53.TabIndex = 114;
-            this.button53.Text = "Lock";
+            this.button53.Text = "Activare";
             this.button53.UseVisualStyleBackColor = false;
             this.button53.Click += new System.EventHandler(this.button53_Click);
             // 
@@ -835,9 +835,9 @@
             // 
             this.button54.Location = new System.Drawing.Point(575, 305);
             this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(67, 20);
+            this.button54.Size = new System.Drawing.Size(72, 20);
             this.button54.TabIndex = 113;
-            this.button54.Text = "Release";
+            this.button54.Text = "Dezactivare";
             this.button54.UseVisualStyleBackColor = true;
             this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
@@ -865,9 +865,9 @@
             this.button55.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button55.Location = new System.Drawing.Point(494, 352);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(67, 20);
+            this.button55.Size = new System.Drawing.Size(72, 20);
             this.button55.TabIndex = 118;
-            this.button55.Text = "Lock";
+            this.button55.Text = "Activare";
             this.button55.UseVisualStyleBackColor = false;
             this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
@@ -875,9 +875,9 @@
             // 
             this.button56.Location = new System.Drawing.Point(575, 352);
             this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(67, 20);
+            this.button56.Size = new System.Drawing.Size(72, 20);
             this.button56.TabIndex = 117;
-            this.button56.Text = "Release";
+            this.button56.Text = "Dezactivare";
             this.button56.UseVisualStyleBackColor = true;
             this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
@@ -905,9 +905,9 @@
             this.button57.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button57.Location = new System.Drawing.Point(494, 399);
             this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(67, 20);
+            this.button57.Size = new System.Drawing.Size(72, 20);
             this.button57.TabIndex = 122;
-            this.button57.Text = "Lock";
+            this.button57.Text = "Activare";
             this.button57.UseVisualStyleBackColor = false;
             this.button57.Click += new System.EventHandler(this.button57_Click);
             // 
@@ -915,9 +915,9 @@
             // 
             this.button58.Location = new System.Drawing.Point(575, 399);
             this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(67, 20);
+            this.button58.Size = new System.Drawing.Size(72, 20);
             this.button58.TabIndex = 121;
-            this.button58.Text = "Release";
+            this.button58.Text = "Dezactivare";
             this.button58.UseVisualStyleBackColor = true;
             this.button58.Click += new System.EventHandler(this.button58_Click);
             // 
@@ -945,9 +945,9 @@
             this.button59.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button59.Location = new System.Drawing.Point(494, 446);
             this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(67, 20);
+            this.button59.Size = new System.Drawing.Size(72, 20);
             this.button59.TabIndex = 126;
-            this.button59.Text = "Lock";
+            this.button59.Text = "Activare";
             this.button59.UseVisualStyleBackColor = false;
             this.button59.Click += new System.EventHandler(this.button59_Click);
             // 
@@ -955,9 +955,9 @@
             // 
             this.button60.Location = new System.Drawing.Point(575, 446);
             this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(67, 20);
+            this.button60.Size = new System.Drawing.Size(72, 20);
             this.button60.TabIndex = 125;
-            this.button60.Text = "Release";
+            this.button60.Text = "Dezactivare";
             this.button60.UseVisualStyleBackColor = true;
             this.button60.Click += new System.EventHandler(this.button60_Click);
             // 
@@ -985,9 +985,9 @@
             this.button61.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button61.Location = new System.Drawing.Point(494, 493);
             this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(67, 20);
+            this.button61.Size = new System.Drawing.Size(72, 20);
             this.button61.TabIndex = 130;
-            this.button61.Text = "Lock";
+            this.button61.Text = "Activare";
             this.button61.UseVisualStyleBackColor = false;
             this.button61.Click += new System.EventHandler(this.button61_Click);
             // 
@@ -995,9 +995,9 @@
             // 
             this.button62.Location = new System.Drawing.Point(575, 493);
             this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(67, 20);
+            this.button62.Size = new System.Drawing.Size(72, 20);
             this.button62.TabIndex = 129;
-            this.button62.Text = "Release";
+            this.button62.Text = "Dezactivare";
             this.button62.UseVisualStyleBackColor = true;
             this.button62.Click += new System.EventHandler(this.button62_Click);
             // 
@@ -1025,9 +1025,9 @@
             this.button63.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button63.Location = new System.Drawing.Point(494, 540);
             this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(67, 20);
+            this.button63.Size = new System.Drawing.Size(72, 20);
             this.button63.TabIndex = 134;
-            this.button63.Text = "Lock";
+            this.button63.Text = "Activare";
             this.button63.UseVisualStyleBackColor = false;
             this.button63.Click += new System.EventHandler(this.button63_Click);
             // 
@@ -1035,9 +1035,9 @@
             // 
             this.button64.Location = new System.Drawing.Point(575, 540);
             this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(67, 20);
+            this.button64.Size = new System.Drawing.Size(72, 20);
             this.button64.TabIndex = 133;
-            this.button64.Text = "Release";
+            this.button64.Text = "Dezactivare";
             this.button64.UseVisualStyleBackColor = true;
             this.button64.Click += new System.EventHandler(this.button64_Click);
             // 
@@ -1065,9 +1065,9 @@
             this.button65.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button65.Location = new System.Drawing.Point(821, 142);
             this.button65.Name = "button65";
-            this.button65.Size = new System.Drawing.Size(67, 20);
+            this.button65.Size = new System.Drawing.Size(72, 20);
             this.button65.TabIndex = 138;
-            this.button65.Text = "Lock";
+            this.button65.Text = "Activare";
             this.button65.UseVisualStyleBackColor = false;
             this.button65.Click += new System.EventHandler(this.button65_Click);
             // 
@@ -1075,9 +1075,9 @@
             // 
             this.button66.Location = new System.Drawing.Point(902, 142);
             this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(67, 20);
+            this.button66.Size = new System.Drawing.Size(72, 20);
             this.button66.TabIndex = 137;
-            this.button66.Text = "Release";
+            this.button66.Text = "Dezactivare";
             this.button66.UseVisualStyleBackColor = true;
             this.button66.Click += new System.EventHandler(this.button66_Click);
             // 
@@ -1105,9 +1105,9 @@
             this.button67.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button67.Location = new System.Drawing.Point(821, 189);
             this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(67, 20);
+            this.button67.Size = new System.Drawing.Size(72, 20);
             this.button67.TabIndex = 142;
-            this.button67.Text = "Lock";
+            this.button67.Text = "Activare";
             this.button67.UseVisualStyleBackColor = false;
             this.button67.Click += new System.EventHandler(this.button67_Click);
             // 
@@ -1115,9 +1115,9 @@
             // 
             this.button68.Location = new System.Drawing.Point(902, 189);
             this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(67, 20);
+            this.button68.Size = new System.Drawing.Size(72, 20);
             this.button68.TabIndex = 141;
-            this.button68.Text = "Release";
+            this.button68.Text = "Dezactivare";
             this.button68.UseVisualStyleBackColor = true;
             this.button68.Click += new System.EventHandler(this.button68_Click);
             // 
@@ -1154,9 +1154,9 @@
             // 
             this.button69.Location = new System.Drawing.Point(902, 258);
             this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(67, 20);
+            this.button69.Size = new System.Drawing.Size(72, 20);
             this.button69.TabIndex = 148;
-            this.button69.Text = "Release";
+            this.button69.Text = "Dezactivare";
             this.button69.UseVisualStyleBackColor = true;
             this.button69.Click += new System.EventHandler(this.button69_Click);
             // 
@@ -1164,9 +1164,9 @@
             // 
             this.button70.Location = new System.Drawing.Point(821, 258);
             this.button70.Name = "button70";
-            this.button70.Size = new System.Drawing.Size(67, 20);
+            this.button70.Size = new System.Drawing.Size(72, 20);
             this.button70.TabIndex = 147;
-            this.button70.Text = "Lock";
+            this.button70.Text = "Activare";
             this.button70.UseVisualStyleBackColor = true;
             this.button70.Click += new System.EventHandler(this.button70_Click);
             // 
@@ -1184,9 +1184,9 @@
             // 
             this.button71.Location = new System.Drawing.Point(902, 236);
             this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(67, 20);
+            this.button71.Size = new System.Drawing.Size(72, 20);
             this.button71.TabIndex = 145;
-            this.button71.Text = "Release";
+            this.button71.Text = "Dezactivare";
             this.button71.UseVisualStyleBackColor = true;
             this.button71.Click += new System.EventHandler(this.button71_Click);
             // 
@@ -1194,9 +1194,9 @@
             // 
             this.button72.Location = new System.Drawing.Point(821, 236);
             this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(67, 20);
+            this.button72.Size = new System.Drawing.Size(72, 20);
             this.button72.TabIndex = 144;
-            this.button72.Text = "Lock";
+            this.button72.Text = "Activare";
             this.button72.UseVisualStyleBackColor = true;
             this.button72.Click += new System.EventHandler(this.button72_Click);
             // 
@@ -1215,9 +1215,9 @@
             this.button73.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button73.Location = new System.Drawing.Point(821, 305);
             this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(67, 20);
+            this.button73.Size = new System.Drawing.Size(72, 20);
             this.button73.TabIndex = 153;
-            this.button73.Text = "Lock";
+            this.button73.Text = "Activare";
             this.button73.UseVisualStyleBackColor = false;
             this.button73.Click += new System.EventHandler(this.button73_Click);
             // 
@@ -1225,9 +1225,9 @@
             // 
             this.button74.Location = new System.Drawing.Point(902, 305);
             this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(67, 20);
+            this.button74.Size = new System.Drawing.Size(72, 20);
             this.button74.TabIndex = 152;
-            this.button74.Text = "Release";
+            this.button74.Text = "Dezactivare";
             this.button74.UseVisualStyleBackColor = true;
             this.button74.Click += new System.EventHandler(this.button74_Click);
             // 
@@ -1255,9 +1255,9 @@
             this.button75.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button75.Location = new System.Drawing.Point(821, 352);
             this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(67, 20);
+            this.button75.Size = new System.Drawing.Size(72, 20);
             this.button75.TabIndex = 157;
-            this.button75.Text = "Lock";
+            this.button75.Text = "Activare";
             this.button75.UseVisualStyleBackColor = false;
             this.button75.Click += new System.EventHandler(this.button75_Click);
             // 
@@ -1265,9 +1265,9 @@
             // 
             this.button76.Location = new System.Drawing.Point(902, 352);
             this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(67, 20);
+            this.button76.Size = new System.Drawing.Size(72, 20);
             this.button76.TabIndex = 156;
-            this.button76.Text = "Release";
+            this.button76.Text = "Dezactivare";
             this.button76.UseVisualStyleBackColor = true;
             this.button76.Click += new System.EventHandler(this.button76_Click);
             // 
@@ -1295,9 +1295,9 @@
             this.button77.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button77.Location = new System.Drawing.Point(821, 399);
             this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(67, 20);
+            this.button77.Size = new System.Drawing.Size(72, 20);
             this.button77.TabIndex = 161;
-            this.button77.Text = "Lock";
+            this.button77.Text = "Activare";
             this.button77.UseVisualStyleBackColor = false;
             this.button77.Click += new System.EventHandler(this.button77_Click);
             // 
@@ -1305,9 +1305,9 @@
             // 
             this.button78.Location = new System.Drawing.Point(902, 399);
             this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(67, 20);
+            this.button78.Size = new System.Drawing.Size(72, 20);
             this.button78.TabIndex = 160;
-            this.button78.Text = "Release";
+            this.button78.Text = "Dezactivare";
             this.button78.UseVisualStyleBackColor = true;
             this.button78.Click += new System.EventHandler(this.button78_Click);
             // 
