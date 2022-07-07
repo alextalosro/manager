@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReasonModal));
             this.buttonValidate = new System.Windows.Forms.Button();
             this.buttonAbort = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -102,6 +103,7 @@
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.buttonValidate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReasonModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReasonModal";
