@@ -4,6 +4,21 @@
     "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\EcolorProductionManager\\EcolorProductionManager.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\DataAccessLayer\\DataAccessLayer.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\EcolorProductionManager\\EcolorProductionManager.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +46,11 @@
         "frameworks": {
           "net48": {
             "targetAlias": "net48",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Admin\\source\\repos\\EcolorProductionManager\\DataAccessLayer\\DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -44,6 +63,18 @@
         "net48": {
           "targetAlias": "net48",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.22.0, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.6, )"
+            },
             "OPCFoundation.NetStandard.Opc.Ua": {
               "target": "Package",
               "version": "[1.4.368.53, )"
