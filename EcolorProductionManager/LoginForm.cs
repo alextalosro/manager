@@ -3,6 +3,10 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using DataAccessLayer;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace EcolorProductionManager
 {
@@ -13,33 +17,29 @@ namespace EcolorProductionManager
             InitializeComponent();
         }
 
+        public static User selectedUser = new User();
         public static string loggedUserFullName = "";
         public static bool isCurrentUserAdmin;
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string hashedPassword = hashPassword(textPassword.Text);
+
             try
             {
-                //Query the db for username and password;
-                string mainconn = ConfigurationManager.ConnectionStrings["sqlConnectionString"].ConnectionString;
-                SqlConnection sqlconn = new SqlConnection(mainconn);
-                string sqlquery = "SELECT * FROM [dbo].[users] WHERE username=@ParsedUserName and password=@ParsedPassword";
-                sqlconn.Open();
-                SqlCommand sqlCmd = new SqlCommand(sqlquery, sqlconn);
-                sqlCmd.Parameters.AddWithValue("@ParsedUserName", textUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@ParsedPassword", textPassword.Text);
-                SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                sqlCmd.ExecuteNonQuery();
 
-                if (dt.Rows.Count > 0)
+                using (var ctx = new DatabaseContext())
                 {
-                    DataRow[] dr = dt.Select();
+                    selectedUser = ctx.Users
+                        .Where(user => user.Username == textUsername.Text && user.Password == hashedPassword)
+                        .FirstOrDefault();
+                }
 
+                if (selectedUser != null)
+                {
                     //Set is curent logged user ? admin : user
-                    isCurrentUserAdmin = dr[0].ItemArray[5].ToString() == "admin" ? true : false;
+                    isCurrentUserAdmin = selectedUser.UserRole == "admin" ? true : false;
                     //Set FullName of logged user into label
-                    loggedUserFullName = dr[0].ItemArray[3].ToString() + " " + dr[0].ItemArray[4].ToString();
+                    loggedUserFullName = selectedUser.Firstname + " " + selectedUser.Lastname;
 
                     WelcomePage wcp = new WelcomePage();
 
@@ -90,6 +90,14 @@ namespace EcolorProductionManager
         private void LoginForm_Load(object sender, EventArgs e)
         {
             this.Text = "DASHBOARD BYPASS INTERLOCK";
+        }
+
+        public string hashPassword(string plainPassword)
+        {
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(plainPassword);
+            var hashedPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashedPassword);
         }
     }
 }

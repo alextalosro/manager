@@ -1,4 +1,5 @@
-﻿using Opc.Ua.Client;
+﻿using DataAccessLayer;
+using Opc.Ua.Client;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -77,7 +78,7 @@ namespace EcolorProductionManager
                 TagList.Add("Tivox interlock scanare", new OPCUAClass.TagClass("Tivox interlock scanare", "Tivox.Tivox PLC.Tivox interlock scanare"));
                 TagList.Add("Weeke 5 Interlock Scanare", new OPCUAClass.TagClass("Weeke 5 Interlock Scanare", "Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare"));
 
-                myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
+                //myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
                 isClientConnected = true;
             }
             catch (Exception ex)
@@ -103,11 +104,13 @@ namespace EcolorProductionManager
             loggedUsername.Text = loggedUsername.Text + LoginForm.loggedUserFullName;
             this.Text = "DASHBOARD BYPASS INTERLOCK";
 
-            //Async get status timer.
-            Timer timer = new Timer();
-            timer.Tick += Timer_Tick;
-            timer.Interval = 500;
-            timer.Enabled = true;
+            AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaALock);
+
+            ////Async get status timer.
+            //Timer timer = new Timer();
+            //timer.Tick += Timer_Tick;
+            //timer.Interval = 500;
+            //timer.Enabled = true;
         }
 
         private async void Timer_Tick(object sender, EventArgs e)
@@ -327,19 +330,20 @@ namespace EcolorProductionManager
             string action = $"Statusul liniei ({label.Text.ToUpper()}) a fost schimbat in {button.Text.ToUpper()}.";
             var reason = reasonModal.Reason;
 
-            //Query the db for username and password;
-            string mainconn = ConfigurationManager.ConnectionStrings["sqlConnectionString"].ConnectionString;
-            SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "INSERT INTO [dbo].[log_item] VALUES (@date_time, @fullname, @action, @reason)";
-            sqlconn.Open();
-            SqlCommand sqlCmd = new SqlCommand(sqlquery, sqlconn);
-            sqlCmd.Parameters.AddWithValue("@date_time", dateTime);
-            sqlCmd.Parameters.AddWithValue("@fullname", fullName);
-            sqlCmd.Parameters.AddWithValue("@action", action);
-            sqlCmd.Parameters.AddWithValue("@reason", reason);
-            sqlCmd.ExecuteNonQuery();
+            using (var ctx = new DatabaseContext())
+            {
+                var logItem = new LogItem()
+                {
+                    ActionExecutionTime = dateTime,
+                    Action = action,
+                    Reason = reason,
+                    User = LoginForm.selectedUser,
+                };
 
-            sqlconn.Close();
+                ctx.Users.Attach(LoginForm.selectedUser);
+                ctx.LogItems.Add(logItem);
+                ctx.SaveChanges();
+            }
         }
 
         private async void buttonLock_Click(object sender, EventArgs e)

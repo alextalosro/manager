@@ -2,6 +2,10 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using DataAccessLayer;
+using System.Text;
+using System.Security.Cryptography;
+using System.Linq;
 
 namespace EcolorProductionManager
 {
@@ -26,20 +30,42 @@ namespace EcolorProductionManager
                 }
                 else
                 {
-                    //Query the db for username and password;
-                    string mainconn = ConfigurationManager.ConnectionStrings["sqlConnectionString"].ConnectionString;
-                    SqlConnection sqlconn = new SqlConnection(mainconn);
-                    string sqlquery = "INSERT INTO [dbo].[users] VALUES (@username, @password, @firstname, @lastname, @user_role)";
-                    sqlconn.Open();
-                    SqlCommand sqlCmd = new SqlCommand(sqlquery, sqlconn);
-                    sqlCmd.Parameters.AddWithValue("@username", textUsername.Text);
-                    sqlCmd.Parameters.AddWithValue("@password", textPassword.Text);
-                    sqlCmd.Parameters.AddWithValue("@firstname", textFirstName.Text);
-                    sqlCmd.Parameters.AddWithValue("@lastname", textLastName.Text);
-                    sqlCmd.Parameters.AddWithValue("@user_role", comboBox1.GetItemText(comboBox1.SelectedItem));
-                    sqlCmd.ExecuteNonQuery();
-                    labelStatusMessage.Text = "User " + textUsername.Text + " was registered successfully!. You can now close this panel!.";
-                    sqlconn.Close();
+
+                    User selectedUser = new User();
+
+                    using (var ctx = new DatabaseContext())
+                    {
+                        selectedUser = ctx.Users
+                            .Where(user => user.Username == textUsername.Text)
+                            .FirstOrDefault();
+                    }
+
+                    if (selectedUser != null)
+                    {
+                        if (selectedUser.Username == textUsername.Text)
+                        {
+                            MessageBox.Show("Username-ul este deja utilizat. Incercati alt username");
+                            return;
+                        }
+                    }
+
+                    using (var ctx = new DatabaseContext())
+                    {
+                        var user = new User()
+                        {
+                            Username = textUsername.Text,
+                            Firstname = textFirstName.Text,
+                            Lastname = textLastName.Text,
+                            Password = hashPassword(textPassword.Text),
+                            UserRole = comboBox1.GetItemText(comboBox1.SelectedItem),
+                        };
+
+                        ctx.Users.Add(user);
+                        ctx.SaveChanges();
+                    }
+
+                    MessageBox.Show("Utilizator inregistrat cu succes. Puteti inchide panou de inregistrare !");
+
                 }
             }
             catch(Exception ex)
@@ -91,6 +117,18 @@ namespace EcolorProductionManager
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void UserRegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        public string hashPassword(string plainPassword)
+        {
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(plainPassword);
+            var hashedPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashedPassword);
         }
     }
 }
