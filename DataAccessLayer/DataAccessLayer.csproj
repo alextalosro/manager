@@ -59,12 +59,19 @@
     <Compile Include="Migrations\202207162041303_InitialMigration.designer.cs">
       <DependentUpon>202207162041303_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208182048116_nullable-user-in-log-item.cs" />
+    <Compile Include="Migrations\202208182048116_nullable-user-in-log-item.designer.cs">
+      <DependentUpon>202208182048116_nullable-user-in-log-item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202207162041303_InitialMigration.resx">
       <DependentUpon>202207162041303_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208182048116_nullable-user-in-log-item.resx">
+      <DependentUpon>202208182048116_nullable-user-in-log-item.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -33,7 +33,7 @@
             this.loggedUsername = new System.Windows.Forms.Label();
             this.buttonLiniaATestLiniaALock = new System.Windows.Forms.Button();
             this.buttonLiniaATestLiniaAUnlock = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.testLiniaA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAnthon2InterlockScanareUnlock = new System.Windows.Forms.Button();
             this.buttonAnthon2InterlockScanareLock = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.logButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.interlock = new System.Windows.Forms.Label();
             this.buttonLiniaAInterlockUnlock = new System.Windows.Forms.Button();
             this.buttonLiniaAInterlockLock = new System.Windows.Forms.Button();
             this.labelLiniaA = new System.Windows.Forms.Label();
@@ -70,17 +70,17 @@
             this.labelHomag2 = new System.Windows.Forms.Label();
             this.buttonHomag2InterlockScanareInfeed1Lock = new System.Windows.Forms.Button();
             this.buttonHomag2InterlockScanareInfeed1Unlock = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed1 = new System.Windows.Forms.Label();
             this.buttonHomag2InterlockScanareInfeed2Lock = new System.Windows.Forms.Button();
             this.buttonHomag2InterlockScanareInfeed2Unlock = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed2 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed2h3 = new System.Windows.Forms.Label();
             this.labelHomag3 = new System.Windows.Forms.Label();
             this.button35 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed1h3 = new System.Windows.Forms.Label();
             this.labelHomag4 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
@@ -91,11 +91,11 @@
             this.label35 = new System.Windows.Forms.Label();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed2h6 = new System.Windows.Forms.Label();
             this.labelHomag6 = new System.Windows.Forms.Label();
             this.button51 = new System.Windows.Forms.Button();
             this.button52 = new System.Windows.Forms.Button();
-            this.label42 = new System.Windows.Forms.Label();
+            this.interlockScanareInfeed1h6 = new System.Windows.Forms.Label();
             this.labelHomag7 = new System.Windows.Forms.Label();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
@@ -132,7 +132,7 @@
             this.label60 = new System.Windows.Forms.Label();
             this.button69 = new System.Windows.Forms.Button();
             this.button70 = new System.Windows.Forms.Button();
-            this.label61 = new System.Windows.Forms.Label();
+            this.outputInterlock2Dreapta = new System.Windows.Forms.Label();
             this.button71 = new System.Windows.Forms.Button();
             this.button72 = new System.Windows.Forms.Button();
             this.labelProcess2 = new System.Windows.Forms.Label();
@@ -154,17 +154,17 @@
             // loggedUsername
             // 
             this.loggedUsername.AutoSize = true;
-            this.loggedUsername.Location = new System.Drawing.Point(262, 15);
+            this.loggedUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedUsername.Location = new System.Drawing.Point(262, 11);
             this.loggedUsername.Name = "loggedUsername";
-            this.loggedUsername.Size = new System.Drawing.Size(102, 13);
+            this.loggedUsername.Size = new System.Drawing.Size(0, 20);
             this.loggedUsername.TabIndex = 0;
-            this.loggedUsername.Text = "Utilizator autetificat: ";
             // 
             // buttonLiniaATestLiniaALock
             // 
             this.buttonLiniaATestLiniaALock.Location = new System.Drawing.Point(172, 142);
             this.buttonLiniaATestLiniaALock.Name = "buttonLiniaATestLiniaALock";
-            this.buttonLiniaATestLiniaALock.Size = new System.Drawing.Size(72, 20);
+            this.buttonLiniaATestLiniaALock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaATestLiniaALock.TabIndex = 4;
             this.buttonLiniaATestLiniaALock.Text = "Activare";
             this.buttonLiniaATestLiniaALock.UseVisualStyleBackColor = true;
@@ -172,23 +172,23 @@
             // 
             // buttonLiniaATestLiniaAUnlock
             // 
-            this.buttonLiniaATestLiniaAUnlock.Location = new System.Drawing.Point(253, 142);
+            this.buttonLiniaATestLiniaAUnlock.Location = new System.Drawing.Point(278, 142);
             this.buttonLiniaATestLiniaAUnlock.Name = "buttonLiniaATestLiniaAUnlock";
-            this.buttonLiniaATestLiniaAUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonLiniaATestLiniaAUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaATestLiniaAUnlock.TabIndex = 5;
             this.buttonLiniaATestLiniaAUnlock.Text = "Dezactivare";
             this.buttonLiniaATestLiniaAUnlock.UseVisualStyleBackColor = true;
             this.buttonLiniaATestLiniaAUnlock.Click += new System.EventHandler(this.buttonUnlock_ClickAsync);
             // 
-            // label1
+            // testLiniaA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "TestLiniaA";
+            this.testLiniaA.AutoSize = true;
+            this.testLiniaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testLiniaA.Location = new System.Drawing.Point(22, 146);
+            this.testLiniaA.Name = "testLiniaA";
+            this.testLiniaA.Size = new System.Drawing.Size(57, 13);
+            this.testLiniaA.TabIndex = 6;
+            this.testLiniaA.Text = "TestLiniaA";
             // 
             // label2
             // 
@@ -201,9 +201,9 @@
             // 
             // buttonAnthon2InterlockScanareUnlock
             // 
-            this.buttonAnthon2InterlockScanareUnlock.Location = new System.Drawing.Point(253, 211);
+            this.buttonAnthon2InterlockScanareUnlock.Location = new System.Drawing.Point(278, 211);
             this.buttonAnthon2InterlockScanareUnlock.Name = "buttonAnthon2InterlockScanareUnlock";
-            this.buttonAnthon2InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonAnthon2InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon2InterlockScanareUnlock.TabIndex = 8;
             this.buttonAnthon2InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonAnthon2InterlockScanareUnlock.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             this.buttonAnthon2InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonAnthon2InterlockScanareLock.Location = new System.Drawing.Point(172, 211);
             this.buttonAnthon2InterlockScanareLock.Name = "buttonAnthon2InterlockScanareLock";
-            this.buttonAnthon2InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonAnthon2InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon2InterlockScanareLock.TabIndex = 9;
             this.buttonAnthon2InterlockScanareLock.Text = "Activare";
             this.buttonAnthon2InterlockScanareLock.UseVisualStyleBackColor = false;
@@ -271,21 +271,21 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Dashboard";
             // 
-            // label3
+            // interlock
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Interlock";
+            this.interlock.AutoSize = true;
+            this.interlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interlock.Location = new System.Drawing.Point(22, 168);
+            this.interlock.Name = "interlock";
+            this.interlock.Size = new System.Drawing.Size(48, 13);
+            this.interlock.TabIndex = 24;
+            this.interlock.Text = "Interlock";
             // 
             // buttonLiniaAInterlockUnlock
             // 
-            this.buttonLiniaAInterlockUnlock.Location = new System.Drawing.Point(253, 164);
+            this.buttonLiniaAInterlockUnlock.Location = new System.Drawing.Point(278, 164);
             this.buttonLiniaAInterlockUnlock.Name = "buttonLiniaAInterlockUnlock";
-            this.buttonLiniaAInterlockUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonLiniaAInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaAInterlockUnlock.TabIndex = 23;
             this.buttonLiniaAInterlockUnlock.Text = "Dezactivare";
             this.buttonLiniaAInterlockUnlock.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             // 
             this.buttonLiniaAInterlockLock.Location = new System.Drawing.Point(172, 164);
             this.buttonLiniaAInterlockLock.Name = "buttonLiniaAInterlockLock";
-            this.buttonLiniaAInterlockLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonLiniaAInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaAInterlockLock.TabIndex = 22;
             this.buttonLiniaAInterlockLock.Text = "Activare";
             this.buttonLiniaAInterlockLock.UseVisualStyleBackColor = true;
@@ -336,7 +336,7 @@
             this.buttonAnthon3InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonAnthon3InterlockScanareLock.Location = new System.Drawing.Point(173, 258);
             this.buttonAnthon3InterlockScanareLock.Name = "buttonAnthon3InterlockScanareLock";
-            this.buttonAnthon3InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonAnthon3InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon3InterlockScanareLock.TabIndex = 29;
             this.buttonAnthon3InterlockScanareLock.Text = "Activare";
             this.buttonAnthon3InterlockScanareLock.UseVisualStyleBackColor = false;
@@ -344,9 +344,9 @@
             // 
             // buttonAnthon3InterlockScanareUnlock
             // 
-            this.buttonAnthon3InterlockScanareUnlock.Location = new System.Drawing.Point(254, 258);
+            this.buttonAnthon3InterlockScanareUnlock.Location = new System.Drawing.Point(279, 258);
             this.buttonAnthon3InterlockScanareUnlock.Name = "buttonAnthon3InterlockScanareUnlock";
-            this.buttonAnthon3InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonAnthon3InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon3InterlockScanareUnlock.TabIndex = 28;
             this.buttonAnthon3InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonAnthon3InterlockScanareUnlock.UseVisualStyleBackColor = true;
@@ -376,7 +376,7 @@
             this.buttonBiesseInterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonBiesseInterlockScanareLock.Location = new System.Drawing.Point(173, 354);
             this.buttonBiesseInterlockScanareLock.Name = "buttonBiesseInterlockScanareLock";
-            this.buttonBiesseInterlockScanareLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonBiesseInterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonBiesseInterlockScanareLock.TabIndex = 37;
             this.buttonBiesseInterlockScanareLock.Text = "Activare";
             this.buttonBiesseInterlockScanareLock.UseVisualStyleBackColor = false;
@@ -384,9 +384,9 @@
             // 
             // buttonBiesseInterlockScanareUnlock
             // 
-            this.buttonBiesseInterlockScanareUnlock.Location = new System.Drawing.Point(254, 354);
+            this.buttonBiesseInterlockScanareUnlock.Location = new System.Drawing.Point(279, 354);
             this.buttonBiesseInterlockScanareUnlock.Name = "buttonBiesseInterlockScanareUnlock";
-            this.buttonBiesseInterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonBiesseInterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonBiesseInterlockScanareUnlock.TabIndex = 36;
             this.buttonBiesseInterlockScanareUnlock.Text = "Dezactivare";
             this.buttonBiesseInterlockScanareUnlock.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             this.buttonBedBoxBedBoxInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonBedBoxBedBoxInterlockLock.Location = new System.Drawing.Point(172, 307);
             this.buttonBedBoxBedBoxInterlockLock.Name = "buttonBedBoxBedBoxInterlockLock";
-            this.buttonBedBoxBedBoxInterlockLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonBedBoxBedBoxInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonBedBoxBedBoxInterlockLock.TabIndex = 33;
             this.buttonBedBoxBedBoxInterlockLock.Text = "Activare";
             this.buttonBedBoxBedBoxInterlockLock.UseVisualStyleBackColor = false;
@@ -424,9 +424,9 @@
             // 
             // buttonBedBoxBedBoxInterlockUnlock
             // 
-            this.buttonBedBoxBedBoxInterlockUnlock.Location = new System.Drawing.Point(253, 307);
+            this.buttonBedBoxBedBoxInterlockUnlock.Location = new System.Drawing.Point(278, 307);
             this.buttonBedBoxBedBoxInterlockUnlock.Name = "buttonBedBoxBedBoxInterlockUnlock";
-            this.buttonBedBoxBedBoxInterlockUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonBedBoxBedBoxInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonBedBoxBedBoxInterlockUnlock.TabIndex = 32;
             this.buttonBedBoxBedBoxInterlockUnlock.Text = "Dezactivare";
             this.buttonBedBoxBedBoxInterlockUnlock.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@
             this.buttonHomag1InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag1InterlockScanareLock.Location = new System.Drawing.Point(172, 448);
             this.buttonHomag1InterlockScanareLock.Name = "buttonHomag1InterlockScanareLock";
-            this.buttonHomag1InterlockScanareLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag1InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag1InterlockScanareLock.TabIndex = 45;
             this.buttonHomag1InterlockScanareLock.Text = "Activare";
             this.buttonHomag1InterlockScanareLock.UseVisualStyleBackColor = false;
@@ -464,9 +464,9 @@
             // 
             // buttonHomag1InterlockScanareUnlock
             // 
-            this.buttonHomag1InterlockScanareUnlock.Location = new System.Drawing.Point(253, 448);
+            this.buttonHomag1InterlockScanareUnlock.Location = new System.Drawing.Point(278, 448);
             this.buttonHomag1InterlockScanareUnlock.Name = "buttonHomag1InterlockScanareUnlock";
-            this.buttonHomag1InterlockScanareUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag1InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag1InterlockScanareUnlock.TabIndex = 44;
             this.buttonHomag1InterlockScanareUnlock.Text = "Dezactivare";
             this.buttonHomag1InterlockScanareUnlock.UseVisualStyleBackColor = true;
@@ -496,7 +496,7 @@
             this.buttonDebitareFolieInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonDebitareFolieInterlockLock.Location = new System.Drawing.Point(173, 401);
             this.buttonDebitareFolieInterlockLock.Name = "buttonDebitareFolieInterlockLock";
-            this.buttonDebitareFolieInterlockLock.Size = new System.Drawing.Size(72, 20);
+            this.buttonDebitareFolieInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonDebitareFolieInterlockLock.TabIndex = 41;
             this.buttonDebitareFolieInterlockLock.Text = "Activare";
             this.buttonDebitareFolieInterlockLock.UseVisualStyleBackColor = false;
@@ -504,9 +504,9 @@
             // 
             // buttonDebitareFolieInterlockUnlock
             // 
-            this.buttonDebitareFolieInterlockUnlock.Location = new System.Drawing.Point(254, 401);
+            this.buttonDebitareFolieInterlockUnlock.Location = new System.Drawing.Point(279, 401);
             this.buttonDebitareFolieInterlockUnlock.Name = "buttonDebitareFolieInterlockUnlock";
-            this.buttonDebitareFolieInterlockUnlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonDebitareFolieInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonDebitareFolieInterlockUnlock.TabIndex = 40;
             this.buttonDebitareFolieInterlockUnlock.Text = "Dezactivare";
             this.buttonDebitareFolieInterlockUnlock.UseVisualStyleBackColor = true;
@@ -536,7 +536,7 @@
             this.buttonHomag2InterlockScanareInfeed1Lock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag2InterlockScanareInfeed1Lock.Location = new System.Drawing.Point(172, 517);
             this.buttonHomag2InterlockScanareInfeed1Lock.Name = "buttonHomag2InterlockScanareInfeed1Lock";
-            this.buttonHomag2InterlockScanareInfeed1Lock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag2InterlockScanareInfeed1Lock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed1Lock.TabIndex = 49;
             this.buttonHomag2InterlockScanareInfeed1Lock.Text = "Activare";
             this.buttonHomag2InterlockScanareInfeed1Lock.UseVisualStyleBackColor = false;
@@ -544,29 +544,29 @@
             // 
             // buttonHomag2InterlockScanareInfeed1Unlock
             // 
-            this.buttonHomag2InterlockScanareInfeed1Unlock.Location = new System.Drawing.Point(253, 517);
+            this.buttonHomag2InterlockScanareInfeed1Unlock.Location = new System.Drawing.Point(278, 517);
             this.buttonHomag2InterlockScanareInfeed1Unlock.Name = "buttonHomag2InterlockScanareInfeed1Unlock";
-            this.buttonHomag2InterlockScanareInfeed1Unlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag2InterlockScanareInfeed1Unlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed1Unlock.TabIndex = 48;
             this.buttonHomag2InterlockScanareInfeed1Unlock.Text = "Dezactivare";
             this.buttonHomag2InterlockScanareInfeed1Unlock.UseVisualStyleBackColor = true;
             this.buttonHomag2InterlockScanareInfeed1Unlock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed1Unlock_Click);
             // 
-            // label19
+            // interlockScanareInfeed1
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(22, 521);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(133, 13);
-            this.label19.TabIndex = 47;
-            this.label19.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1.AutoSize = true;
+            this.interlockScanareInfeed1.Location = new System.Drawing.Point(22, 521);
+            this.interlockScanareInfeed1.Name = "interlockScanareInfeed1";
+            this.interlockScanareInfeed1.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1.TabIndex = 47;
+            this.interlockScanareInfeed1.Text = "Interlock Scanare Infeed 1";
             // 
             // buttonHomag2InterlockScanareInfeed2Lock
             // 
             this.buttonHomag2InterlockScanareInfeed2Lock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHomag2InterlockScanareInfeed2Lock.Location = new System.Drawing.Point(172, 495);
             this.buttonHomag2InterlockScanareInfeed2Lock.Name = "buttonHomag2InterlockScanareInfeed2Lock";
-            this.buttonHomag2InterlockScanareInfeed2Lock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag2InterlockScanareInfeed2Lock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed2Lock.TabIndex = 65;
             this.buttonHomag2InterlockScanareInfeed2Lock.Text = "Activare";
             this.buttonHomag2InterlockScanareInfeed2Lock.UseVisualStyleBackColor = false;
@@ -574,29 +574,29 @@
             // 
             // buttonHomag2InterlockScanareInfeed2Unlock
             // 
-            this.buttonHomag2InterlockScanareInfeed2Unlock.Location = new System.Drawing.Point(253, 495);
+            this.buttonHomag2InterlockScanareInfeed2Unlock.Location = new System.Drawing.Point(278, 495);
             this.buttonHomag2InterlockScanareInfeed2Unlock.Name = "buttonHomag2InterlockScanareInfeed2Unlock";
-            this.buttonHomag2InterlockScanareInfeed2Unlock.Size = new System.Drawing.Size(72, 20);
+            this.buttonHomag2InterlockScanareInfeed2Unlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed2Unlock.TabIndex = 64;
             this.buttonHomag2InterlockScanareInfeed2Unlock.Text = "Dezactivare";
             this.buttonHomag2InterlockScanareInfeed2Unlock.UseVisualStyleBackColor = true;
             this.buttonHomag2InterlockScanareInfeed2Unlock.Click += new System.EventHandler(this.buttonHomag2InterlockScanareInfeed2Unlock_Click);
             // 
-            // label24
+            // interlockScanareInfeed2
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(22, 499);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(133, 13);
-            this.label24.TabIndex = 63;
-            this.label24.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2.AutoSize = true;
+            this.interlockScanareInfeed2.Location = new System.Drawing.Point(22, 499);
+            this.interlockScanareInfeed2.Name = "interlockScanareInfeed2";
+            this.interlockScanareInfeed2.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2.TabIndex = 63;
+            this.interlockScanareInfeed2.Text = "Interlock Scanare Infeed 2";
             // 
             // button25
             // 
             this.button25.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button25.Location = new System.Drawing.Point(172, 564);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(72, 20);
+            this.button25.Size = new System.Drawing.Size(100, 22);
             this.button25.TabIndex = 84;
             this.button25.Text = "Activare";
             this.button25.UseVisualStyleBackColor = false;
@@ -604,22 +604,22 @@
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(253, 564);
+            this.button26.Location = new System.Drawing.Point(278, 564);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(72, 20);
+            this.button26.Size = new System.Drawing.Size(100, 22);
             this.button26.TabIndex = 83;
             this.button26.Text = "Dezactivare";
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
-            // label25
+            // interlockScanareInfeed2h3
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(22, 568);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(133, 13);
-            this.label25.TabIndex = 82;
-            this.label25.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2h3.AutoSize = true;
+            this.interlockScanareInfeed2h3.Location = new System.Drawing.Point(22, 568);
+            this.interlockScanareInfeed2h3.Name = "interlockScanareInfeed2h3";
+            this.interlockScanareInfeed2h3.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2h3.TabIndex = 82;
+            this.interlockScanareInfeed2h3.Text = "Interlock Scanare Infeed 2";
             // 
             // labelHomag3
             // 
@@ -636,7 +636,7 @@
             this.button35.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button35.Location = new System.Drawing.Point(172, 586);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(72, 20);
+            this.button35.Size = new System.Drawing.Size(100, 22);
             this.button35.TabIndex = 68;
             this.button35.Text = "Activare";
             this.button35.UseVisualStyleBackColor = false;
@@ -644,28 +644,28 @@
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(253, 586);
+            this.button36.Location = new System.Drawing.Point(278, 586);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(72, 20);
+            this.button36.Size = new System.Drawing.Size(100, 22);
             this.button36.TabIndex = 67;
             this.button36.Text = "Dezactivare";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
-            // label31
+            // interlockScanareInfeed1h3
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(22, 590);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(133, 13);
-            this.label31.TabIndex = 66;
-            this.label31.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1h3.AutoSize = true;
+            this.interlockScanareInfeed1h3.Location = new System.Drawing.Point(22, 590);
+            this.interlockScanareInfeed1h3.Name = "interlockScanareInfeed1h3";
+            this.interlockScanareInfeed1h3.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1h3.TabIndex = 66;
+            this.interlockScanareInfeed1h3.Text = "Interlock Scanare Infeed 1";
             // 
             // labelHomag4
             // 
             this.labelHomag4.AutoSize = true;
             this.labelHomag4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag4.Location = new System.Drawing.Point(344, 117);
+            this.labelHomag4.Location = new System.Drawing.Point(409, 117);
             this.labelHomag4.Name = "labelHomag4";
             this.labelHomag4.Size = new System.Drawing.Size(94, 24);
             this.labelHomag4.TabIndex = 88;
@@ -674,9 +674,9 @@
             // button37
             // 
             this.button37.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button37.Location = new System.Drawing.Point(494, 142);
+            this.button37.Location = new System.Drawing.Point(559, 142);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(72, 20);
+            this.button37.Size = new System.Drawing.Size(100, 22);
             this.button37.TabIndex = 87;
             this.button37.Text = "Activare";
             this.button37.UseVisualStyleBackColor = false;
@@ -684,9 +684,9 @@
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(575, 142);
+            this.button38.Location = new System.Drawing.Point(665, 142);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(72, 20);
+            this.button38.Size = new System.Drawing.Size(100, 22);
             this.button38.TabIndex = 86;
             this.button38.Text = "Dezactivare";
             this.button38.UseVisualStyleBackColor = true;
@@ -695,7 +695,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(344, 146);
+            this.label33.Location = new System.Drawing.Point(409, 146);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(91, 13);
             this.label33.TabIndex = 85;
@@ -705,7 +705,7 @@
             // 
             this.labelHomag5.AutoSize = true;
             this.labelHomag5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag5.Location = new System.Drawing.Point(344, 164);
+            this.labelHomag5.Location = new System.Drawing.Point(409, 164);
             this.labelHomag5.Name = "labelHomag5";
             this.labelHomag5.Size = new System.Drawing.Size(94, 24);
             this.labelHomag5.TabIndex = 92;
@@ -714,9 +714,9 @@
             // button39
             // 
             this.button39.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button39.Location = new System.Drawing.Point(494, 189);
+            this.button39.Location = new System.Drawing.Point(559, 189);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(72, 20);
+            this.button39.Size = new System.Drawing.Size(100, 22);
             this.button39.TabIndex = 91;
             this.button39.Text = "Activare";
             this.button39.UseVisualStyleBackColor = false;
@@ -724,9 +724,9 @@
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(575, 189);
+            this.button40.Location = new System.Drawing.Point(665, 189);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(72, 20);
+            this.button40.Size = new System.Drawing.Size(100, 22);
             this.button40.TabIndex = 90;
             this.button40.Text = "Dezactivare";
             this.button40.UseVisualStyleBackColor = true;
@@ -735,7 +735,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(344, 193);
+            this.label35.Location = new System.Drawing.Point(409, 193);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(91, 13);
             this.label35.TabIndex = 89;
@@ -744,9 +744,9 @@
             // button41
             // 
             this.button41.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button41.Location = new System.Drawing.Point(494, 236);
+            this.button41.Location = new System.Drawing.Point(559, 236);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(72, 20);
+            this.button41.Size = new System.Drawing.Size(100, 22);
             this.button41.TabIndex = 111;
             this.button41.Text = "Activare";
             this.button41.UseVisualStyleBackColor = false;
@@ -754,28 +754,28 @@
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(575, 236);
+            this.button42.Location = new System.Drawing.Point(665, 236);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(72, 20);
+            this.button42.Size = new System.Drawing.Size(100, 22);
             this.button42.TabIndex = 110;
             this.button42.Text = "Dezactivare";
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
-            // label36
+            // interlockScanareInfeed2h6
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(344, 240);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(133, 13);
-            this.label36.TabIndex = 109;
-            this.label36.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2h6.AutoSize = true;
+            this.interlockScanareInfeed2h6.Location = new System.Drawing.Point(409, 240);
+            this.interlockScanareInfeed2h6.Name = "interlockScanareInfeed2h6";
+            this.interlockScanareInfeed2h6.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2h6.TabIndex = 109;
+            this.interlockScanareInfeed2h6.Text = "Interlock Scanare Infeed 2";
             // 
             // labelHomag6
             // 
             this.labelHomag6.AutoSize = true;
             this.labelHomag6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag6.Location = new System.Drawing.Point(344, 211);
+            this.labelHomag6.Location = new System.Drawing.Point(409, 211);
             this.labelHomag6.Name = "labelHomag6";
             this.labelHomag6.Size = new System.Drawing.Size(94, 24);
             this.labelHomag6.TabIndex = 96;
@@ -784,9 +784,9 @@
             // button51
             // 
             this.button51.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button51.Location = new System.Drawing.Point(494, 258);
+            this.button51.Location = new System.Drawing.Point(559, 258);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(72, 20);
+            this.button51.Size = new System.Drawing.Size(100, 22);
             this.button51.TabIndex = 95;
             this.button51.Text = "Activare";
             this.button51.UseVisualStyleBackColor = false;
@@ -794,28 +794,28 @@
             // 
             // button52
             // 
-            this.button52.Location = new System.Drawing.Point(575, 258);
+            this.button52.Location = new System.Drawing.Point(665, 258);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(72, 20);
+            this.button52.Size = new System.Drawing.Size(100, 22);
             this.button52.TabIndex = 94;
             this.button52.Text = "Dezactivare";
             this.button52.UseVisualStyleBackColor = true;
             this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
-            // label42
+            // interlockScanareInfeed1h6
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(344, 262);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(133, 13);
-            this.label42.TabIndex = 93;
-            this.label42.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1h6.AutoSize = true;
+            this.interlockScanareInfeed1h6.Location = new System.Drawing.Point(409, 262);
+            this.interlockScanareInfeed1h6.Name = "interlockScanareInfeed1h6";
+            this.interlockScanareInfeed1h6.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1h6.TabIndex = 93;
+            this.interlockScanareInfeed1h6.Text = "Interlock Scanare Infeed 1";
             // 
             // labelHomag7
             // 
             this.labelHomag7.AutoSize = true;
             this.labelHomag7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag7.Location = new System.Drawing.Point(344, 280);
+            this.labelHomag7.Location = new System.Drawing.Point(409, 280);
             this.labelHomag7.Name = "labelHomag7";
             this.labelHomag7.Size = new System.Drawing.Size(94, 24);
             this.labelHomag7.TabIndex = 115;
@@ -824,9 +824,9 @@
             // button53
             // 
             this.button53.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button53.Location = new System.Drawing.Point(494, 305);
+            this.button53.Location = new System.Drawing.Point(559, 305);
             this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(72, 20);
+            this.button53.Size = new System.Drawing.Size(100, 22);
             this.button53.TabIndex = 114;
             this.button53.Text = "Activare";
             this.button53.UseVisualStyleBackColor = false;
@@ -834,9 +834,9 @@
             // 
             // button54
             // 
-            this.button54.Location = new System.Drawing.Point(575, 305);
+            this.button54.Location = new System.Drawing.Point(665, 305);
             this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(72, 20);
+            this.button54.Size = new System.Drawing.Size(100, 22);
             this.button54.TabIndex = 113;
             this.button54.Text = "Dezactivare";
             this.button54.UseVisualStyleBackColor = true;
@@ -845,7 +845,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(344, 309);
+            this.label44.Location = new System.Drawing.Point(409, 309);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(91, 13);
             this.label44.TabIndex = 112;
@@ -855,7 +855,7 @@
             // 
             this.labelKoch1.AutoSize = true;
             this.labelKoch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKoch1.Location = new System.Drawing.Point(344, 327);
+            this.labelKoch1.Location = new System.Drawing.Point(409, 327);
             this.labelKoch1.Name = "labelKoch1";
             this.labelKoch1.Size = new System.Drawing.Size(75, 24);
             this.labelKoch1.TabIndex = 119;
@@ -864,9 +864,9 @@
             // button55
             // 
             this.button55.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button55.Location = new System.Drawing.Point(494, 352);
+            this.button55.Location = new System.Drawing.Point(559, 352);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(72, 20);
+            this.button55.Size = new System.Drawing.Size(100, 22);
             this.button55.TabIndex = 118;
             this.button55.Text = "Activare";
             this.button55.UseVisualStyleBackColor = false;
@@ -874,9 +874,9 @@
             // 
             // button56
             // 
-            this.button56.Location = new System.Drawing.Point(575, 352);
+            this.button56.Location = new System.Drawing.Point(665, 352);
             this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(72, 20);
+            this.button56.Size = new System.Drawing.Size(100, 22);
             this.button56.TabIndex = 117;
             this.button56.Text = "Dezactivare";
             this.button56.UseVisualStyleBackColor = true;
@@ -885,7 +885,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(344, 356);
+            this.label46.Location = new System.Drawing.Point(409, 356);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(91, 13);
             this.label46.TabIndex = 116;
@@ -895,7 +895,7 @@
             // 
             this.labelKoch2.AutoSize = true;
             this.labelKoch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKoch2.Location = new System.Drawing.Point(344, 374);
+            this.labelKoch2.Location = new System.Drawing.Point(409, 374);
             this.labelKoch2.Name = "labelKoch2";
             this.labelKoch2.Size = new System.Drawing.Size(75, 24);
             this.labelKoch2.TabIndex = 123;
@@ -904,9 +904,9 @@
             // button57
             // 
             this.button57.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button57.Location = new System.Drawing.Point(494, 399);
+            this.button57.Location = new System.Drawing.Point(559, 399);
             this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(72, 20);
+            this.button57.Size = new System.Drawing.Size(100, 22);
             this.button57.TabIndex = 122;
             this.button57.Text = "Activare";
             this.button57.UseVisualStyleBackColor = false;
@@ -914,9 +914,9 @@
             // 
             // button58
             // 
-            this.button58.Location = new System.Drawing.Point(575, 399);
+            this.button58.Location = new System.Drawing.Point(665, 399);
             this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(72, 20);
+            this.button58.Size = new System.Drawing.Size(100, 22);
             this.button58.TabIndex = 121;
             this.button58.Text = "Dezactivare";
             this.button58.UseVisualStyleBackColor = true;
@@ -925,7 +925,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(344, 403);
+            this.label48.Location = new System.Drawing.Point(409, 403);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(91, 13);
             this.label48.TabIndex = 120;
@@ -935,7 +935,7 @@
             // 
             this.labelKoch3.AutoSize = true;
             this.labelKoch3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKoch3.Location = new System.Drawing.Point(344, 421);
+            this.labelKoch3.Location = new System.Drawing.Point(409, 421);
             this.labelKoch3.Name = "labelKoch3";
             this.labelKoch3.Size = new System.Drawing.Size(75, 24);
             this.labelKoch3.TabIndex = 127;
@@ -944,9 +944,9 @@
             // button59
             // 
             this.button59.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button59.Location = new System.Drawing.Point(494, 446);
+            this.button59.Location = new System.Drawing.Point(559, 446);
             this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(72, 20);
+            this.button59.Size = new System.Drawing.Size(100, 22);
             this.button59.TabIndex = 126;
             this.button59.Text = "Activare";
             this.button59.UseVisualStyleBackColor = false;
@@ -954,9 +954,9 @@
             // 
             // button60
             // 
-            this.button60.Location = new System.Drawing.Point(575, 446);
+            this.button60.Location = new System.Drawing.Point(665, 446);
             this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(72, 20);
+            this.button60.Size = new System.Drawing.Size(100, 22);
             this.button60.TabIndex = 125;
             this.button60.Text = "Dezactivare";
             this.button60.UseVisualStyleBackColor = true;
@@ -965,7 +965,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(344, 450);
+            this.label50.Location = new System.Drawing.Point(409, 450);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(83, 13);
             this.label50.TabIndex = 124;
@@ -975,7 +975,7 @@
             // 
             this.labelL2Caserat.AutoSize = true;
             this.labelL2Caserat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL2Caserat.Location = new System.Drawing.Point(344, 468);
+            this.labelL2Caserat.Location = new System.Drawing.Point(409, 468);
             this.labelL2Caserat.Name = "labelL2Caserat";
             this.labelL2Caserat.Size = new System.Drawing.Size(108, 24);
             this.labelL2Caserat.TabIndex = 131;
@@ -984,9 +984,9 @@
             // button61
             // 
             this.button61.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button61.Location = new System.Drawing.Point(494, 493);
+            this.button61.Location = new System.Drawing.Point(559, 493);
             this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(72, 20);
+            this.button61.Size = new System.Drawing.Size(100, 22);
             this.button61.TabIndex = 130;
             this.button61.Text = "Activare";
             this.button61.UseVisualStyleBackColor = false;
@@ -994,9 +994,9 @@
             // 
             // button62
             // 
-            this.button62.Location = new System.Drawing.Point(575, 493);
+            this.button62.Location = new System.Drawing.Point(665, 493);
             this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(72, 20);
+            this.button62.Size = new System.Drawing.Size(100, 22);
             this.button62.TabIndex = 129;
             this.button62.Text = "Dezactivare";
             this.button62.UseVisualStyleBackColor = true;
@@ -1005,7 +1005,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(344, 497);
+            this.label52.Location = new System.Drawing.Point(409, 497);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(91, 13);
             this.label52.TabIndex = 128;
@@ -1015,7 +1015,7 @@
             // 
             this.labelL3Caserat.AutoSize = true;
             this.labelL3Caserat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL3Caserat.Location = new System.Drawing.Point(344, 515);
+            this.labelL3Caserat.Location = new System.Drawing.Point(409, 515);
             this.labelL3Caserat.Name = "labelL3Caserat";
             this.labelL3Caserat.Size = new System.Drawing.Size(108, 24);
             this.labelL3Caserat.TabIndex = 135;
@@ -1024,9 +1024,9 @@
             // button63
             // 
             this.button63.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button63.Location = new System.Drawing.Point(494, 540);
+            this.button63.Location = new System.Drawing.Point(559, 540);
             this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(72, 20);
+            this.button63.Size = new System.Drawing.Size(100, 22);
             this.button63.TabIndex = 134;
             this.button63.Text = "Activare";
             this.button63.UseVisualStyleBackColor = false;
@@ -1034,9 +1034,9 @@
             // 
             // button64
             // 
-            this.button64.Location = new System.Drawing.Point(575, 540);
+            this.button64.Location = new System.Drawing.Point(665, 540);
             this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(72, 20);
+            this.button64.Size = new System.Drawing.Size(100, 22);
             this.button64.TabIndex = 133;
             this.button64.Text = "Dezactivare";
             this.button64.UseVisualStyleBackColor = true;
@@ -1045,7 +1045,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(344, 544);
+            this.label54.Location = new System.Drawing.Point(409, 544);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(91, 13);
             this.label54.TabIndex = 132;
@@ -1055,7 +1055,7 @@
             // 
             this.labelL4Caserat.AutoSize = true;
             this.labelL4Caserat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL4Caserat.Location = new System.Drawing.Point(671, 117);
+            this.labelL4Caserat.Location = new System.Drawing.Point(793, 117);
             this.labelL4Caserat.Name = "labelL4Caserat";
             this.labelL4Caserat.Size = new System.Drawing.Size(108, 24);
             this.labelL4Caserat.TabIndex = 139;
@@ -1064,9 +1064,9 @@
             // button65
             // 
             this.button65.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button65.Location = new System.Drawing.Point(821, 142);
+            this.button65.Location = new System.Drawing.Point(943, 142);
             this.button65.Name = "button65";
-            this.button65.Size = new System.Drawing.Size(72, 20);
+            this.button65.Size = new System.Drawing.Size(100, 22);
             this.button65.TabIndex = 138;
             this.button65.Text = "Activare";
             this.button65.UseVisualStyleBackColor = false;
@@ -1074,9 +1074,9 @@
             // 
             // button66
             // 
-            this.button66.Location = new System.Drawing.Point(902, 142);
+            this.button66.Location = new System.Drawing.Point(1049, 142);
             this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(72, 20);
+            this.button66.Size = new System.Drawing.Size(100, 22);
             this.button66.TabIndex = 137;
             this.button66.Text = "Dezactivare";
             this.button66.UseVisualStyleBackColor = true;
@@ -1085,7 +1085,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(671, 146);
+            this.label56.Location = new System.Drawing.Point(793, 146);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(91, 13);
             this.label56.TabIndex = 136;
@@ -1095,7 +1095,7 @@
             // 
             this.labelL5Caserat.AutoSize = true;
             this.labelL5Caserat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL5Caserat.Location = new System.Drawing.Point(671, 164);
+            this.labelL5Caserat.Location = new System.Drawing.Point(793, 164);
             this.labelL5Caserat.Name = "labelL5Caserat";
             this.labelL5Caserat.Size = new System.Drawing.Size(108, 24);
             this.labelL5Caserat.TabIndex = 143;
@@ -1104,9 +1104,9 @@
             // button67
             // 
             this.button67.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button67.Location = new System.Drawing.Point(821, 189);
+            this.button67.Location = new System.Drawing.Point(943, 189);
             this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(72, 20);
+            this.button67.Size = new System.Drawing.Size(100, 22);
             this.button67.TabIndex = 142;
             this.button67.Text = "Activare";
             this.button67.UseVisualStyleBackColor = false;
@@ -1114,9 +1114,9 @@
             // 
             // button68
             // 
-            this.button68.Location = new System.Drawing.Point(902, 189);
+            this.button68.Location = new System.Drawing.Point(1049, 189);
             this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(72, 20);
+            this.button68.Size = new System.Drawing.Size(100, 22);
             this.button68.TabIndex = 141;
             this.button68.Text = "Dezactivare";
             this.button68.UseVisualStyleBackColor = true;
@@ -1125,7 +1125,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(671, 193);
+            this.label58.Location = new System.Drawing.Point(793, 193);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(91, 13);
             this.label58.TabIndex = 140;
@@ -1135,7 +1135,7 @@
             // 
             this.labelLinia1Caserat.AutoSize = true;
             this.labelLinia1Caserat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLinia1Caserat.Location = new System.Drawing.Point(671, 211);
+            this.labelLinia1Caserat.Location = new System.Drawing.Point(793, 211);
             this.labelLinia1Caserat.Name = "labelLinia1Caserat";
             this.labelLinia1Caserat.Size = new System.Drawing.Size(147, 24);
             this.labelLinia1Caserat.TabIndex = 150;
@@ -1145,7 +1145,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(671, 262);
+            this.label60.Location = new System.Drawing.Point(793, 262);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(129, 13);
             this.label60.TabIndex = 149;
@@ -1153,9 +1153,9 @@
             // 
             // button69
             // 
-            this.button69.Location = new System.Drawing.Point(902, 258);
+            this.button69.Location = new System.Drawing.Point(1049, 258);
             this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(72, 20);
+            this.button69.Size = new System.Drawing.Size(100, 22);
             this.button69.TabIndex = 148;
             this.button69.Text = "Dezactivare";
             this.button69.UseVisualStyleBackColor = true;
@@ -1163,29 +1163,29 @@
             // 
             // button70
             // 
-            this.button70.Location = new System.Drawing.Point(821, 258);
+            this.button70.Location = new System.Drawing.Point(943, 258);
             this.button70.Name = "button70";
-            this.button70.Size = new System.Drawing.Size(72, 20);
+            this.button70.Size = new System.Drawing.Size(100, 22);
             this.button70.TabIndex = 147;
             this.button70.Text = "Activare";
             this.button70.UseVisualStyleBackColor = true;
             this.button70.Click += new System.EventHandler(this.button70_Click);
             // 
-            // label61
+            // outputInterlock2Dreapta
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(671, 240);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(133, 13);
-            this.label61.TabIndex = 146;
-            this.label61.Text = "Output Interlock 2 Dreapta";
+            this.outputInterlock2Dreapta.AutoSize = true;
+            this.outputInterlock2Dreapta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputInterlock2Dreapta.Location = new System.Drawing.Point(793, 240);
+            this.outputInterlock2Dreapta.Name = "outputInterlock2Dreapta";
+            this.outputInterlock2Dreapta.Size = new System.Drawing.Size(133, 13);
+            this.outputInterlock2Dreapta.TabIndex = 146;
+            this.outputInterlock2Dreapta.Text = "Output Interlock 2 Dreapta";
             // 
             // button71
             // 
-            this.button71.Location = new System.Drawing.Point(902, 236);
+            this.button71.Location = new System.Drawing.Point(1049, 236);
             this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(72, 20);
+            this.button71.Size = new System.Drawing.Size(100, 22);
             this.button71.TabIndex = 145;
             this.button71.Text = "Dezactivare";
             this.button71.UseVisualStyleBackColor = true;
@@ -1193,9 +1193,9 @@
             // 
             // button72
             // 
-            this.button72.Location = new System.Drawing.Point(821, 236);
+            this.button72.Location = new System.Drawing.Point(943, 236);
             this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(72, 20);
+            this.button72.Size = new System.Drawing.Size(100, 22);
             this.button72.TabIndex = 144;
             this.button72.Text = "Activare";
             this.button72.UseVisualStyleBackColor = true;
@@ -1205,7 +1205,7 @@
             // 
             this.labelProcess2.AutoSize = true;
             this.labelProcess2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProcess2.Location = new System.Drawing.Point(671, 280);
+            this.labelProcess2.Location = new System.Drawing.Point(793, 280);
             this.labelProcess2.Name = "labelProcess2";
             this.labelProcess2.Size = new System.Drawing.Size(102, 24);
             this.labelProcess2.TabIndex = 154;
@@ -1214,9 +1214,9 @@
             // button73
             // 
             this.button73.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button73.Location = new System.Drawing.Point(821, 305);
+            this.button73.Location = new System.Drawing.Point(943, 305);
             this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(72, 20);
+            this.button73.Size = new System.Drawing.Size(100, 22);
             this.button73.TabIndex = 153;
             this.button73.Text = "Activare";
             this.button73.UseVisualStyleBackColor = false;
@@ -1224,9 +1224,9 @@
             // 
             // button74
             // 
-            this.button74.Location = new System.Drawing.Point(902, 305);
+            this.button74.Location = new System.Drawing.Point(1049, 305);
             this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(72, 20);
+            this.button74.Size = new System.Drawing.Size(100, 22);
             this.button74.TabIndex = 152;
             this.button74.Text = "Dezactivare";
             this.button74.UseVisualStyleBackColor = true;
@@ -1235,7 +1235,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(671, 309);
+            this.label63.Location = new System.Drawing.Point(793, 309);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(83, 13);
             this.label63.TabIndex = 151;
@@ -1245,7 +1245,7 @@
             // 
             this.labelTivox.AutoSize = true;
             this.labelTivox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTivox.Location = new System.Drawing.Point(671, 329);
+            this.labelTivox.Location = new System.Drawing.Point(793, 329);
             this.labelTivox.Name = "labelTivox";
             this.labelTivox.Size = new System.Drawing.Size(61, 24);
             this.labelTivox.TabIndex = 158;
@@ -1254,9 +1254,9 @@
             // button75
             // 
             this.button75.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button75.Location = new System.Drawing.Point(821, 352);
+            this.button75.Location = new System.Drawing.Point(943, 352);
             this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(72, 20);
+            this.button75.Size = new System.Drawing.Size(100, 22);
             this.button75.TabIndex = 157;
             this.button75.Text = "Activare";
             this.button75.UseVisualStyleBackColor = false;
@@ -1264,9 +1264,9 @@
             // 
             // button76
             // 
-            this.button76.Location = new System.Drawing.Point(902, 352);
+            this.button76.Location = new System.Drawing.Point(1049, 352);
             this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(72, 20);
+            this.button76.Size = new System.Drawing.Size(100, 22);
             this.button76.TabIndex = 156;
             this.button76.Text = "Dezactivare";
             this.button76.UseVisualStyleBackColor = true;
@@ -1275,7 +1275,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(671, 356);
+            this.label65.Location = new System.Drawing.Point(793, 356);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(91, 13);
             this.label65.TabIndex = 155;
@@ -1285,7 +1285,7 @@
             // 
             this.labelWeeke.AutoSize = true;
             this.labelWeeke.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWeeke.Location = new System.Drawing.Point(671, 374);
+            this.labelWeeke.Location = new System.Drawing.Point(793, 374);
             this.labelWeeke.Name = "labelWeeke";
             this.labelWeeke.Size = new System.Drawing.Size(75, 24);
             this.labelWeeke.TabIndex = 162;
@@ -1294,9 +1294,9 @@
             // button77
             // 
             this.button77.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button77.Location = new System.Drawing.Point(821, 399);
+            this.button77.Location = new System.Drawing.Point(943, 399);
             this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(72, 20);
+            this.button77.Size = new System.Drawing.Size(100, 22);
             this.button77.TabIndex = 161;
             this.button77.Text = "Activare";
             this.button77.UseVisualStyleBackColor = false;
@@ -1304,9 +1304,9 @@
             // 
             // button78
             // 
-            this.button78.Location = new System.Drawing.Point(902, 399);
+            this.button78.Location = new System.Drawing.Point(1049, 399);
             this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(72, 20);
+            this.button78.Size = new System.Drawing.Size(100, 22);
             this.button78.TabIndex = 160;
             this.button78.Text = "Dezactivare";
             this.button78.UseVisualStyleBackColor = true;
@@ -1315,7 +1315,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(671, 403);
+            this.label67.Location = new System.Drawing.Point(793, 403);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(91, 13);
             this.label67.TabIndex = 159;
@@ -1355,7 +1355,7 @@
             this.Controls.Add(this.label60);
             this.Controls.Add(this.button69);
             this.Controls.Add(this.button70);
-            this.Controls.Add(this.label61);
+            this.Controls.Add(this.outputInterlock2Dreapta);
             this.Controls.Add(this.button71);
             this.Controls.Add(this.button72);
             this.Controls.Add(this.labelL5Caserat);
@@ -1392,11 +1392,11 @@
             this.Controls.Add(this.label44);
             this.Controls.Add(this.button41);
             this.Controls.Add(this.button42);
-            this.Controls.Add(this.label36);
+            this.Controls.Add(this.interlockScanareInfeed2h6);
             this.Controls.Add(this.labelHomag6);
             this.Controls.Add(this.button51);
             this.Controls.Add(this.button52);
-            this.Controls.Add(this.label42);
+            this.Controls.Add(this.interlockScanareInfeed1h6);
             this.Controls.Add(this.labelHomag5);
             this.Controls.Add(this.button39);
             this.Controls.Add(this.button40);
@@ -1407,18 +1407,18 @@
             this.Controls.Add(this.label33);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.button26);
-            this.Controls.Add(this.label25);
+            this.Controls.Add(this.interlockScanareInfeed2h3);
             this.Controls.Add(this.labelHomag3);
             this.Controls.Add(this.button35);
             this.Controls.Add(this.button36);
-            this.Controls.Add(this.label31);
+            this.Controls.Add(this.interlockScanareInfeed1h3);
             this.Controls.Add(this.buttonHomag2InterlockScanareInfeed2Lock);
             this.Controls.Add(this.buttonHomag2InterlockScanareInfeed2Unlock);
-            this.Controls.Add(this.label24);
+            this.Controls.Add(this.interlockScanareInfeed2);
             this.Controls.Add(this.labelHomag2);
             this.Controls.Add(this.buttonHomag2InterlockScanareInfeed1Lock);
             this.Controls.Add(this.buttonHomag2InterlockScanareInfeed1Unlock);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.interlockScanareInfeed1);
             this.Controls.Add(this.labelHomag1);
             this.Controls.Add(this.buttonHomag1InterlockScanareLock);
             this.Controls.Add(this.buttonHomag1InterlockScanareUnlock);
@@ -1441,7 +1441,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.labelAnthon2);
             this.Controls.Add(this.labelLiniaA);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.interlock);
             this.Controls.Add(this.buttonLiniaAInterlockUnlock);
             this.Controls.Add(this.buttonLiniaAInterlockLock);
             this.Controls.Add(this.label5);
@@ -1452,7 +1452,7 @@
             this.Controls.Add(this.buttonAnthon2InterlockScanareLock);
             this.Controls.Add(this.buttonAnthon2InterlockScanareUnlock);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.testLiniaA);
             this.Controls.Add(this.buttonLiniaATestLiniaAUnlock);
             this.Controls.Add(this.buttonLiniaATestLiniaALock);
             this.Controls.Add(this.loggedUsername);
@@ -1473,7 +1473,7 @@
         private System.Windows.Forms.Label loggedUsername;
         private System.Windows.Forms.Button buttonLiniaATestLiniaALock;
         private System.Windows.Forms.Button buttonLiniaATestLiniaAUnlock;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label testLiniaA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonAnthon2InterlockScanareUnlock;
         private System.Windows.Forms.Button buttonAnthon2InterlockScanareLock;
@@ -1482,7 +1482,7 @@
         private System.Windows.Forms.Button logButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label interlock;
         private System.Windows.Forms.Button buttonLiniaAInterlockUnlock;
         private System.Windows.Forms.Button buttonLiniaAInterlockLock;
         private System.Windows.Forms.Label labelLiniaA;
@@ -1510,17 +1510,17 @@
         private System.Windows.Forms.Label labelHomag2;
         private System.Windows.Forms.Button buttonHomag2InterlockScanareInfeed1Lock;
         private System.Windows.Forms.Button buttonHomag2InterlockScanareInfeed1Unlock;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label interlockScanareInfeed1;
         private System.Windows.Forms.Button buttonHomag2InterlockScanareInfeed2Lock;
         private System.Windows.Forms.Button buttonHomag2InterlockScanareInfeed2Unlock;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label interlockScanareInfeed2;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label interlockScanareInfeed2h3;
         private System.Windows.Forms.Label labelHomag3;
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label interlockScanareInfeed1h3;
         private System.Windows.Forms.Label labelHomag4;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button button38;
@@ -1531,11 +1531,11 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label interlockScanareInfeed2h6;
         private System.Windows.Forms.Label labelHomag6;
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label interlockScanareInfeed1h6;
         private System.Windows.Forms.Label labelHomag7;
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button54;
@@ -1572,7 +1572,7 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Button button69;
         private System.Windows.Forms.Button button70;
-        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label outputInterlock2Dreapta;
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Button button72;
         private System.Windows.Forms.Label labelProcess2;
