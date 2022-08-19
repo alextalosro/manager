@@ -82,75 +82,85 @@ namespace EcolorProductionManager
                 MessageBox.Show(ex.Message);
             }
 
-            // Create excel file
-            HSSFWorkbook workbook = new HSSFWorkbook();
-            HSSFFont myFont = (HSSFFont)workbook.CreateFont();
-            myFont.FontHeightInPoints = 12;
-            myFont.FontName = "Tahoma";
-
-            //Create new sheet
-            ISheet Sheet = workbook.CreateSheet("Raport");
-
-            //Creat The Headers of the excel
-            IRow HeaderRow = Sheet.CreateRow(0);
-
-            //Create The Actual Cells
-            CreateCell(HeaderRow, 0, "Nr.Crt");
-            CreateCell(HeaderRow, 1, "Data/Ora");
-            CreateCell(HeaderRow, 2, "Utilizator");
-            CreateCell(HeaderRow, 3, "Actiune");
-            CreateCell(HeaderRow, 4, "Motiv");
-
-            // This Where the Data row starts from
-            int RowIndex = 1;
-            //Iteration through owr collection
-            foreach (var logItem in logItems)
+            try
             {
-                string fullName = "";
+                // Create excel file
+                HSSFWorkbook workbook = new HSSFWorkbook();
+                HSSFFont myFont = (HSSFFont)workbook.CreateFont();
+                myFont.FontHeightInPoints = 12;
+                myFont.FontName = "Tahoma";
 
-                if (logItem.User != null)
+                //Create new sheet
+                ISheet Sheet = workbook.CreateSheet("Raport");
+
+                //Creat The Headers of the excel
+                IRow HeaderRow = Sheet.CreateRow(0);
+
+                //Create The Actual Cells
+                CreateCell(HeaderRow, 0, "Nr.Crt");
+                CreateCell(HeaderRow, 1, "Data/Ora");
+                CreateCell(HeaderRow, 2, "Utilizator");
+                CreateCell(HeaderRow, 3, "Actiune");
+                CreateCell(HeaderRow, 4, "Motiv");
+
+                // This Where the Data row starts from
+                int RowIndex = 1;
+                //Iteration through owr collection
+                foreach (var logItem in logItems)
                 {
-                    fullName = logItem.User.Firstname + " " + logItem.User.Lastname;
+                    string fullName = "";
+
+                    if (logItem.User != null)
+                    {
+                        fullName = logItem.User.Firstname + " " + logItem.User.Lastname;
+                    }
+
+                    //Creating the CurrentDataRow
+                    IRow CurrentRow = Sheet.CreateRow(RowIndex);
+
+                    CreateCell(CurrentRow, 0, RowIndex);
+                    CreateCell(CurrentRow, 1, logItem.ActionExecutionTime.ToString());
+                    CreateCell(CurrentRow, 2, fullName);
+                    CreateCell(CurrentRow, 3, logItem.Action);
+                    CreateCell(CurrentRow, 4, logItem.Reason);
+                    RowIndex++;
                 }
 
-                //Creating the CurrentDataRow
-                IRow CurrentRow = Sheet.CreateRow(RowIndex);
+                // Auto sized all the affected columns
+                int lastColumNum = Sheet.GetRow(0).LastCellNum;
+                for (int i = 0; i <= lastColumNum; i++)
+                {
+                    Sheet.AutoSizeColumn(i);
+                    GC.Collect();
+                }
 
-                CreateCell(CurrentRow, 0, RowIndex);
-                CreateCell(CurrentRow, 1, logItem.ActionExecutionTime.ToString());
-                CreateCell(CurrentRow, 2, fullName);
-                CreateCell(CurrentRow, 3, logItem.Action);
-                CreateCell(CurrentRow, 4, logItem.Reason);
-                RowIndex++;
+                // Write Excel to disk 
+                FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+                folderBrowserDialog.Description = "Custom Description";
+                string selectedPath = "";
+                string dateTimeNowNoWhiteSpace = String.Concat(DateTime.Now.ToString("dd:MM:yyyy:HH:mm").Where(c => !Char.IsWhiteSpace(c)));
+                Regex pattern = new Regex("[/:]");
+                string dateTimeProcessed = pattern.Replace(dateTimeNowNoWhiteSpace, "-");
+
+                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                {
+                    selectedPath = folderBrowserDialog.SelectedPath;
+                }
+
+                string fullPath = Path.Combine(selectedPath, dateTimeProcessed + "interlock.xls");
+
+                using (var fileData = new FileStream(fullPath, FileMode.CreateNew))
+                {
+                    workbook.Write(fileData);
+                }
+
+                AddLogItemToDatabase();
             }
-
-            // Auto sized all the affected columns
-            int lastColumNum = Sheet.GetRow(0).LastCellNum;
-            for (int i = 0; i <= lastColumNum; i++)
+            catch(Exception ex)
             {
-                Sheet.AutoSizeColumn(i);
-                GC.Collect();
+                MessageBox.Show(ex.Message);
             }
 
-            // Write Excel to disk 
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.Description = "Custom Description";
-            string selectedPath = "";
-            string dateTimeNowNoWhiteSpace = String.Concat(DateTime.Now.ToString("dd:MM:yyyy:HH:mm").Where(c => !Char.IsWhiteSpace(c)));
-            Regex pattern = new Regex("[/:]");
-            string dateTimeProcessed = pattern.Replace(dateTimeNowNoWhiteSpace, "-");
-
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-            {
-                selectedPath = folderBrowserDialog.SelectedPath;
-            }
-
-            string fullPath = Path.Combine(selectedPath, dateTimeProcessed + "interlock.xls");
-
-            using (var fileData = new FileStream(fullPath, FileMode.CreateNew))
-            {
-                workbook.Write(fileData);
-            }
         }
 
         private void CreateCell(IRow CurrentRow, int CellIndex, string Value, HSSFCellStyle Style = null)
@@ -170,6 +180,29 @@ namespace EcolorProductionManager
             if (Style != null)
             {
                 Cell.CellStyle = Style;
+            }
+        }
+
+        private void AddLogItemToDatabase()
+        {
+            DateTime dateTime = DateTime.Now;
+            var reason = "";
+            string action = "Raport-ul excel al actiunilor a fost descarcat!";
+
+
+            using (var ctx = new DatabaseContext())
+            {
+                var logItem = new LogItem()
+                {
+                    ActionExecutionTime = dateTime,
+                    Action = action,
+                    Reason = reason,
+                    User = LoginForm.selectedUser,
+                };
+
+                ctx.Users.Attach(LoginForm.selectedUser);
+                ctx.LogItems.Add(logItem);
+                ctx.SaveChanges();
             }
         }
     }
