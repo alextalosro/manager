@@ -78,7 +78,7 @@ namespace EcolorProductionManager
                 TagList.Add("Tivox interlock scanare", new OPCUAClass.TagClass("Tivox interlock scanare", "Tivox.Tivox PLC.Tivox interlock scanare"));
                 TagList.Add("Weeke 5 Interlock Scanare", new OPCUAClass.TagClass("Weeke 5 Interlock Scanare", "Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare"));
 
-                //myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
+                myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
                 isClientConnected = true;
             }
             catch (Exception ex)
@@ -101,16 +101,15 @@ namespace EcolorProductionManager
         {
             registerButton.Enabled = LoginForm.isCurrentUserAdmin;
             logButton.Enabled = LoginForm.isCurrentUserAdmin;
-            loggedUsername.Text = loggedUsername.Text + LoginForm.loggedUserFullName;
+            loggedUsername.Text = LoginForm.loggedUserFullName;
             this.Text = "DASHBOARD BYPASS INTERLOCK";
 
-            AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaALock);
 
-            ////Async get status timer.
-            //Timer timer = new Timer();
-            //timer.Tick += Timer_Tick;
-            //timer.Interval = 500;
-            //timer.Enabled = true;
+            //Async get status timer.
+            Timer timer = new Timer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = 500;
+            timer.Enabled = true;
         }
 
         private async void Timer_Tick(object sender, EventArgs e)
@@ -118,119 +117,239 @@ namespace EcolorProductionManager
             var results = await Task.Run(() => GetTagsStatus());
 
             //Linia A
+            //Culoare
             buttonLiniaATestLiniaALock.BackColor = results[0] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonLiniaATestLiniaAUnlock.BackColor = results[0] == "False" ? Color.LightGreen : SystemColors.ControlLight;
-
+            buttonLiniaATestLiniaAUnlock.BackColor = results[0] == "False" ? Color.Red : SystemColors.ControlLight;
             buttonLiniaAInterlockLock.BackColor = results[1] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonLiniaAInterlockUnlock.BackColor = results[1] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonLiniaAInterlockUnlock.BackColor = results[1] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonLiniaATestLiniaALock.Text = results[0] == "True" ? "Bypass Activ" : "Activare";
+            buttonLiniaATestLiniaAUnlock.Text = results[0] == "False" ? "Bypass Inactiv" : "Dezactivare";
+            buttonLiniaAInterlockLock.Text = results[1] == "True" ? "Bypass Activ" : "Activare";
+            buttonLiniaAInterlockUnlock.Text = results[1] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Anthon 2
+            //Culoare
             buttonAnthon2InterlockScanareLock.BackColor = results[2] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonAnthon2InterlockScanareUnlock.BackColor = results[2] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonAnthon2InterlockScanareUnlock.BackColor = results[2] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonAnthon2InterlockScanareLock.Text = results[2] == "True" ? "Bypass Activ" : "Activare";
+            buttonAnthon2InterlockScanareUnlock.Text = results[2] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Anthon 3
+            //Culoare
             buttonAnthon3InterlockScanareLock.BackColor = results[3] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonAnthon3InterlockScanareUnlock.BackColor = results[3] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonAnthon3InterlockScanareUnlock.BackColor = results[3] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonAnthon3InterlockScanareLock.Text = results[3] == "True" ? "Bypass Activ" : "Activare";
+            buttonAnthon3InterlockScanareUnlock.Text = results[3] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //BedBox
+            //Culoare
             buttonBedBoxBedBoxInterlockLock.BackColor = results[4] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonBedBoxBedBoxInterlockUnlock.BackColor = results[4] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonBedBoxBedBoxInterlockUnlock.BackColor = results[4] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonBedBoxBedBoxInterlockLock.Text = results[4] == "True" ? "Bypass Activ" : "Activare";
+            buttonBedBoxBedBoxInterlockUnlock.Text = results[4] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Biesses
+            //Culoare
             buttonBiesseInterlockScanareLock.BackColor = results[5] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonBiesseInterlockScanareUnlock.BackColor = results[5] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonBiesseInterlockScanareUnlock.BackColor = results[5] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonBiesseInterlockScanareLock.Text = results[5] == "True" ? "Bypass Activ" : "Activare";
+            buttonBiesseInterlockScanareUnlock.Text = results[5] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Debitare folie
+            //Culoare
             buttonDebitareFolieInterlockLock.BackColor = results[6] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonDebitareFolieInterlockUnlock.BackColor = results[6] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonDebitareFolieInterlockUnlock.BackColor = results[6] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonDebitareFolieInterlockLock.Text = results[6] == "True" ? "Bypass Activ" : "Activare";
+            buttonDebitareFolieInterlockUnlock.Text = results[6] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Homag 1
+            //Culoare
             buttonHomag1InterlockScanareLock.BackColor = results[7] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag1InterlockScanareUnlock.BackColor = results[7] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonHomag1InterlockScanareUnlock.BackColor = results[7] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonHomag1InterlockScanareLock.Text = results[7] == "True" ? "Bypass Activ" : "Activare";
+            buttonHomag1InterlockScanareUnlock.Text = results[7] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Homag 2
+            //Culoare
             buttonHomag2InterlockScanareInfeed2Lock.BackColor = results[8] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = results[8] == "False" ? Color.LightGreen : SystemColors.ControlLight;
-
+            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = results[8] == "False" ? Color.Red : SystemColors.ControlLight;
             buttonHomag2InterlockScanareInfeed1Lock.BackColor = results[9] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = results[9] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = results[9] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            buttonHomag2InterlockScanareInfeed2Lock.Text = results[8] == "True" ? "Bypass Activ" : "Activare";
+            buttonHomag2InterlockScanareInfeed2Unlock.Text = results[8] == "False" ? "Bypass Inactiv" : "Dezactivare";
+            buttonHomag2InterlockScanareInfeed1Lock.Text = results[9] == "True" ? "Bypass Activ" : "Activare";
+            buttonHomag2InterlockScanareInfeed1Unlock.Text = results[9] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Homag 3
+            //Culoare
             button25.BackColor = results[10] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button26.BackColor = results[10] == "False" ? Color.LightGreen : SystemColors.ControlLight;
-
+            button26.BackColor = results[10] == "False" ? Color.Red : SystemColors.ControlLight;
             button35.BackColor = results[11] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button36.BackColor = results[11] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button36.BackColor = results[11] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button25.Text = results[10] == "True" ? "Bypass Activ" : "Activare";
+            button26.Text = results[10] == "False" ? "Bypass Inactiv" : "Dezactivare";
+            button35.Text = results[11] == "True" ? "Bypass Activ" : "Activare";
+            button36.Text = results[11] == "False" ? "Bypass Inactiv" : "Dezactivare";
 
 
             //Homag 4
+            //Culoare
             button37.BackColor = results[12] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button38.BackColor = results[12] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button38.BackColor = results[12] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button37.Text = results[12] == "True" ? "Bypass Activ" : "Activare";
+            button38.Text = results[12] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Homag 5
+            //Culoare
             button39.BackColor = results[13] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button40.BackColor = results[13] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button40.BackColor = results[13] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button39.Text = results[13] == "True" ? "Bypass Activ" : "Activare";
+            button40.Text = results[13] == "False" ? "Bypass Inactiv" : "Dezactivare";
 
 
             //Homag 6
+            //Culoare
             button41.BackColor = results[14] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button42.BackColor = results[14] == "False" ? Color.LightGreen : SystemColors.ControlLight;
-
+            button42.BackColor = results[14] == "False" ? Color.Red : SystemColors.ControlLight;
             button51.BackColor = results[15] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button52.BackColor = results[15] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button52.BackColor = results[15] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button41.Text = results[14] == "True" ? "Bypass Activ" : "Activare";
+            button42.Text = results[14] == "False" ? "Bypass Inactiv" : "Dezactivare";
+            button51.Text = results[15] == "True" ? "Bypass Activ" : "Activare";
+            button52.Text = results[15] == "False" ? "Bypass Inactiv" : "Dezactivare";
 
 
             //Homag 7
+            //Culoare
             button53.BackColor = results[16] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button54.BackColor = results[16] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button54.BackColor = results[16] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button53.Text = results[16] == "True" ? "Bypass Activ" : "Activare";
+            button54.Text = results[16] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Koch 1
+            //Culoare
             button55.BackColor = results[17] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button56.BackColor = results[17] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button56.BackColor = results[17] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button55.Text = results[17] == "True" ? "Bypass Activ" : "Activare";
+            button56.Text = results[17] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Koch 2
+            //Culoare
             button57.BackColor = results[18] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button58.BackColor = results[18] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button58.BackColor = results[18] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button57.Text = results[18] == "True" ? "Bypass Activ" : "Activare";
+            button58.Text = results[18] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Koch 3
+            //Culoare
             button59.BackColor = results[19] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button60.BackColor = results[19] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button60.BackColor = results[19] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button59.Text = results[19] == "True" ? "Bypass Activ" : "Activare";
+            button60.Text = results[19] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //L2 Caserat
+            //Culoare
             button61.BackColor = results[20] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button62.BackColor = results[20] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button62.BackColor = results[20] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button61.Text = results[20] == "True" ? "Bypass Activ" : "Activare";
+            button62.Text = results[20] == "False" ? "Bypass Inactiv" : "Dezactivare";
 
 
             //L3 Caserat
+            //Culoare
             button63.BackColor = results[21] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button64.BackColor = results[21] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button64.BackColor = results[21] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button63.Text = results[21] == "True" ? "Bypass Activ" : "Activare";
+            button64.Text = results[21] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //L4 Caserat
+            //Culoare
             button65.BackColor = results[22] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button66.BackColor = results[22] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button66.BackColor = results[22] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button65.Text = results[22] == "True" ? "Bypass Activ" : "Activare";
+            button66.Text = results[22] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //L5 Caserat
+            //Culoare
             button67.BackColor = results[23] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button68.BackColor = results[23] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button68.BackColor = results[23] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button67.Text = results[23] == "True" ? "Bypass Activ" : "Activare";
+            button68.Text = results[23] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Linia 1 Caserat
+            //Culoare
             button72.BackColor = results[24] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button71.BackColor = results[24] == "False" ? Color.LightGreen : SystemColors.ControlLight;
-
+            button71.BackColor = results[24] == "False" ? Color.Red : SystemColors.ControlLight;
             button70.BackColor = results[25] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button69.BackColor = results[25] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button69.BackColor = results[25] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button72.Text = results[24] == "True" ? "Bypass Activ" : "Activare";
+            button71.Text = results[24] == "False" ? "Bypass Inactiv" : "Dezactivare";
+            button70.Text = results[25] == "True" ? "Bypass Activ" : "Activare";
+            button69.Text = results[25] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Process 2
+            //Culoare
             button73.BackColor = results[26] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button74.BackColor = results[26] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button74.BackColor = results[26] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button73.Text = results[26] == "True" ? "Bypass Activ" : "Activare";
+            button74.Text = results[26] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Tivox
+            //Culoare
             button75.BackColor = results[27] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button76.BackColor = results[27] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button76.BackColor = results[27] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button75.Text = results[27] == "True" ? "Bypass Activ" : "Activare";
+            button76.Text = results[27] == "False" ? "Bypass Inactiv" : "Dezactivare";
+
 
             //Weeke
+            //Culoare
             button77.BackColor = results[28] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button77.BackColor = results[28] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button78.BackColor = results[28] == "False" ? Color.Red : SystemColors.ControlLight;
+            //Text
+            button77.Text = results[28] == "True" ? "Bypass Activ" : "Activare";
+            button78.Text = results[28] == "False" ? "Bypass Inactiv" : "Dezactivare";
         }
 
         public List<string> GetTagsStatus()
@@ -323,11 +442,13 @@ namespace EcolorProductionManager
             logForm.Show();
         }
 
-        private void AddLogItemToDatabase(ReasonModal reasonModal, Label label, Button button)
+        private void AddLogItemToDatabase(ReasonModal reasonModal, Label label, string status, Label aditionalLabel = null)
         {
             DateTime dateTime = DateTime.Now;
             string fullName = LoginForm.loggedUserFullName;
-            string action = $"Statusul liniei ({label.Text.ToUpper()}) a fost schimbat in {button.Text.ToUpper()}.";
+            string? aditionalInfo = aditionalLabel != null ? $"({aditionalLabel.Text.ToUpper()})" : null;
+
+            string action = $"({label.Text.ToUpper()}){aditionalInfo} BYPASS {status}.";
             var reason = reasonModal.Reason;
 
             using (var ctx = new DatabaseContext())
@@ -356,7 +477,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaALock);
+                    AddLogItemToDatabase(reasonModal, labelLiniaA, "ACTIV", testLiniaA);
                     this.Enabled = true;
                 }
                 else
@@ -381,7 +502,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaATestLiniaAUnlock);
+                    AddLogItemToDatabase(reasonModal, labelLiniaA, "INACTIV", testLiniaA);
                     this.Enabled = true;
                 }
                 else
@@ -406,7 +527,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Interlock", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaAInterlockLock);
+                    AddLogItemToDatabase(reasonModal, labelLiniaA, "ACTIV", interlock);
                     this.Enabled = true;
                 }
                 else
@@ -431,7 +552,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Interlock", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, buttonLiniaAInterlockUnlock);
+                    AddLogItemToDatabase(reasonModal, labelLiniaA, "INACTIV", interlock);
                     this.Enabled = true;
                 }
                 else
@@ -456,7 +577,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelAnthon2, buttonAnthon2InterlockScanareLock);
+                    AddLogItemToDatabase(reasonModal, labelAnthon2, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -481,7 +602,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelAnthon2, buttonAnthon2InterlockScanareUnlock);
+                    AddLogItemToDatabase(reasonModal, labelAnthon2, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -506,7 +627,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelAnthon3, buttonAnthon3InterlockScanareLock);
+                    AddLogItemToDatabase(reasonModal, labelAnthon3, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -531,7 +652,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelAnthon3, buttonAnthon3InterlockScanareUnlock);
+                    AddLogItemToDatabase(reasonModal, labelAnthon3, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -556,7 +677,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.BedBox Interlock", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelBedBox, buttonBedBoxBedBoxInterlockLock);
+                    AddLogItemToDatabase(reasonModal, labelBedBox, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -581,7 +702,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.BedBox Interlock", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelBedBox, buttonBedBoxBedBoxInterlockUnlock);
+                    AddLogItemToDatabase(reasonModal, labelBedBox, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -606,7 +727,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Biesse Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelBiesse, buttonBiesseInterlockScanareLock);
+                    AddLogItemToDatabase(reasonModal, labelBiesse, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -631,7 +752,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Biesse Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelBiesse, buttonBiesseInterlockScanareUnlock);
+                    AddLogItemToDatabase(reasonModal, labelBiesse, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -656,7 +777,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Interlock", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelDebitareFolie, buttonDebitareFolieInterlockLock);
+                    AddLogItemToDatabase(reasonModal, labelDebitareFolie, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -681,7 +802,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Interlock", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelDebitareFolie, buttonDebitareFolieInterlockUnlock);
+                    AddLogItemToDatabase(reasonModal, labelDebitareFolie, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -708,7 +829,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag1, buttonHomag1InterlockScanareLock);
+                    AddLogItemToDatabase(reasonModal, labelHomag1, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -733,7 +854,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag1, buttonHomag1InterlockScanareUnlock);
+                    AddLogItemToDatabase(reasonModal, labelHomag1, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -760,7 +881,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag2, buttonHomag2InterlockScanareInfeed2Lock);
+                    AddLogItemToDatabase(reasonModal, labelHomag2, "ACTIV", interlockScanareInfeed2);
                     this.Enabled = true;
                 }
                 else
@@ -785,7 +906,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag2, buttonHomag2InterlockScanareInfeed2Unlock);
+                    AddLogItemToDatabase(reasonModal, labelHomag2, "INACTIV", interlockScanareInfeed2);
                     this.Enabled = true;
                 }
                 else
@@ -810,7 +931,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag2, buttonHomag2InterlockScanareInfeed1Lock);
+                    AddLogItemToDatabase(reasonModal, labelHomag2, "ACTIV", interlockScanareInfeed1);
                     this.Enabled = true;
                 }
                 else
@@ -835,7 +956,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag2, buttonHomag2InterlockScanareInfeed1Unlock);
+                    AddLogItemToDatabase(reasonModal, labelHomag2, "INACTIV", interlockScanareInfeed1);
                     this.Enabled = true;
                 }
                 else
@@ -862,7 +983,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag3, button25);
+                    AddLogItemToDatabase(reasonModal, labelHomag3, "ACTIV", interlockScanareInfeed2h3);
                     this.Enabled = true;
                 }
                 else
@@ -887,7 +1008,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag3, button26);
+                    AddLogItemToDatabase(reasonModal, labelHomag3, "INACTIV", interlockScanareInfeed2h3);
                     this.Enabled = true;
                 }
                 else
@@ -912,7 +1033,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag3, button35);
+                    AddLogItemToDatabase(reasonModal, labelHomag3, "ACTIV", interlockScanareInfeed1h3);
                     this.Enabled = true;
                 }
                 else
@@ -937,7 +1058,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag3, button36);
+                    AddLogItemToDatabase(reasonModal, labelHomag3, "INACTIV", interlockScanareInfeed1h3);
                     this.Enabled = true;
                 }
                 else
@@ -964,7 +1085,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag4, button37);
+                    AddLogItemToDatabase(reasonModal, labelHomag4, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -989,7 +1110,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag4, button37);
+                    AddLogItemToDatabase(reasonModal, labelHomag4, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1016,7 +1137,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag5, button39);
+                    AddLogItemToDatabase(reasonModal, labelHomag5, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1041,7 +1162,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag5, button40);
+                    AddLogItemToDatabase(reasonModal, labelHomag5, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1068,7 +1189,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag6, button41);
+                    AddLogItemToDatabase(reasonModal, labelHomag6, "ACTIV", interlockScanareInfeed2h6);
                     this.Enabled = true;
                 }
                 else
@@ -1093,7 +1214,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag6, button42);
+                    AddLogItemToDatabase(reasonModal, labelHomag6, "INACTIV", interlockScanareInfeed2h6);
                     this.Enabled = true;
                 }
                 else
@@ -1118,7 +1239,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag6, button51);
+                    AddLogItemToDatabase(reasonModal, labelHomag6, "ACTIV", interlockScanareInfeed1h6);
                     this.Enabled = true;
                 }
                 else
@@ -1143,7 +1264,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag6, button52);
+                    AddLogItemToDatabase(reasonModal, labelHomag6, "INACTIV", interlockScanareInfeed1h6);
                     this.Enabled = true;
                 }
                 else
@@ -1170,7 +1291,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelHomag7, button53);
+                    AddLogItemToDatabase(reasonModal, labelHomag7, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1195,7 +1316,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelHomag7, button54);
+                    AddLogItemToDatabase(reasonModal, labelHomag7, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1222,7 +1343,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelKoch1, button55);
+                    AddLogItemToDatabase(reasonModal, labelKoch1, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1247,7 +1368,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelKoch1, button56);
+                    AddLogItemToDatabase(reasonModal, labelKoch1, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1273,8 +1394,8 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    //myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelKoch2, button57);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)true);
+                    AddLogItemToDatabase(reasonModal, labelKoch2, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1299,7 +1420,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelKoch2, button58);
+                    AddLogItemToDatabase(reasonModal, labelKoch2, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1326,7 +1447,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Output Interlock", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelKoch3, button59);
+                    AddLogItemToDatabase(reasonModal, labelKoch3, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1351,7 +1472,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Output Interlock", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelKoch3, button60);
+                    AddLogItemToDatabase(reasonModal, labelKoch3, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1378,7 +1499,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.L2 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelL2Caserat, button61);
+                    AddLogItemToDatabase(reasonModal, labelL2Caserat, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1403,7 +1524,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.L2 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelL2Caserat, button62);
+                    AddLogItemToDatabase(reasonModal, labelL2Caserat, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1430,7 +1551,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.L3 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelL3Caserat, button63);
+                    AddLogItemToDatabase(reasonModal, labelL3Caserat, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1455,7 +1576,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.L3 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelL3Caserat, button64);
+                    AddLogItemToDatabase(reasonModal, labelL3Caserat, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1482,7 +1603,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.L4_Interlock_scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelL4Caserat, button65);
+                    AddLogItemToDatabase(reasonModal, labelL4Caserat, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1507,7 +1628,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.L4_Interlock_scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelL4Caserat, button66);
+                    AddLogItemToDatabase(reasonModal, labelL4Caserat, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1534,7 +1655,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelL5Caserat, button67);
+                    AddLogItemToDatabase(reasonModal, labelL5Caserat, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1559,7 +1680,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelL5Caserat, button68);
+                    AddLogItemToDatabase(reasonModal, labelL5Caserat, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1586,7 +1707,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, button72);
+                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "ACTIV", outputInterlock2Dreapta);
                     this.Enabled = true;
                 }
                 else
@@ -1611,7 +1732,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, button71);
+                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "INACTIV", outputInterlock2Dreapta);
                     this.Enabled = true;
                 }
                 else
@@ -1636,7 +1757,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, button70);
+                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1661,7 +1782,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, button69);
+                    AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1688,7 +1809,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Output interlock", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelProcess2, button73);
+                    AddLogItemToDatabase(reasonModal, labelProcess2, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1714,7 +1835,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Output interlock", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelProcess2, button74);
+                    AddLogItemToDatabase(reasonModal, labelProcess2, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1741,7 +1862,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Tivox interlock scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelTivox, button75);
+                    AddLogItemToDatabase(reasonModal, labelTivox, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1767,7 +1888,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Tivox interlock scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelTivox, button76);
+                    AddLogItemToDatabase(reasonModal, labelTivox, "INACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1794,7 +1915,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelWeeke, button77);
+                    AddLogItemToDatabase(reasonModal, labelWeeke, "ACTIV");
                     this.Enabled = true;
                 }
                 else
@@ -1820,7 +1941,7 @@ namespace EcolorProductionManager
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
                     myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelWeeke, button78);
+                    AddLogItemToDatabase(reasonModal, labelWeeke, "INACTIV");
                     this.Enabled = true;
                 }
                 else

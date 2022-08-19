@@ -47,14 +47,17 @@ namespace EcolorProductionManager
                     {
                         wcp.Show(); //Show welcome page.
                         this.Hide(); //Hide current form (login form);
+                        AddLogItemToDatabase(loggedUserFullName, true);
                     }
                     else
                     {
                         wcp.Dispose();
                     }
+
                 }
                 else
                 {
+                    AddLogItemToDatabase(textUsername.Text, false);
                     MessageBox.Show("Invalid credentials! Contact network administrator!");
                     textUsername.Text = "";
                     textPassword.Text = "";
@@ -98,6 +101,48 @@ namespace EcolorProductionManager
             var asByteArray = Encoding.Default.GetBytes(plainPassword);
             var hashedPassword = sha.ComputeHash(asByteArray);
             return Convert.ToBase64String(hashedPassword);
+        }
+
+        private void AddLogItemToDatabase(string username, bool loginSuccess = false)
+        {
+            DateTime dateTime = DateTime.Now;
+            var reason = "";
+            string fullName = username;
+            string action = "";
+
+            if (loginSuccess == true)
+            {
+                action = $"{fullName} s-a autentificat in aplicatie.";
+            }
+            else
+            {
+                action = $"{fullName} a esuat autentificarea.";
+            }
+            
+            try
+            {
+                using (var ctx = new DatabaseContext())
+                {
+                    var logItem = new LogItem()
+                    {
+                        ActionExecutionTime = dateTime,
+                        Action = action,
+                        Reason = reason,
+                        User = loginSuccess ? selectedUser : null,
+                    };
+
+                    if (loginSuccess)
+                    {
+                        ctx.Users.Attach(LoginForm.selectedUser);
+                    }
+                    ctx.LogItems.Add(logItem);
+                    ctx.SaveChanges();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

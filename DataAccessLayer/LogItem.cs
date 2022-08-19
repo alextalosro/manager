@@ -16,6 +16,6 @@ namespace DataAccessLayer
 
         public string Reason { get; set; }
 
-        public User User { get; set; }
+        public User? User { get; set; }
     }
 }

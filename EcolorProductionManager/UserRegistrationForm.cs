@@ -62,8 +62,10 @@ namespace EcolorProductionManager
 
                         ctx.Users.Add(user);
                         ctx.SaveChanges();
+                        AddLogItemToDatabase(user, true);
                     }
 
+                    
                     MessageBox.Show("Utilizator inregistrat cu succes. Puteti inchide panou de inregistrare !");
 
                 }
@@ -119,16 +121,40 @@ namespace EcolorProductionManager
             this.Dispose();
         }
 
-        private void UserRegistrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
         public string hashPassword(string plainPassword)
         {
             var sha = SHA256.Create();
             var asByteArray = Encoding.Default.GetBytes(plainPassword);
             var hashedPassword = sha.ComputeHash(asByteArray);
             return Convert.ToBase64String(hashedPassword);
+        }
+
+        private void AddLogItemToDatabase(User user, bool registerSucces = false)
+        {
+            DateTime dateTime = DateTime.Now;
+            var reason = "";
+            string action = "";
+
+            if (registerSucces == true)
+            {
+                action = $"{user.Username} a fost inregistrat cu success";
+            }
+
+
+            using (var ctx = new DatabaseContext())
+            {
+                var logItem = new LogItem()
+                {
+                    ActionExecutionTime = dateTime,
+                    Action = action,
+                    Reason = reason,
+                    User = LoginForm.selectedUser,
+                };
+
+                ctx.Users.Attach(LoginForm.selectedUser);
+                ctx.LogItems.Add(logItem);
+                ctx.SaveChanges();
+            }
         }
     }
 }

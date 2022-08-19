@@ -49,7 +49,13 @@ namespace EcolorProductionManager
             
             foreach (var logItem in logItems)
             {
-                string[] columns = { logItem.ActionExecutionTime.ToString(), logItem.User.Firstname + " " + logItem.User.Lastname, logItem.Action, logItem.Reason };
+                string fullName = "";
+
+                if (logItem.User != null)
+                {
+                    fullName = logItem.User.Firstname + " " + logItem.User.Lastname;
+                }
+                string[] columns = { logItem.ActionExecutionTime.ToString(), fullName, logItem.Action, logItem.Reason };
                 ListViewItem item = new ListViewItem(columns);
                 listView1.Items.Add(item);
             }
@@ -100,12 +106,19 @@ namespace EcolorProductionManager
             //Iteration through owr collection
             foreach (var logItem in logItems)
             {
+                string fullName = "";
+
+                if (logItem.User != null)
+                {
+                    fullName = logItem.User.Firstname + " " + logItem.User.Lastname;
+                }
+
                 //Creating the CurrentDataRow
                 IRow CurrentRow = Sheet.CreateRow(RowIndex);
 
                 CreateCell(CurrentRow, 0, RowIndex);
                 CreateCell(CurrentRow, 1, logItem.ActionExecutionTime.ToString());
-                CreateCell(CurrentRow, 2, logItem.User.Firstname + " " + logItem.User.Lastname);
+                CreateCell(CurrentRow, 2, fullName);
                 CreateCell(CurrentRow, 3, logItem.Action);
                 CreateCell(CurrentRow, 4, logItem.Reason);
                 RowIndex++;
