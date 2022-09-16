@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomePage));
             this.loggedUsername = new System.Windows.Forms.Label();
-            this.buttonLiniaATestLiniaALock = new System.Windows.Forms.Button();
-            this.buttonLiniaATestLiniaAUnlock = new System.Windows.Forms.Button();
-            this.testLiniaA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAnthon2InterlockScanareUnlock = new System.Windows.Forms.Button();
             this.buttonAnthon2InterlockScanareLock = new System.Windows.Forms.Button();
@@ -160,48 +157,18 @@
             this.loggedUsername.Size = new System.Drawing.Size(0, 20);
             this.loggedUsername.TabIndex = 0;
             // 
-            // buttonLiniaATestLiniaALock
-            // 
-            this.buttonLiniaATestLiniaALock.Location = new System.Drawing.Point(172, 142);
-            this.buttonLiniaATestLiniaALock.Name = "buttonLiniaATestLiniaALock";
-            this.buttonLiniaATestLiniaALock.Size = new System.Drawing.Size(100, 22);
-            this.buttonLiniaATestLiniaALock.TabIndex = 4;
-            this.buttonLiniaATestLiniaALock.Text = "Activare";
-            this.buttonLiniaATestLiniaALock.UseVisualStyleBackColor = true;
-            this.buttonLiniaATestLiniaALock.Click += new System.EventHandler(this.buttonLock_Click);
-            // 
-            // buttonLiniaATestLiniaAUnlock
-            // 
-            this.buttonLiniaATestLiniaAUnlock.Location = new System.Drawing.Point(278, 142);
-            this.buttonLiniaATestLiniaAUnlock.Name = "buttonLiniaATestLiniaAUnlock";
-            this.buttonLiniaATestLiniaAUnlock.Size = new System.Drawing.Size(100, 22);
-            this.buttonLiniaATestLiniaAUnlock.TabIndex = 5;
-            this.buttonLiniaATestLiniaAUnlock.Text = "Dezactivare";
-            this.buttonLiniaATestLiniaAUnlock.UseVisualStyleBackColor = true;
-            this.buttonLiniaATestLiniaAUnlock.Click += new System.EventHandler(this.buttonUnlock_ClickAsync);
-            // 
-            // testLiniaA
-            // 
-            this.testLiniaA.AutoSize = true;
-            this.testLiniaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testLiniaA.Location = new System.Drawing.Point(22, 146);
-            this.testLiniaA.Name = "testLiniaA";
-            this.testLiniaA.Size = new System.Drawing.Size(57, 13);
-            this.testLiniaA.TabIndex = 6;
-            this.testLiniaA.Text = "TestLiniaA";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 215);
+            this.label2.Location = new System.Drawing.Point(22, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Interlock Scanare";
+            this.label2.Text = "Bypass";
             // 
             // buttonAnthon2InterlockScanareUnlock
             // 
-            this.buttonAnthon2InterlockScanareUnlock.Location = new System.Drawing.Point(278, 211);
+            this.buttonAnthon2InterlockScanareUnlock.Location = new System.Drawing.Point(278, 189);
             this.buttonAnthon2InterlockScanareUnlock.Name = "buttonAnthon2InterlockScanareUnlock";
             this.buttonAnthon2InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon2InterlockScanareUnlock.TabIndex = 8;
@@ -212,7 +179,7 @@
             // buttonAnthon2InterlockScanareLock
             // 
             this.buttonAnthon2InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonAnthon2InterlockScanareLock.Location = new System.Drawing.Point(172, 211);
+            this.buttonAnthon2InterlockScanareLock.Location = new System.Drawing.Point(172, 189);
             this.buttonAnthon2InterlockScanareLock.Name = "buttonAnthon2InterlockScanareLock";
             this.buttonAnthon2InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon2InterlockScanareLock.TabIndex = 9;
@@ -275,15 +242,15 @@
             // 
             this.interlock.AutoSize = true;
             this.interlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.interlock.Location = new System.Drawing.Point(22, 168);
+            this.interlock.Location = new System.Drawing.Point(22, 146);
             this.interlock.Name = "interlock";
-            this.interlock.Size = new System.Drawing.Size(48, 13);
+            this.interlock.Size = new System.Drawing.Size(41, 13);
             this.interlock.TabIndex = 24;
-            this.interlock.Text = "Interlock";
+            this.interlock.Text = "Bypass";
             // 
             // buttonLiniaAInterlockUnlock
             // 
-            this.buttonLiniaAInterlockUnlock.Location = new System.Drawing.Point(278, 164);
+            this.buttonLiniaAInterlockUnlock.Location = new System.Drawing.Point(278, 142);
             this.buttonLiniaAInterlockUnlock.Name = "buttonLiniaAInterlockUnlock";
             this.buttonLiniaAInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaAInterlockUnlock.TabIndex = 23;
@@ -293,7 +260,7 @@
             // 
             // buttonLiniaAInterlockLock
             // 
-            this.buttonLiniaAInterlockLock.Location = new System.Drawing.Point(172, 164);
+            this.buttonLiniaAInterlockLock.Location = new System.Drawing.Point(172, 142);
             this.buttonLiniaAInterlockLock.Name = "buttonLiniaAInterlockLock";
             this.buttonLiniaAInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonLiniaAInterlockLock.TabIndex = 22;
@@ -315,7 +282,7 @@
             // 
             this.labelAnthon2.AutoSize = true;
             this.labelAnthon2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnthon2.Location = new System.Drawing.Point(21, 186);
+            this.labelAnthon2.Location = new System.Drawing.Point(21, 164);
             this.labelAnthon2.Name = "labelAnthon2";
             this.labelAnthon2.Size = new System.Drawing.Size(94, 24);
             this.labelAnthon2.TabIndex = 26;
@@ -325,7 +292,7 @@
             // 
             this.labelAnthon3.AutoSize = true;
             this.labelAnthon3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnthon3.Location = new System.Drawing.Point(22, 233);
+            this.labelAnthon3.Location = new System.Drawing.Point(22, 211);
             this.labelAnthon3.Name = "labelAnthon3";
             this.labelAnthon3.Size = new System.Drawing.Size(94, 24);
             this.labelAnthon3.TabIndex = 30;
@@ -334,7 +301,7 @@
             // buttonAnthon3InterlockScanareLock
             // 
             this.buttonAnthon3InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonAnthon3InterlockScanareLock.Location = new System.Drawing.Point(173, 258);
+            this.buttonAnthon3InterlockScanareLock.Location = new System.Drawing.Point(173, 236);
             this.buttonAnthon3InterlockScanareLock.Name = "buttonAnthon3InterlockScanareLock";
             this.buttonAnthon3InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon3InterlockScanareLock.TabIndex = 29;
@@ -344,7 +311,7 @@
             // 
             // buttonAnthon3InterlockScanareUnlock
             // 
-            this.buttonAnthon3InterlockScanareUnlock.Location = new System.Drawing.Point(279, 258);
+            this.buttonAnthon3InterlockScanareUnlock.Location = new System.Drawing.Point(279, 236);
             this.buttonAnthon3InterlockScanareUnlock.Name = "buttonAnthon3InterlockScanareUnlock";
             this.buttonAnthon3InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonAnthon3InterlockScanareUnlock.TabIndex = 28;
@@ -355,17 +322,17 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 262);
+            this.label9.Location = new System.Drawing.Point(23, 240);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 27;
-            this.label9.Text = "Interlock Scanare";
+            this.label9.Text = "Bypass";
             // 
             // labelBiesse
             // 
             this.labelBiesse.AutoSize = true;
             this.labelBiesse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBiesse.Location = new System.Drawing.Point(22, 329);
+            this.labelBiesse.Location = new System.Drawing.Point(22, 307);
             this.labelBiesse.Name = "labelBiesse";
             this.labelBiesse.Size = new System.Drawing.Size(72, 24);
             this.labelBiesse.TabIndex = 38;
@@ -374,7 +341,7 @@
             // buttonBiesseInterlockScanareLock
             // 
             this.buttonBiesseInterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonBiesseInterlockScanareLock.Location = new System.Drawing.Point(173, 354);
+            this.buttonBiesseInterlockScanareLock.Location = new System.Drawing.Point(173, 332);
             this.buttonBiesseInterlockScanareLock.Name = "buttonBiesseInterlockScanareLock";
             this.buttonBiesseInterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonBiesseInterlockScanareLock.TabIndex = 37;
@@ -384,7 +351,7 @@
             // 
             // buttonBiesseInterlockScanareUnlock
             // 
-            this.buttonBiesseInterlockScanareUnlock.Location = new System.Drawing.Point(279, 354);
+            this.buttonBiesseInterlockScanareUnlock.Location = new System.Drawing.Point(279, 332);
             this.buttonBiesseInterlockScanareUnlock.Name = "buttonBiesseInterlockScanareUnlock";
             this.buttonBiesseInterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonBiesseInterlockScanareUnlock.TabIndex = 36;
@@ -395,17 +362,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 358);
+            this.label11.Location = new System.Drawing.Point(23, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 13);
+            this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 35;
-            this.label11.Text = "Interlock Scanare";
+            this.label11.Text = "Bypass";
             // 
             // labelBedBox
             // 
             this.labelBedBox.AutoSize = true;
             this.labelBedBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBedBox.Location = new System.Drawing.Point(21, 282);
+            this.labelBedBox.Location = new System.Drawing.Point(21, 260);
             this.labelBedBox.Name = "labelBedBox";
             this.labelBedBox.Size = new System.Drawing.Size(83, 24);
             this.labelBedBox.TabIndex = 34;
@@ -414,7 +381,7 @@
             // buttonBedBoxBedBoxInterlockLock
             // 
             this.buttonBedBoxBedBoxInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonBedBoxBedBoxInterlockLock.Location = new System.Drawing.Point(172, 307);
+            this.buttonBedBoxBedBoxInterlockLock.Location = new System.Drawing.Point(172, 285);
             this.buttonBedBoxBedBoxInterlockLock.Name = "buttonBedBoxBedBoxInterlockLock";
             this.buttonBedBoxBedBoxInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonBedBoxBedBoxInterlockLock.TabIndex = 33;
@@ -424,7 +391,7 @@
             // 
             // buttonBedBoxBedBoxInterlockUnlock
             // 
-            this.buttonBedBoxBedBoxInterlockUnlock.Location = new System.Drawing.Point(278, 307);
+            this.buttonBedBoxBedBoxInterlockUnlock.Location = new System.Drawing.Point(278, 285);
             this.buttonBedBoxBedBoxInterlockUnlock.Name = "buttonBedBoxBedBoxInterlockUnlock";
             this.buttonBedBoxBedBoxInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonBedBoxBedBoxInterlockUnlock.TabIndex = 32;
@@ -435,17 +402,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(22, 311);
+            this.label13.Location = new System.Drawing.Point(22, 289);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 13);
+            this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 31;
-            this.label13.Text = "BedBox Interlock";
+            this.label13.Text = "Bypass";
             // 
             // labelHomag1
             // 
             this.labelHomag1.AutoSize = true;
             this.labelHomag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag1.Location = new System.Drawing.Point(22, 423);
+            this.labelHomag1.Location = new System.Drawing.Point(22, 401);
             this.labelHomag1.Name = "labelHomag1";
             this.labelHomag1.Size = new System.Drawing.Size(94, 24);
             this.labelHomag1.TabIndex = 46;
@@ -454,7 +421,7 @@
             // buttonHomag1InterlockScanareLock
             // 
             this.buttonHomag1InterlockScanareLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonHomag1InterlockScanareLock.Location = new System.Drawing.Point(172, 448);
+            this.buttonHomag1InterlockScanareLock.Location = new System.Drawing.Point(172, 426);
             this.buttonHomag1InterlockScanareLock.Name = "buttonHomag1InterlockScanareLock";
             this.buttonHomag1InterlockScanareLock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag1InterlockScanareLock.TabIndex = 45;
@@ -464,7 +431,7 @@
             // 
             // buttonHomag1InterlockScanareUnlock
             // 
-            this.buttonHomag1InterlockScanareUnlock.Location = new System.Drawing.Point(278, 448);
+            this.buttonHomag1InterlockScanareUnlock.Location = new System.Drawing.Point(278, 426);
             this.buttonHomag1InterlockScanareUnlock.Name = "buttonHomag1InterlockScanareUnlock";
             this.buttonHomag1InterlockScanareUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag1InterlockScanareUnlock.TabIndex = 44;
@@ -475,17 +442,17 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 452);
+            this.label15.Location = new System.Drawing.Point(22, 430);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 13);
+            this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 43;
-            this.label15.Text = "Interlock Scanare";
+            this.label15.Text = "Bypass";
             // 
             // labelDebitareFolie
             // 
             this.labelDebitareFolie.AutoSize = true;
             this.labelDebitareFolie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDebitareFolie.Location = new System.Drawing.Point(22, 376);
+            this.labelDebitareFolie.Location = new System.Drawing.Point(22, 354);
             this.labelDebitareFolie.Name = "labelDebitareFolie";
             this.labelDebitareFolie.Size = new System.Drawing.Size(141, 24);
             this.labelDebitareFolie.TabIndex = 42;
@@ -494,7 +461,7 @@
             // buttonDebitareFolieInterlockLock
             // 
             this.buttonDebitareFolieInterlockLock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonDebitareFolieInterlockLock.Location = new System.Drawing.Point(173, 401);
+            this.buttonDebitareFolieInterlockLock.Location = new System.Drawing.Point(173, 379);
             this.buttonDebitareFolieInterlockLock.Name = "buttonDebitareFolieInterlockLock";
             this.buttonDebitareFolieInterlockLock.Size = new System.Drawing.Size(100, 22);
             this.buttonDebitareFolieInterlockLock.TabIndex = 41;
@@ -504,7 +471,7 @@
             // 
             // buttonDebitareFolieInterlockUnlock
             // 
-            this.buttonDebitareFolieInterlockUnlock.Location = new System.Drawing.Point(279, 401);
+            this.buttonDebitareFolieInterlockUnlock.Location = new System.Drawing.Point(279, 379);
             this.buttonDebitareFolieInterlockUnlock.Name = "buttonDebitareFolieInterlockUnlock";
             this.buttonDebitareFolieInterlockUnlock.Size = new System.Drawing.Size(100, 22);
             this.buttonDebitareFolieInterlockUnlock.TabIndex = 40;
@@ -515,17 +482,17 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 405);
+            this.label17.Location = new System.Drawing.Point(23, 383);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 13);
+            this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 39;
-            this.label17.Text = "Interlock";
+            this.label17.Text = "Bypass";
             // 
             // labelHomag2
             // 
             this.labelHomag2.AutoSize = true;
             this.labelHomag2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag2.Location = new System.Drawing.Point(22, 470);
+            this.labelHomag2.Location = new System.Drawing.Point(22, 448);
             this.labelHomag2.Name = "labelHomag2";
             this.labelHomag2.Size = new System.Drawing.Size(94, 24);
             this.labelHomag2.TabIndex = 50;
@@ -534,7 +501,7 @@
             // buttonHomag2InterlockScanareInfeed1Lock
             // 
             this.buttonHomag2InterlockScanareInfeed1Lock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonHomag2InterlockScanareInfeed1Lock.Location = new System.Drawing.Point(172, 517);
+            this.buttonHomag2InterlockScanareInfeed1Lock.Location = new System.Drawing.Point(172, 495);
             this.buttonHomag2InterlockScanareInfeed1Lock.Name = "buttonHomag2InterlockScanareInfeed1Lock";
             this.buttonHomag2InterlockScanareInfeed1Lock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed1Lock.TabIndex = 49;
@@ -544,7 +511,7 @@
             // 
             // buttonHomag2InterlockScanareInfeed1Unlock
             // 
-            this.buttonHomag2InterlockScanareInfeed1Unlock.Location = new System.Drawing.Point(278, 517);
+            this.buttonHomag2InterlockScanareInfeed1Unlock.Location = new System.Drawing.Point(278, 495);
             this.buttonHomag2InterlockScanareInfeed1Unlock.Name = "buttonHomag2InterlockScanareInfeed1Unlock";
             this.buttonHomag2InterlockScanareInfeed1Unlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed1Unlock.TabIndex = 48;
@@ -555,16 +522,16 @@
             // interlockScanareInfeed1
             // 
             this.interlockScanareInfeed1.AutoSize = true;
-            this.interlockScanareInfeed1.Location = new System.Drawing.Point(22, 521);
+            this.interlockScanareInfeed1.Location = new System.Drawing.Point(22, 499);
             this.interlockScanareInfeed1.Name = "interlockScanareInfeed1";
-            this.interlockScanareInfeed1.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed1.TabIndex = 47;
-            this.interlockScanareInfeed1.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1.Text = "Bypass Infeed 1";
             // 
             // buttonHomag2InterlockScanareInfeed2Lock
             // 
             this.buttonHomag2InterlockScanareInfeed2Lock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonHomag2InterlockScanareInfeed2Lock.Location = new System.Drawing.Point(172, 495);
+            this.buttonHomag2InterlockScanareInfeed2Lock.Location = new System.Drawing.Point(172, 473);
             this.buttonHomag2InterlockScanareInfeed2Lock.Name = "buttonHomag2InterlockScanareInfeed2Lock";
             this.buttonHomag2InterlockScanareInfeed2Lock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed2Lock.TabIndex = 65;
@@ -574,7 +541,7 @@
             // 
             // buttonHomag2InterlockScanareInfeed2Unlock
             // 
-            this.buttonHomag2InterlockScanareInfeed2Unlock.Location = new System.Drawing.Point(278, 495);
+            this.buttonHomag2InterlockScanareInfeed2Unlock.Location = new System.Drawing.Point(278, 473);
             this.buttonHomag2InterlockScanareInfeed2Unlock.Name = "buttonHomag2InterlockScanareInfeed2Unlock";
             this.buttonHomag2InterlockScanareInfeed2Unlock.Size = new System.Drawing.Size(100, 22);
             this.buttonHomag2InterlockScanareInfeed2Unlock.TabIndex = 64;
@@ -585,16 +552,16 @@
             // interlockScanareInfeed2
             // 
             this.interlockScanareInfeed2.AutoSize = true;
-            this.interlockScanareInfeed2.Location = new System.Drawing.Point(22, 499);
+            this.interlockScanareInfeed2.Location = new System.Drawing.Point(22, 477);
             this.interlockScanareInfeed2.Name = "interlockScanareInfeed2";
-            this.interlockScanareInfeed2.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed2.TabIndex = 63;
-            this.interlockScanareInfeed2.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2.Text = "Bypass Infeed 2";
             // 
             // button25
             // 
             this.button25.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button25.Location = new System.Drawing.Point(172, 564);
+            this.button25.Location = new System.Drawing.Point(172, 542);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(100, 22);
             this.button25.TabIndex = 84;
@@ -604,7 +571,7 @@
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(278, 564);
+            this.button26.Location = new System.Drawing.Point(278, 542);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(100, 22);
             this.button26.TabIndex = 83;
@@ -615,17 +582,17 @@
             // interlockScanareInfeed2h3
             // 
             this.interlockScanareInfeed2h3.AutoSize = true;
-            this.interlockScanareInfeed2h3.Location = new System.Drawing.Point(22, 568);
+            this.interlockScanareInfeed2h3.Location = new System.Drawing.Point(22, 546);
             this.interlockScanareInfeed2h3.Name = "interlockScanareInfeed2h3";
-            this.interlockScanareInfeed2h3.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2h3.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed2h3.TabIndex = 82;
-            this.interlockScanareInfeed2h3.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2h3.Text = "Bypass Infeed 2";
             // 
             // labelHomag3
             // 
             this.labelHomag3.AutoSize = true;
             this.labelHomag3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomag3.Location = new System.Drawing.Point(22, 539);
+            this.labelHomag3.Location = new System.Drawing.Point(22, 517);
             this.labelHomag3.Name = "labelHomag3";
             this.labelHomag3.Size = new System.Drawing.Size(94, 24);
             this.labelHomag3.TabIndex = 69;
@@ -634,7 +601,7 @@
             // button35
             // 
             this.button35.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button35.Location = new System.Drawing.Point(172, 586);
+            this.button35.Location = new System.Drawing.Point(172, 564);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(100, 22);
             this.button35.TabIndex = 68;
@@ -644,7 +611,7 @@
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(278, 586);
+            this.button36.Location = new System.Drawing.Point(278, 564);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(100, 22);
             this.button36.TabIndex = 67;
@@ -655,11 +622,11 @@
             // interlockScanareInfeed1h3
             // 
             this.interlockScanareInfeed1h3.AutoSize = true;
-            this.interlockScanareInfeed1h3.Location = new System.Drawing.Point(22, 590);
+            this.interlockScanareInfeed1h3.Location = new System.Drawing.Point(22, 568);
             this.interlockScanareInfeed1h3.Name = "interlockScanareInfeed1h3";
-            this.interlockScanareInfeed1h3.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1h3.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed1h3.TabIndex = 66;
-            this.interlockScanareInfeed1h3.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1h3.Text = "Bypass Infeed 1";
             // 
             // labelHomag4
             // 
@@ -697,9 +664,9 @@
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(409, 146);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(91, 13);
+            this.label33.Size = new System.Drawing.Size(41, 13);
             this.label33.TabIndex = 85;
-            this.label33.Text = "Interlock Scanare";
+            this.label33.Text = "Bypass";
             // 
             // labelHomag5
             // 
@@ -737,9 +704,9 @@
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(409, 193);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(91, 13);
+            this.label35.Size = new System.Drawing.Size(41, 13);
             this.label35.TabIndex = 89;
-            this.label35.Text = "Interlock Scanare";
+            this.label35.Text = "Bypass";
             // 
             // button41
             // 
@@ -767,9 +734,9 @@
             this.interlockScanareInfeed2h6.AutoSize = true;
             this.interlockScanareInfeed2h6.Location = new System.Drawing.Point(409, 240);
             this.interlockScanareInfeed2h6.Name = "interlockScanareInfeed2h6";
-            this.interlockScanareInfeed2h6.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed2h6.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed2h6.TabIndex = 109;
-            this.interlockScanareInfeed2h6.Text = "Interlock Scanare Infeed 2";
+            this.interlockScanareInfeed2h6.Text = "Bypass Infeed 2";
             // 
             // labelHomag6
             // 
@@ -807,9 +774,9 @@
             this.interlockScanareInfeed1h6.AutoSize = true;
             this.interlockScanareInfeed1h6.Location = new System.Drawing.Point(409, 262);
             this.interlockScanareInfeed1h6.Name = "interlockScanareInfeed1h6";
-            this.interlockScanareInfeed1h6.Size = new System.Drawing.Size(133, 13);
+            this.interlockScanareInfeed1h6.Size = new System.Drawing.Size(83, 13);
             this.interlockScanareInfeed1h6.TabIndex = 93;
-            this.interlockScanareInfeed1h6.Text = "Interlock Scanare Infeed 1";
+            this.interlockScanareInfeed1h6.Text = "Bypass Infeed 1";
             // 
             // labelHomag7
             // 
@@ -847,9 +814,9 @@
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(409, 309);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(91, 13);
+            this.label44.Size = new System.Drawing.Size(41, 13);
             this.label44.TabIndex = 112;
-            this.label44.Text = "Interlock Scanare";
+            this.label44.Text = "Bypass";
             // 
             // labelKoch1
             // 
@@ -887,9 +854,9 @@
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(409, 356);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(91, 13);
+            this.label46.Size = new System.Drawing.Size(41, 13);
             this.label46.TabIndex = 116;
-            this.label46.Text = "Interlock Scanare";
+            this.label46.Text = "Bypass";
             // 
             // labelKoch2
             // 
@@ -927,9 +894,9 @@
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(409, 403);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(91, 13);
+            this.label48.Size = new System.Drawing.Size(41, 13);
             this.label48.TabIndex = 120;
-            this.label48.Text = "Interlock Scanare";
+            this.label48.Text = "Bypass";
             // 
             // labelKoch3
             // 
@@ -967,9 +934,9 @@
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(409, 450);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(83, 13);
+            this.label50.Size = new System.Drawing.Size(41, 13);
             this.label50.TabIndex = 124;
-            this.label50.Text = "Output Interlock";
+            this.label50.Text = "Bypass";
             // 
             // labelL2Caserat
             // 
@@ -1007,9 +974,9 @@
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(409, 497);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(91, 13);
+            this.label52.Size = new System.Drawing.Size(41, 13);
             this.label52.TabIndex = 128;
-            this.label52.Text = "Interlock Scanare";
+            this.label52.Text = "Bypass";
             // 
             // labelL3Caserat
             // 
@@ -1047,9 +1014,9 @@
             this.label54.AutoSize = true;
             this.label54.Location = new System.Drawing.Point(409, 544);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(91, 13);
+            this.label54.Size = new System.Drawing.Size(41, 13);
             this.label54.TabIndex = 132;
-            this.label54.Text = "Interlock Scanare";
+            this.label54.Text = "Bypass";
             // 
             // labelL4Caserat
             // 
@@ -1087,9 +1054,10 @@
             this.label56.AutoSize = true;
             this.label56.Location = new System.Drawing.Point(793, 146);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(91, 13);
+            this.label56.Size = new System.Drawing.Size(41, 13);
             this.label56.TabIndex = 136;
-            this.label56.Text = "Interlock Scanare";
+            this.label56.Text = "Bypass";
+            this.label56.Click += new System.EventHandler(this.label56_Click);
             // 
             // labelL5Caserat
             // 
@@ -1127,9 +1095,9 @@
             this.label58.AutoSize = true;
             this.label58.Location = new System.Drawing.Point(793, 193);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(91, 13);
+            this.label58.Size = new System.Drawing.Size(41, 13);
             this.label58.TabIndex = 140;
-            this.label58.Text = "Interlock Scanare";
+            this.label58.Text = "Bypass";
             // 
             // labelLinia1Caserat
             // 
@@ -1147,9 +1115,9 @@
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.Location = new System.Drawing.Point(793, 262);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(129, 13);
+            this.label60.Size = new System.Drawing.Size(87, 13);
             this.label60.TabIndex = 149;
-            this.label60.Text = "Output Interlock 1 Stanga";
+            this.label60.Text = "Bypass 1 Stanga";
             // 
             // button69
             // 
@@ -1177,9 +1145,9 @@
             this.outputInterlock2Dreapta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputInterlock2Dreapta.Location = new System.Drawing.Point(793, 240);
             this.outputInterlock2Dreapta.Name = "outputInterlock2Dreapta";
-            this.outputInterlock2Dreapta.Size = new System.Drawing.Size(133, 13);
+            this.outputInterlock2Dreapta.Size = new System.Drawing.Size(91, 13);
             this.outputInterlock2Dreapta.TabIndex = 146;
-            this.outputInterlock2Dreapta.Text = "Output Interlock 2 Dreapta";
+            this.outputInterlock2Dreapta.Text = "Bypass 2 Dreapta";
             // 
             // button71
             // 
@@ -1237,9 +1205,9 @@
             this.label63.AutoSize = true;
             this.label63.Location = new System.Drawing.Point(793, 309);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(83, 13);
+            this.label63.Size = new System.Drawing.Size(41, 13);
             this.label63.TabIndex = 151;
-            this.label63.Text = "Output Interlock";
+            this.label63.Text = "Bypass";
             // 
             // labelTivox
             // 
@@ -1277,9 +1245,9 @@
             this.label65.AutoSize = true;
             this.label65.Location = new System.Drawing.Point(793, 356);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(91, 13);
+            this.label65.Size = new System.Drawing.Size(41, 13);
             this.label65.TabIndex = 155;
-            this.label65.Text = "Interlock Scanare";
+            this.label65.Text = "Bypass";
             // 
             // labelWeeke
             // 
@@ -1317,9 +1285,9 @@
             this.label67.AutoSize = true;
             this.label67.Location = new System.Drawing.Point(793, 403);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(91, 13);
+            this.label67.Size = new System.Drawing.Size(41, 13);
             this.label67.TabIndex = 159;
-            this.label67.Text = "Interlock Scanare";
+            this.label67.Text = "Bypass";
             // 
             // buttonAbout
             // 
@@ -1452,9 +1420,6 @@
             this.Controls.Add(this.buttonAnthon2InterlockScanareLock);
             this.Controls.Add(this.buttonAnthon2InterlockScanareUnlock);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.testLiniaA);
-            this.Controls.Add(this.buttonLiniaATestLiniaAUnlock);
-            this.Controls.Add(this.buttonLiniaATestLiniaALock);
             this.Controls.Add(this.loggedUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1471,9 +1436,6 @@
         #endregion
 
         private System.Windows.Forms.Label loggedUsername;
-        private System.Windows.Forms.Button buttonLiniaATestLiniaALock;
-        private System.Windows.Forms.Button buttonLiniaATestLiniaAUnlock;
-        private System.Windows.Forms.Label testLiniaA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonAnthon2InterlockScanareUnlock;
         private System.Windows.Forms.Button buttonAnthon2InterlockScanareLock;

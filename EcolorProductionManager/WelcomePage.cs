@@ -49,34 +49,34 @@ namespace EcolorProductionManager
             {
                 //Tag list for read async subscription.
                 TagList.Add("TestLiniaA", new OPCUAClass.TagClass("TestLiniaA", "Ambalaj Linia A.Linia A PLC.TestLiniaA"));
-                TagList.Add("Interlock", new OPCUAClass.TagClass("Interlock", "Ambalaj Linia A.Linia A PLC.Interlock"));
-                TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2 Interlock Scanare", "Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare"));
-                TagList.Add("Anthon 3 Interlock Scanare", new OPCUAClass.TagClass("Anthon 3 Interlock Scanare", "Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare"));
-                TagList.Add("BedBox Interlock", new OPCUAClass.TagClass("BedBox Interlock", "BedBox.BedBoxPLC.BedBox Interlock"));
-                TagList.Add("Biesse Interlock Scanare", new OPCUAClass.TagClass("Biesse Interlock Scanare", "Biesse.Biesse PLC.Biesse Interlock Scanare"));
-                TagList.Add("Interlock2", new OPCUAClass.TagClass("Interlock", "Debitare_folie.PLC_debitare_folie.Interlock"));
-                TagList.Add("Homag 1 Interlock Scanare", new OPCUAClass.TagClass("Homag 1 Interlock Scanare", "Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare"));
-                TagList.Add("Homag 2 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 2", "Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2"));
-                TagList.Add("Homag 2 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 1", "Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1"));
-                TagList.Add("Homag 3 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 2", "Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2"));
-                TagList.Add("Homag 3 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 1", "Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1"));
-                TagList.Add("Homag 4 Interlock Scanare", new OPCUAClass.TagClass("Homag 4 Interlock Scanare", "Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare"));
-                TagList.Add("Homag 5 Interlock Scanare", new OPCUAClass.TagClass("Homag 5 Interlock Scanare", "Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare"));
-                TagList.Add("Homag 6 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 2", "Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2"));
-                TagList.Add("Homag 6 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 1", "Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1"));
-                TagList.Add("Homag 7 Interlock Scanare", new OPCUAClass.TagClass("Homag 7 Interlock Scanare", "Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare"));
-                TagList.Add("Koch 1 Interlock Scanare", new OPCUAClass.TagClass("Koch 1 Interlock Scanare", "Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare"));
-                TagList.Add("Koch 2 Interlock Scanare", new OPCUAClass.TagClass("Koch 2 Interlock Scanare", "Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare"));
-                TagList.Add("Output Interlock", new OPCUAClass.TagClass("Output Interlock", "Koch 3.Interlock Koch 3.Output Interlock"));
-                TagList.Add("L2 Interlock Scanare", new OPCUAClass.TagClass("L2 Interlock Scanare", "L2_Caserat.L2 PLC.L2 Interlock Scanare"));
-                TagList.Add("L3 Interlock Scanare", new OPCUAClass.TagClass("L3 Interlock Scanare", "L3_Caserat.L3 PLC.L3 Interlock Scanare"));
-                TagList.Add("L4_Interlock_scanare", new OPCUAClass.TagClass("L4_Interlock_scanare", "L4_Caserat.L4 PLC.L4_Interlock_scanare"));
-                TagList.Add("L5 Caserat Interlock Scanare", new OPCUAClass.TagClass("L5 Caserat Interlock Scanare", "L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare"));
-                TagList.Add("Output interlock 2 dreapta", new OPCUAClass.TagClass("Output interlock 2 dreapta", "Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta"));
-                TagList.Add("Output interlock 1 stanga", new OPCUAClass.TagClass("Output interlock 1 stanga", "Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga"));
-                TagList.Add("Output interlock", new OPCUAClass.TagClass("Output interlock", "Process 2.Interlock Process 2.Output interlock"));
-                TagList.Add("Tivox interlock scanare", new OPCUAClass.TagClass("Tivox interlock scanare", "Tivox.Tivox PLC.Tivox interlock scanare"));
-                TagList.Add("Weeke 5 Interlock Scanare", new OPCUAClass.TagClass("Weeke 5 Interlock Scanare", "Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare"));
+                TagList.Add("Interlock", new OPCUAClass.TagClass("Interlock", "Ambalaj Linia A.Linia A PLC.Dsh bypass"));
+                TagList.Add("Anthon 2 Interlock Scanare", new OPCUAClass.TagClass("Anthon 2 Interlock Scanare", "Anthon 2.Anthon 2 Alim PLC.Dsh bypass"));
+                TagList.Add("Anthon 3 Interlock Scanare", new OPCUAClass.TagClass("Anthon 3 Interlock Scanare", "Anthon 3.Anthon 3 Alim PLC.Dsh bypass"));
+                TagList.Add("BedBox Interlock", new OPCUAClass.TagClass("BedBox Interlock", "BedBox.BedBoxPLC.Dsh bypass"));
+                TagList.Add("Biesse Interlock Scanare", new OPCUAClass.TagClass("Biesse Interlock Scanare", "Biesse.Biesse PLC.Dsh bypass"));
+                TagList.Add("Interlock2", new OPCUAClass.TagClass("Interlock", "Debitare_folie.PLC_debitare_folie.Dsh bypass"));
+                TagList.Add("Homag 1 Interlock Scanare", new OPCUAClass.TagClass("Homag 1 Interlock Scanare", "Homag 1.Homag 1 PLC.Dsh bypass"));
+                TagList.Add("Homag 2 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 2", "Homag 2.Homag 2 Infeed PLC.Dsh bypass 2"));
+                TagList.Add("Homag 2 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 1", "Homag 2.Homag 2 Infeed PLC.Dsh bypass 1"));
+                TagList.Add("Homag 3 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 2", "Homag 3.Homag 3 Infeed PLC.Dsh bypass 2"));
+                TagList.Add("Homag 3 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 3 Interlock Scanare Infeed 1", "Homag 3.Homag 3 Infeed PLC.Dsh bypass 1"));
+                TagList.Add("Homag 4 Interlock Scanare", new OPCUAClass.TagClass("Homag 4 Interlock Scanare", "Homag 4.Homag 4 Infeed PLC.Dsh bypass"));
+                TagList.Add("Homag 5 Interlock Scanare", new OPCUAClass.TagClass("Homag 5 Interlock Scanare", "Homag 5.Homag 5 Infeed PLC.Dsh bypass"));
+                TagList.Add("Homag 6 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 2", "Homag 6.Homag 6 Infeed PLC.Dsh bypass 2"));
+                TagList.Add("Homag 6 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 6 Interlock Scanare Infeed 1", "Homag 6.Homag 6 Infeed PLC.Dsh bypass 1"));
+                TagList.Add("Homag 7 Interlock Scanare", new OPCUAClass.TagClass("Homag 7 Interlock Scanare", "Homag 7.Homag 7 Infeed PLC.Dsh bypass"));
+                TagList.Add("Koch 1 Interlock Scanare", new OPCUAClass.TagClass("Koch 1 Interlock Scanare", "Koch 1.Koch 1 PLC.Dsh bypass"));
+                TagList.Add("Koch 2 Interlock Scanare", new OPCUAClass.TagClass("Koch 2 Interlock Scanare", "Koch 2.Koch 2 PLC.Dsh bypass"));
+                TagList.Add("Output Interlock", new OPCUAClass.TagClass("Output Interlock", "Koch 3.Interlock Koch 3.Dsh bypass"));
+                TagList.Add("L2 Interlock Scanare", new OPCUAClass.TagClass("L2 Interlock Scanare", "L2_Caserat.L2 PLC.Dsh bypass"));
+                TagList.Add("L3 Interlock Scanare", new OPCUAClass.TagClass("L3 Interlock Scanare", "L3_Caserat.L3 PLC.Dsh bypass"));
+                TagList.Add("L4_Interlock_scanare", new OPCUAClass.TagClass("L4_Interlock_scanare", "L4_Caserat.L4 PLC.Dsh bypass"));
+                TagList.Add("L5 Caserat Interlock Scanare", new OPCUAClass.TagClass("L5 Caserat Interlock Scanare", "L5 Caserat.L5 Caserat PLC.Dsh bypass"));
+                TagList.Add("Output interlock 2 dreapta", new OPCUAClass.TagClass("Output interlock 2 dreapta", "Linia 1 caserat.Adam L Caserat 1.Dsh bypass 2"));
+                TagList.Add("Output interlock 1 stanga", new OPCUAClass.TagClass("Output interlock 1 stanga", "Linia 1 caserat.Adam L Caserat 1.Dsh bypass 1"));
+                TagList.Add("Output interlock", new OPCUAClass.TagClass("Output interlock", "Process 2.Interlock Process 2.Dsh bypass"));
+                TagList.Add("Tivox interlock scanare", new OPCUAClass.TagClass("Tivox interlock scanare", "Tivox.Tivox PLC.Dsh bypass"));
+                TagList.Add("Weeke 5 Interlock Scanare", new OPCUAClass.TagClass("Weeke 5 Interlock Scanare", "Weeke 5.Weeke 5 PLC.Dsh bypass"));
 
                 myOPCUAServer = new OPCUAClass(serverAddress, serverPort, TagList, isSessionRenewalRequired, renewSessionAfterMinutes, nameSpace);
                 isClientConnected = true;
@@ -118,13 +118,9 @@ namespace EcolorProductionManager
 
             //Linia A
             //Culoare
-            buttonLiniaATestLiniaALock.BackColor = results[0] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonLiniaATestLiniaAUnlock.BackColor = results[0] == "False" ? Color.Red : SystemColors.ControlLight;
             buttonLiniaAInterlockLock.BackColor = results[1] == "True" ? Color.LightGreen : SystemColors.ControlLight;
             buttonLiniaAInterlockUnlock.BackColor = results[1] == "False" ? Color.Red : SystemColors.ControlLight;
             //Text
-            buttonLiniaATestLiniaALock.Text = results[0] == "True" ? "Bypass Activ" : "Activare";
-            buttonLiniaATestLiniaAUnlock.Text = results[0] == "False" ? "Bypass Inactiv" : "Dezactivare";
             buttonLiniaAInterlockLock.Text = results[1] == "True" ? "Bypass Activ" : "Activare";
             buttonLiniaAInterlockUnlock.Text = results[1] == "False" ? "Bypass Inactiv" : "Dezactivare";
 
@@ -467,56 +463,6 @@ namespace EcolorProductionManager
             }
         }
 
-        private async void buttonLock_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                reasonModal.Show();
-                this.Enabled = false;
-
-                if (await reasonModal.ShowModalAsync() == DialogResult.OK)
-                {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)true);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, "ACTIV", testLiniaA);
-                    this.Enabled = true;
-                }
-                else
-                {
-                    this.Enabled = true;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                this.Enabled = true;
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private async void buttonUnlock_ClickAsync(object sender, EventArgs e)
-        {
-            try
-            {
-                reasonModal.Show();
-                this.Enabled = false;
-
-                if (await reasonModal.ShowModalAsync() == DialogResult.OK)
-                {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.TestLiniaA", (bool)false);
-                    AddLogItemToDatabase(reasonModal, labelLiniaA, "INACTIV", testLiniaA);
-                    this.Enabled = true;
-                }
-                else
-                {
-                    this.Enabled = true;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                this.Enabled = true;
-                MessageBox.Show(ex.Message);
-            }
-        }
         private async void buttonLiniaAInterlockLock_Click(object sender, EventArgs e)
         {
             try
@@ -526,7 +472,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Interlock", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, "ACTIV", interlock);
                     this.Enabled = true;
                 }
@@ -551,7 +497,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Interlock", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Ambalaj Linia A.Linia A PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelLiniaA, "INACTIV", interlock);
                     this.Enabled = true;
                 }
@@ -576,7 +522,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelAnthon2, "ACTIV");
                     this.Enabled = true;
                 }
@@ -601,7 +547,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Anthon 2 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Anthon 2.Anthon 2 Alim PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelAnthon2, "INACTIV");
                     this.Enabled = true;
                 }
@@ -626,7 +572,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelAnthon3, "ACTIV");
                     this.Enabled = true;
                 }
@@ -651,7 +597,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Anthon 3 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Anthon 3.Anthon 3 Alim PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelAnthon3, "INACTIV");
                     this.Enabled = true;
                 }
@@ -676,7 +622,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.BedBox Interlock", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelBedBox, "ACTIV");
                     this.Enabled = true;
                 }
@@ -701,7 +647,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.BedBox Interlock", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=BedBox.BedBoxPLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelBedBox, "INACTIV");
                     this.Enabled = true;
                 }
@@ -726,7 +672,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Biesse Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelBiesse, "ACTIV");
                     this.Enabled = true;
                 }
@@ -751,7 +697,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Biesse Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Biesse.Biesse PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelBiesse, "INACTIV");
                     this.Enabled = true;
                 }
@@ -776,7 +722,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Interlock", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelDebitareFolie, "ACTIV");
                     this.Enabled = true;
                 }
@@ -801,7 +747,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Interlock", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Debitare_folie.PLC_debitare_folie.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelDebitareFolie, "INACTIV");
                     this.Enabled = true;
                 }
@@ -828,7 +774,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag1, "ACTIV");
                     this.Enabled = true;
                 }
@@ -853,7 +799,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Homag 1 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 1.Homag 1 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag1, "INACTIV");
                     this.Enabled = true;
                 }
@@ -880,7 +826,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Dsh bypass 2", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag2, "ACTIV", interlockScanareInfeed2);
                     this.Enabled = true;
                 }
@@ -905,7 +851,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 2", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Dsh bypass 2", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag2, "INACTIV", interlockScanareInfeed2);
                     this.Enabled = true;
                 }
@@ -930,7 +876,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Dsh bypass 1", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag2, "ACTIV", interlockScanareInfeed1);
                     this.Enabled = true;
                 }
@@ -955,7 +901,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Homag 2 Interlock Scanare Infeed 1", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 2.Homag 2 Infeed PLC.Dsh bypass 1", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag2, "INACTIV", interlockScanareInfeed1);
                     this.Enabled = true;
                 }
@@ -982,7 +928,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Dsh bypass 2", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag3, "ACTIV", interlockScanareInfeed2h3);
                     this.Enabled = true;
                 }
@@ -1007,7 +953,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 2", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Dsh bypass 2", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag3, "INACTIV", interlockScanareInfeed2h3);
                     this.Enabled = true;
                 }
@@ -1032,7 +978,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Dsh bypass 1", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag3, "ACTIV", interlockScanareInfeed1h3);
                     this.Enabled = true;
                 }
@@ -1057,7 +1003,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Homag 3 Interlock Scanare Infeed 1", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 3.Homag 3 Infeed PLC.Dsh bypass 1", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag3, "INACTIV", interlockScanareInfeed1h3);
                     this.Enabled = true;
                 }
@@ -1084,7 +1030,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag4, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1109,7 +1055,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Homag 4 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 4.Homag 4 Infeed PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag4, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1136,7 +1082,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag5, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1161,7 +1107,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Homag 5 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 5.Homag 5 Infeed PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag5, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1188,7 +1134,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Dsh bypass 2", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag6, "ACTIV", interlockScanareInfeed2h6);
                     this.Enabled = true;
                 }
@@ -1213,7 +1159,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 2", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Dsh bypass 2", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag6, "INACTIV", interlockScanareInfeed2h6);
                     this.Enabled = true;
                 }
@@ -1238,7 +1184,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Dsh bypass 1", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag6, "ACTIV", interlockScanareInfeed1h6);
                     this.Enabled = true;
                 }
@@ -1263,7 +1209,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Homag 6 Interlock Scanare Infeed 1", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 6.Homag 6 Infeed PLC.Dsh bypass 1", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag6, "INACTIV", interlockScanareInfeed1h6);
                     this.Enabled = true;
                 }
@@ -1290,7 +1236,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelHomag7, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1315,7 +1261,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Homag 7 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Homag 7.Homag 7 Infeed PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelHomag7, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1342,7 +1288,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelKoch1, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1367,7 +1313,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Koch 1 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 1.Koch 1 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelKoch1, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1394,7 +1340,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelKoch2, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1419,7 +1365,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Koch 2 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 2.Koch 2 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelKoch2, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1446,7 +1392,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Output Interlock", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelKoch3, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1471,7 +1417,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Output Interlock", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Koch 3.Interlock Koch 3.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelKoch3, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1498,7 +1444,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.L2 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelL2Caserat, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1523,7 +1469,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.L2 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=L2_Caserat.L2 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelL2Caserat, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1550,7 +1496,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.L3 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelL3Caserat, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1575,7 +1521,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.L3 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=L3_Caserat.L3 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelL3Caserat, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1602,7 +1548,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.L4_Interlock_scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelL4Caserat, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1627,7 +1573,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.L4_Interlock_scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=L4_Caserat.L4 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelL4Caserat, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1654,7 +1600,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelL5Caserat, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1679,7 +1625,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.L5 Caserat Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=L5 Caserat.L5 Caserat PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelL5Caserat, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1706,7 +1652,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Dsh bypass 2", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "ACTIV", outputInterlock2Dreapta);
                     this.Enabled = true;
                 }
@@ -1731,7 +1677,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 2 dreapta", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Dsh bypass 2", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "INACTIV", outputInterlock2Dreapta);
                     this.Enabled = true;
                 }
@@ -1756,7 +1702,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Dsh bypass 1", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1781,7 +1727,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Output interlock 1 stanga", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Linia 1 caserat.Adam L Caserat 1.Dsh bypass 1", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelLinia1Caserat, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1808,7 +1754,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Output interlock", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelProcess2, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1834,7 +1780,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Output interlock", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Process 2.Interlock Process 2.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelProcess2, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1861,7 +1807,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Tivox interlock scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelTivox, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1887,7 +1833,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Tivox interlock scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Tivox.Tivox PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelTivox, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1914,7 +1860,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)true);
+                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Dsh bypass", (bool)true);
                     AddLogItemToDatabase(reasonModal, labelWeeke, "ACTIV");
                     this.Enabled = true;
                 }
@@ -1940,7 +1886,7 @@ namespace EcolorProductionManager
 
                 if (await reasonModal.ShowModalAsync() == DialogResult.OK)
                 {
-                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Weeke 5 Interlock Scanare", (bool)false);
+                    myOPCUAServer.WriteNode("ns=2;s=Weeke 5.Weeke 5 PLC.Dsh bypass", (bool)false);
                     AddLogItemToDatabase(reasonModal, labelWeeke, "INACTIV");
                     this.Enabled = true;
                 }
@@ -1961,6 +1907,11 @@ namespace EcolorProductionManager
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
