@@ -54,7 +54,7 @@ namespace EcolorProductionManager
                 TagList.Add("Anthon 3 Interlock Scanare", new OPCUAClass.TagClass("Anthon 3 Interlock Scanare", "Anthon 3.Anthon 3 Alim PLC.Dsh bypass"));
                 TagList.Add("BedBox Interlock", new OPCUAClass.TagClass("BedBox Interlock", "BedBox.BedBoxPLC.Dsh bypass"));
                 TagList.Add("Biesse Interlock Scanare", new OPCUAClass.TagClass("Biesse Interlock Scanare", "Biesse.Biesse PLC.Dsh bypass"));
-                TagList.Add("Interlock2", new OPCUAClass.TagClass("Interlock", "Debitare_folie.PLC_debitare_folie.Dsh bypass"));
+                TagList.Add("Debitare Folie", new OPCUAClass.TagClass("Debitare Folie", "Debitare_folie.PLC_debitare_folie.Dsh bypass"));
                 TagList.Add("Homag 1 Interlock Scanare", new OPCUAClass.TagClass("Homag 1 Interlock Scanare", "Homag 1.Homag 1 PLC.Dsh bypass"));
                 TagList.Add("Homag 2 Interlock Scanare Infeed 2", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 2", "Homag 2.Homag 2 Infeed PLC.Dsh bypass 2"));
                 TagList.Add("Homag 2 Interlock Scanare Infeed 1", new OPCUAClass.TagClass("Homag 2 Interlock Scanare Infeed 1", "Homag 2.Homag 2 Infeed PLC.Dsh bypass 1"));
@@ -118,8 +118,8 @@ namespace EcolorProductionManager
 
             //Linia A
             //Culoare
-            buttonLiniaAInterlockLock.BackColor = results[1] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonLiniaAInterlockUnlock.BackColor = results[1] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonLiniaAInterlockLock.BackColor = results[1] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonLiniaAInterlockUnlock.BackColor = results[1] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonLiniaAInterlockLock.Text = results[1] == "True" ? "Bypass Activ" : "Activare";
             buttonLiniaAInterlockUnlock.Text = results[1] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -127,8 +127,8 @@ namespace EcolorProductionManager
 
             //Anthon 2
             //Culoare
-            buttonAnthon2InterlockScanareLock.BackColor = results[2] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonAnthon2InterlockScanareUnlock.BackColor = results[2] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonAnthon2InterlockScanareLock.BackColor = results[2] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonAnthon2InterlockScanareUnlock.BackColor = results[2] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonAnthon2InterlockScanareLock.Text = results[2] == "True" ? "Bypass Activ" : "Activare";
             buttonAnthon2InterlockScanareUnlock.Text = results[2] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -136,8 +136,8 @@ namespace EcolorProductionManager
 
             //Anthon 3
             //Culoare
-            buttonAnthon3InterlockScanareLock.BackColor = results[3] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonAnthon3InterlockScanareUnlock.BackColor = results[3] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonAnthon3InterlockScanareLock.BackColor = results[3] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonAnthon3InterlockScanareUnlock.BackColor = results[3] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonAnthon3InterlockScanareLock.Text = results[3] == "True" ? "Bypass Activ" : "Activare";
             buttonAnthon3InterlockScanareUnlock.Text = results[3] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -145,8 +145,8 @@ namespace EcolorProductionManager
 
             //BedBox
             //Culoare
-            buttonBedBoxBedBoxInterlockLock.BackColor = results[4] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonBedBoxBedBoxInterlockUnlock.BackColor = results[4] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonBedBoxBedBoxInterlockLock.BackColor = results[4] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonBedBoxBedBoxInterlockUnlock.BackColor = results[4] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonBedBoxBedBoxInterlockLock.Text = results[4] == "True" ? "Bypass Activ" : "Activare";
             buttonBedBoxBedBoxInterlockUnlock.Text = results[4] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -154,8 +154,8 @@ namespace EcolorProductionManager
 
             //Biesses
             //Culoare
-            buttonBiesseInterlockScanareLock.BackColor = results[5] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonBiesseInterlockScanareUnlock.BackColor = results[5] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonBiesseInterlockScanareLock.BackColor = results[5] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonBiesseInterlockScanareUnlock.BackColor = results[5] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonBiesseInterlockScanareLock.Text = results[5] == "True" ? "Bypass Activ" : "Activare";
             buttonBiesseInterlockScanareUnlock.Text = results[5] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -163,8 +163,8 @@ namespace EcolorProductionManager
 
             //Debitare folie
             //Culoare
-            buttonDebitareFolieInterlockLock.BackColor = results[6] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonDebitareFolieInterlockUnlock.BackColor = results[6] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonDebitareFolieInterlockLock.BackColor = results[6] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonDebitareFolieInterlockUnlock.BackColor = results[6] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonDebitareFolieInterlockLock.Text = results[6] == "True" ? "Bypass Activ" : "Activare";
             buttonDebitareFolieInterlockUnlock.Text = results[6] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -172,8 +172,8 @@ namespace EcolorProductionManager
 
             //Homag 1
             //Culoare
-            buttonHomag1InterlockScanareLock.BackColor = results[7] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag1InterlockScanareUnlock.BackColor = results[7] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonHomag1InterlockScanareLock.BackColor = results[7] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonHomag1InterlockScanareUnlock.BackColor = results[7] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonHomag1InterlockScanareLock.Text = results[7] == "True" ? "Bypass Activ" : "Activare";
             buttonHomag1InterlockScanareUnlock.Text = results[7] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -181,10 +181,10 @@ namespace EcolorProductionManager
 
             //Homag 2
             //Culoare
-            buttonHomag2InterlockScanareInfeed2Lock.BackColor = results[8] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = results[8] == "False" ? Color.Red : SystemColors.ControlLight;
-            buttonHomag2InterlockScanareInfeed1Lock.BackColor = results[9] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = results[9] == "False" ? Color.Red : SystemColors.ControlLight;
+            buttonHomag2InterlockScanareInfeed2Lock.BackColor = results[8] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonHomag2InterlockScanareInfeed2Unlock.BackColor = results[8] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            buttonHomag2InterlockScanareInfeed1Lock.BackColor = results[9] == "True" ? Color.Red : SystemColors.ControlLight;
+            buttonHomag2InterlockScanareInfeed1Unlock.BackColor = results[9] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             buttonHomag2InterlockScanareInfeed2Lock.Text = results[8] == "True" ? "Bypass Activ" : "Activare";
             buttonHomag2InterlockScanareInfeed2Unlock.Text = results[8] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -194,10 +194,10 @@ namespace EcolorProductionManager
 
             //Homag 3
             //Culoare
-            button25.BackColor = results[10] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button26.BackColor = results[10] == "False" ? Color.Red : SystemColors.ControlLight;
-            button35.BackColor = results[11] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button36.BackColor = results[11] == "False" ? Color.Red : SystemColors.ControlLight;
+            button25.BackColor = results[10] == "True" ? Color.Red : SystemColors.ControlLight;
+            button26.BackColor = results[10] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button35.BackColor = results[11] == "True" ? Color.Red : SystemColors.ControlLight;
+            button36.BackColor = results[11] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button25.Text = results[10] == "True" ? "Bypass Activ" : "Activare";
             button26.Text = results[10] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -207,8 +207,8 @@ namespace EcolorProductionManager
 
             //Homag 4
             //Culoare
-            button37.BackColor = results[12] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button38.BackColor = results[12] == "False" ? Color.Red : SystemColors.ControlLight;
+            button37.BackColor = results[12] == "True" ? Color.Red : SystemColors.ControlLight;
+            button38.BackColor = results[12] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button37.Text = results[12] == "True" ? "Bypass Activ" : "Activare";
             button38.Text = results[12] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -216,8 +216,8 @@ namespace EcolorProductionManager
 
             //Homag 5
             //Culoare
-            button39.BackColor = results[13] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button40.BackColor = results[13] == "False" ? Color.Red : SystemColors.ControlLight;
+            button39.BackColor = results[13] == "True" ? Color.Red : SystemColors.ControlLight;
+            button40.BackColor = results[13] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button39.Text = results[13] == "True" ? "Bypass Activ" : "Activare";
             button40.Text = results[13] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -225,10 +225,10 @@ namespace EcolorProductionManager
 
             //Homag 6
             //Culoare
-            button41.BackColor = results[14] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button42.BackColor = results[14] == "False" ? Color.Red : SystemColors.ControlLight;
-            button51.BackColor = results[15] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button52.BackColor = results[15] == "False" ? Color.Red : SystemColors.ControlLight;
+            button41.BackColor = results[14] == "True" ? Color.Red : SystemColors.ControlLight;
+            button42.BackColor = results[14] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button51.BackColor = results[15] == "True" ? Color.Red : SystemColors.ControlLight;
+            button52.BackColor = results[15] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button41.Text = results[14] == "True" ? "Bypass Activ" : "Activare";
             button42.Text = results[14] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -238,8 +238,8 @@ namespace EcolorProductionManager
 
             //Homag 7
             //Culoare
-            button53.BackColor = results[16] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button54.BackColor = results[16] == "False" ? Color.Red : SystemColors.ControlLight;
+            button53.BackColor = results[16] == "True" ? Color.Red : SystemColors.ControlLight;
+            button54.BackColor = results[16] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button53.Text = results[16] == "True" ? "Bypass Activ" : "Activare";
             button54.Text = results[16] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -247,8 +247,8 @@ namespace EcolorProductionManager
 
             //Koch 1
             //Culoare
-            button55.BackColor = results[17] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button56.BackColor = results[17] == "False" ? Color.Red : SystemColors.ControlLight;
+            button55.BackColor = results[17] == "True" ? Color.Red : SystemColors.ControlLight;
+            button56.BackColor = results[17] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button55.Text = results[17] == "True" ? "Bypass Activ" : "Activare";
             button56.Text = results[17] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -256,8 +256,8 @@ namespace EcolorProductionManager
 
             //Koch 2
             //Culoare
-            button57.BackColor = results[18] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button58.BackColor = results[18] == "False" ? Color.Red : SystemColors.ControlLight;
+            button57.BackColor = results[18] == "True" ? Color.Red : SystemColors.ControlLight;
+            button58.BackColor = results[18] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button57.Text = results[18] == "True" ? "Bypass Activ" : "Activare";
             button58.Text = results[18] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -265,8 +265,8 @@ namespace EcolorProductionManager
 
             //Koch 3
             //Culoare
-            button59.BackColor = results[19] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button60.BackColor = results[19] == "False" ? Color.Red : SystemColors.ControlLight;
+            button59.BackColor = results[19] == "True" ? Color.Red : SystemColors.ControlLight;
+            button60.BackColor = results[19] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button59.Text = results[19] == "True" ? "Bypass Activ" : "Activare";
             button60.Text = results[19] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -274,8 +274,8 @@ namespace EcolorProductionManager
 
             //L2 Caserat
             //Culoare
-            button61.BackColor = results[20] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button62.BackColor = results[20] == "False" ? Color.Red : SystemColors.ControlLight;
+            button61.BackColor = results[20] == "True" ? Color.Red : SystemColors.ControlLight;
+            button62.BackColor = results[20] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button61.Text = results[20] == "True" ? "Bypass Activ" : "Activare";
             button62.Text = results[20] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -283,8 +283,8 @@ namespace EcolorProductionManager
 
             //L3 Caserat
             //Culoare
-            button63.BackColor = results[21] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button64.BackColor = results[21] == "False" ? Color.Red : SystemColors.ControlLight;
+            button63.BackColor = results[21] == "True" ? Color.Red : SystemColors.ControlLight;
+            button64.BackColor = results[21] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button63.Text = results[21] == "True" ? "Bypass Activ" : "Activare";
             button64.Text = results[21] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -292,8 +292,8 @@ namespace EcolorProductionManager
 
             //L4 Caserat
             //Culoare
-            button65.BackColor = results[22] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button66.BackColor = results[22] == "False" ? Color.Red : SystemColors.ControlLight;
+            button65.BackColor = results[22] == "True" ? Color.Red : SystemColors.ControlLight;
+            button66.BackColor = results[22] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button65.Text = results[22] == "True" ? "Bypass Activ" : "Activare";
             button66.Text = results[22] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -301,8 +301,8 @@ namespace EcolorProductionManager
 
             //L5 Caserat
             //Culoare
-            button67.BackColor = results[23] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button68.BackColor = results[23] == "False" ? Color.Red : SystemColors.ControlLight;
+            button67.BackColor = results[23] == "True" ? Color.Red : SystemColors.ControlLight;
+            button68.BackColor = results[23] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button67.Text = results[23] == "True" ? "Bypass Activ" : "Activare";
             button68.Text = results[23] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -310,10 +310,10 @@ namespace EcolorProductionManager
 
             //Linia 1 Caserat
             //Culoare
-            button72.BackColor = results[24] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button71.BackColor = results[24] == "False" ? Color.Red : SystemColors.ControlLight;
-            button70.BackColor = results[25] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button69.BackColor = results[25] == "False" ? Color.Red : SystemColors.ControlLight;
+            button72.BackColor = results[24] == "True" ? Color.Red : SystemColors.ControlLight;
+            button71.BackColor = results[24] == "False" ? Color.LightGreen : SystemColors.ControlLight;
+            button70.BackColor = results[25] == "True" ? Color.Red : SystemColors.ControlLight;
+            button69.BackColor = results[25] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button72.Text = results[24] == "True" ? "Bypass Activ" : "Activare";
             button71.Text = results[24] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -323,8 +323,8 @@ namespace EcolorProductionManager
 
             //Process 2
             //Culoare
-            button73.BackColor = results[26] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button74.BackColor = results[26] == "False" ? Color.Red : SystemColors.ControlLight;
+            button73.BackColor = results[26] == "True" ? Color.Red : SystemColors.ControlLight;
+            button74.BackColor = results[26] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button73.Text = results[26] == "True" ? "Bypass Activ" : "Activare";
             button74.Text = results[26] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -332,8 +332,8 @@ namespace EcolorProductionManager
 
             //Tivox
             //Culoare
-            button75.BackColor = results[27] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button76.BackColor = results[27] == "False" ? Color.Red : SystemColors.ControlLight;
+            button75.BackColor = results[27] == "True" ? Color.Red : SystemColors.ControlLight;
+            button76.BackColor = results[27] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button75.Text = results[27] == "True" ? "Bypass Activ" : "Activare";
             button76.Text = results[27] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -341,8 +341,8 @@ namespace EcolorProductionManager
 
             //Weeke
             //Culoare
-            button77.BackColor = results[28] == "True" ? Color.LightGreen : SystemColors.ControlLight;
-            button78.BackColor = results[28] == "False" ? Color.Red : SystemColors.ControlLight;
+            button77.BackColor = results[28] == "True" ? Color.Red : SystemColors.ControlLight;
+            button78.BackColor = results[28] == "False" ? Color.LightGreen : SystemColors.ControlLight;
             //Text
             button77.Text = results[28] == "True" ? "Bypass Activ" : "Activare";
             button78.Text = results[28] == "False" ? "Bypass Inactiv" : "Dezactivare";
@@ -357,7 +357,7 @@ namespace EcolorProductionManager
             string tagCurrentValue3 = TagList["Anthon 3 Interlock Scanare"].CurrentValue;
             string tagCurrentValue4 = TagList["BedBox Interlock"].CurrentValue;
             string tagCurrentValue5 = TagList["Biesse Interlock Scanare"].CurrentValue;
-            string tagCurrentValue6 = TagList["Interlock2"].CurrentValue;
+            string tagCurrentValue6 = TagList["Debitare Folie"].CurrentValue;
             string tagCurrentValue7 = TagList["Homag 1 Interlock Scanare"].CurrentValue;
             string tagCurrentValue8 = TagList["Homag 2 Interlock Scanare Infeed 2"].CurrentValue;
             string tagCurrentValue9 = TagList["Homag 2 Interlock Scanare Infeed 1"].CurrentValue;
