@@ -38,6 +38,7 @@ namespace EcolorProductionManager
                 {
                     logItems = ctx.LogItems
                         .Include(u => u.User)
+                        .OrderByDescending(o => o.ActionExecutionTime)
                         .ToList();
                 }
             }
@@ -74,6 +75,7 @@ namespace EcolorProductionManager
                 {
                     logItems = ctx.LogItems
                         .Include(u => u.User)
+                        .OrderByDescending(o => o.ActionExecutionTime)
                         .ToList();
                 }
             }
